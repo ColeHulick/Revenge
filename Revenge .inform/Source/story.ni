@@ -1,3 +1,5 @@
 "Revenge " by Cole Hulick
 
-Example Location is a room. 
+Base of Volcano is a room. 
+
+Top of Volcano is a room.
