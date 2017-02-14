@@ -20,6 +20,8 @@
 		<false/>
 		<key>IFSettingTestingTabHelpShown</key>
 		<true/>
+		<key>IFSettingTestingTabShownCount</key>
+		<integer>5</integer>
 	</dict>
 	<key>IFOutputSettings</key>
 	<dict/>
