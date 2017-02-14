@@ -7,7 +7,7 @@
         <result xml:space="preserve">
 
 
-Welcome to Revenge! A ravenous dragon has reigned terror on your small town for centuries. Your name is James, you have been training and learning magic since you were born. Your teachers name is Thor and its finally your time to avenge everyone that has lost their homes and lifes from this dragon!
+Welcome to Revenge! A ravenous dragon has reigned terror on your small town for centuries. Your name is James, you have been training and learning magic since you were born. Your teachers name is Thor and its finally your time to avenge everyone that has lost their homes and life's from this dragon!
 
 Revenge 
 An Interactive Fiction by Cole Hulick
@@ -272,11 +272,66 @@ Trail
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
 Forest
+You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall the whole atmosphere changes. The ground was spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were vains, almost as if it is the heart of the entire forest.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1035"></child>
+        <children><child nodeId="node-1051"></child>
+            <child nodeId="node-1054"></child>
+            <child nodeId="node-1042"></child>
+            <child nodeId="node-1035"></child>
+            <child nodeId="node-1057"></child>
+            <child nodeId="node-1045"></child>
         </children>
+    </item>
+    <item nodeId="node-1045">
+        <command xml:space="preserve">x oak tree</command>
+        <result xml:space="preserve">You look more closely and find a mystic looking leather bound hand sized spell book placed on the outside of the tree.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1046"></child>
+        </children>
+    </item>
+    <item nodeId="node-1046">
+        <command xml:space="preserve">take spell book</command>
+        <result xml:space="preserve">You slowly remove the spell book as vines and bark slowly break and fall to the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1047"></child>
+            <child nodeId="node-1065"></child>
+        </children>
+    </item>
+    <item nodeId="node-1065">
+        <command xml:space="preserve">x spell book</command>
+        <result xml:space="preserve">You see nothing special about Spell book.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1047">
+        <command xml:space="preserve">x inside tree</command>
+        <result xml:space="preserve">I only understood you as far as wanting to examine inside.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1048"></child>
+        </children>
+    </item>
+    <item nodeId="node-1048">
+        <command xml:space="preserve">look inside tree</command>
+        <result xml:space="preserve">Large oak tree is empty.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1057">
+        <command xml:space="preserve">x large oak tree</command>
+        <result xml:space="preserve">You look more closely and find a mystic looking leather bound hand sized spell book placed on the outside of the tree.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1035">
         <command xml:space="preserve">w</command>
@@ -302,6 +357,29 @@ Bridge
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Tower
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1042">
+        <command xml:space="preserve">look oak trees</command>
+        <result xml:space="preserve">You look more closely and find a letter on each of the oak trees! It reads ECHO?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1054">
+        <command xml:space="preserve">look oak tree</command>
+        <result xml:space="preserve">You look more closely and find a mystic looking leather bound hand sized spell book placed on the outside of the tree.
+
+In Large oak tree is Spell book.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1051">
+        <command xml:space="preserve">look inside tree</command>
+        <result xml:space="preserve">In Large oak tree is Spell book.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
