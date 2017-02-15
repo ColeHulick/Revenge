@@ -10571,9 +10571,9 @@ Constant DirectionObject_10 = in_obj;
 Constant DirectionObject_11 = out_obj;
 Array Map_Storage -->
  I127_trail 0 0 0 0 0 0 0 0 0 0 0 ! Exits from: I126_town
- I131_river 0 0 I126_town 0 0 I128_forest 0 0 0 0 0 ! Exits from: I127_trail
+ I131_deep_crevice 0 0 I126_town 0 0 I128_forest 0 0 0 0 0 ! Exits from: I127_trail
  0 0 0 0 0 0 0 I127_trail 0 0 0 0 ! Exits from: I128_forest
- 0 0 0 I127_trail 0 0 0 0 0 0 0 0 ! Exits from: I131_river
+ 0 0 0 I127_trail 0 0 0 0 0 0 0 0 ! Exits from: I131_deep_crevice
  0 I135_first_floor I134_cellar I133_bridge 0 0 0 0 0 0 0 0 ! Exits from: I132_tower
  I132_tower 0 0 0 0 0 0 0 0 0 0 0 ! Exits from: I133_bridge
  0 0 0 0 I132_tower 0 0 0 0 0 0 0 ! Exits from: I134_cellar
@@ -11103,7 +11103,7 @@ Object I128_forest ""
     with room_index -1
     has mark_as_room
     with IK1_Count 2
-    with IK1_Link I131_river
+    with IK1_Link I131_deep_crevice
     with KD_Count 1
     with name 'forest' 'rooms//p' 
     with list_together BC_166
@@ -11152,27 +11152,26 @@ Object -> -> I130_spell_book ""
     with article BC_180
 ;
 
-Object I131_river ""
+Object I131_deep_crevice ""
     class K1_room
     with short_name BC_181
+    with description BC_182
     has proper
     with vector 0
     with room_index -1
-    with cap_short_name BC_182
     has mark_as_room
     with IK1_Count 3
     with IK1_Link I132_tower
     with KD_Count 1
-    with name 'river' 'rooms//p' 
-    with description BC_183
-    with list_together BC_184
-    with plural BC_185
-    with article BC_186
+    with name 'deep' 'crevice' 'rooms//p' 
+    with list_together BC_183
+    with plural BC_184
+    with article BC_185
 ;
 
 Object I132_tower ""
     class K1_room
-    with short_name BC_187
+    with short_name BC_186
     has proper
     with vector 0
     with room_index -1
@@ -11181,33 +11180,33 @@ Object I132_tower ""
     with IK1_Link I133_bridge
     with KD_Count 1
     with name 'tower' 'rooms//p' 
-    with description BC_188
-    with list_together BC_189
-    with plural BC_190
-    with article BC_191
+    with description BC_187
+    with list_together BC_188
+    with plural BC_189
+    with article BC_190
 ;
 
 Object I133_bridge ""
     class K1_room
-    with short_name BC_192
+    with short_name BC_191
     has proper
     with vector 0
     with room_index -1
-    with cap_short_name BC_193
+    with cap_short_name BC_192
     has mark_as_room
     with IK1_Count 5
     with IK1_Link I134_cellar
     with KD_Count 1
     with name 'bridge' 'rooms//p' 
-    with description BC_194
-    with list_together BC_195
-    with plural BC_196
-    with article BC_197
+    with description BC_193
+    with list_together BC_194
+    with plural BC_195
+    with article BC_196
 ;
 
 Object I134_cellar ""
     class K1_room
-    with short_name BC_198
+    with short_name BC_197
     has proper
     with vector 0
     with room_index -1
@@ -11216,15 +11215,15 @@ Object I134_cellar ""
     with IK1_Link I135_first_floor
     with KD_Count 1
     with name 'cellar' 'rooms//p' 
-    with description BC_199
-    with list_together BC_200
-    with plural BC_201
-    with article BC_202
+    with description BC_198
+    with list_together BC_199
+    with plural BC_200
+    with article BC_201
 ;
 
 Object I135_first_floor ""
     class K1_room
-    with short_name BC_203
+    with short_name BC_202
     has proper
     with vector 0
     with room_index -1
@@ -11233,15 +11232,15 @@ Object I135_first_floor ""
     with IK1_Link I136_top_of_tower
     with KD_Count 1
     with name 'first' 'floor' 'rooms//p' 
-    with description BC_204
-    with list_together BC_205
-    with plural BC_206
-    with article BC_207
+    with description BC_203
+    with list_together BC_204
+    with plural BC_205
+    with article BC_206
 ;
 
 Object I136_top_of_tower ""
     class K1_room
-    with short_name BC_208
+    with short_name BC_207
     has proper
     with vector 0
     with room_index -1
@@ -11250,10 +11249,10 @@ Object I136_top_of_tower ""
     with IK1_Link nothing
     with KD_Count 1
     with name 'top' 'of' 'tower' 'rooms//p' 
-    with description BC_209
-    with list_together BC_210
-    with plural BC_211
-    with article BC_212
+    with description BC_208
+    with list_together BC_209
+    with plural BC_210
+    with article BC_211
 ;
 
 Constant I71_english_language = 1;
@@ -11307,12 +11306,12 @@ Constant I123_masculine_gender = 2;
 Constant I124_feminine_gender = 3;
 Array Global_Vars -->
   (false) ! 7 darkness witnessed
-  (BC_213) ! 25 command prompt
+  (BC_212) ! 25 command prompt
   (I71_english_language) ! 29 language of play
-  (BC_214) ! 32 story author
-  (BC_215) ! 33 story headline
-  (BC_216) ! 34 story genre
-  (BC_217) ! 35 story description
+  (BC_213) ! 32 story author
+  (BC_214) ! 33 story headline
+  (BC_215) ! 34 story genre
+  (BC_216) ! 35 story description
   (1) ! 36 release number
   (0) ! 37 story creation year
   (0) ! 45 locale paragraph count
@@ -11327,7 +11326,7 @@ Array Global_Vars -->
 
 
 Array T0_final_question_options table  tab_0_0 tab_0_1 tab_0_2 tab_0_3 tab_0_4;
-Array tab_0_0 table $0664 0 (BC_218) (BC_219) (BC_220) (BC_221) (BC_222) ;
+Array tab_0_0 table $0664 0 (BC_217) (BC_218) (BC_219) (BC_220) (BC_221) ;
 Array tab_0_1 table $0465 1 (0) (0) (1) (0) (0) ;
 Array tab_0_2 table $2066 2 (Consult_Grammar_94) (Consult_Grammar_95) (Consult_Grammar_96) (Consult_Grammar_97) (Consult_Grammar_98) ;
 Array tab_0_3 table $0067 3 (IMMEDIATELY_RESTART_VM_R) (IMMEDIATELY_RESTORE_SAVED_R) ( TABLE_NOVALUE) (IMMEDIATELY_QUIT_R) (IMMEDIATELY_UNDO_R) ;
@@ -12530,11 +12529,11 @@ Array ActionHappened --> 0 0 0 0 0;
     if ((((action ==##A77_bridging) &&  (actor==player)))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_801, 801);
-    ! [2: if the player is in river]
-    if (((I131_river == ContainerOf(player))))
-    {! [3: say ~a bridge was built in front of you!~]
-        say__p=1;! [4: ~a bridge was built in front of you!~]
-        ParaContent(); print "a bridge was built in front of you!"; new_line; .L_Say4; .L_SayX4;}
+    ! [2: if the player is in deep crevice]
+    if (((I131_deep_crevice == ContainerOf(player))))
+    {! [3: say ~A bridge was built in front of you!~]
+        say__p=1;! [4: ~A bridge was built in front of you!~]
+        ParaContent(); print "A bridge was built in front of you!"; new_line; .L_Say4; .L_SayX4;}
         RulebookFails(); rtrue;
         } else if (debug_rules > 1) DB_Rule(R_801, 801, 'action');
         rfalse;
@@ -48852,7 +48851,7 @@ Verb 'wait' 'z//'
     *  -> Wait
 ;
 Verb 'answer' 'say' 'shout' 'speak'
-    * 'echo'  -> A77_bridging
+    * 'pathus'  -> A77_bridging
     * topic 'to' creature  -> Answer reverse
 ;
 Verb 'tell'
@@ -48993,7 +48992,7 @@ Verb 'notify'
     * 'on'  -> NotifyOn
     * 'off'  -> NotifyOff
 ;
-Verb 'echo'
+Verb 'pathus'
     *  -> A77_bridging
 ;
 
@@ -49029,12 +49028,13 @@ Verb 'echo'
 
 
 Constant TX_PS_51 = ">";
-Constant TX_PS_42 = "A mystic looking leather bound hand sized spell book, you slowly open it and find a word written inside of the book. It says ECHO?";
+Constant TX_PS_42 = "A mystic looking leather bound hand sized spell book, you slowly open it and find a word written inside of the book. It says PATHUS?";
 Constant TX_PS_3 = "An Interactive Fiction";
 Constant TX_PS_32 = "As good-looking as ever.";
 Constant TX_PS_47 = "Bridge";
 Constant TX_PS_48 = "Cellar";
 Constant TX_PS_4 = "Cole Hulick";
+Constant TX_PS_43 = "Deep Crevice";
 Constant TX_PS_52 = "Fiction";
 Constant TX_PS_49 = "First floor";
 Constant TX_PS_37 = "Forest";
@@ -49044,15 +49044,15 @@ Constant TX_PS_56 = "QUIT";
 Constant TX_PS_53 = "RESTART";
 Constant TX_PS_54 = "RESTORE a saved game";
 Constant TX_PS_2 = "Revenge ";
-Constant TX_PS_44 = "River";
 Constant TX_PS_41 = "Spell book";
+Constant TX_PS_44 = "Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, how can you cross the crevice?";
 Constant TX_PS_50 = "Top of tower";
 Constant TX_PS_45 = "Tower";
 Constant TX_PS_35 = "Town";
 Constant TX_PS_36 = "Trail";
 Constant TX_PS_57 = "UNDO the last command";
 Constant TX_PS_40 = "You look more closely and find a mystic looking leather bound hand sized spell book placed on the outside of the tree.";
-Constant TX_PS_38 = "You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall the whole atmosphere changes. The ground was spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were vains, almost as if it is the heart of the entire forest.";
+Constant TX_PS_38 = "You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall the whole atmosphere changes. The ground was spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest.";
 Constant TX_PS_33 = "Yourself";
 Constant TX_PS_9 = "animals";
 Constant TX_PS_14 = "backdrops";
@@ -49072,7 +49072,6 @@ Constant TX_PS_30 = "outside";
 Constant TX_PS_6 = "people";
 Constant TX_PS_13 = "player's holdalls";
 Constant TX_PS_16 = "regions";
-Constant TX_PS_43 = "river";
 Constant TX_PS_55 = "see some suggestions for AMUSING things to do";
 Constant TX_PS_22 = "south";
 Constant TX_PS_23 = "southeast";
@@ -56423,43 +56422,42 @@ Array BC_182 --> PACKED_TEXT_STORAGE TX_PS_44;
 Array BC_183 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_184 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_185 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_186 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_187 --> PACKED_TEXT_STORAGE TX_PS_45;
+Array BC_186 --> PACKED_TEXT_STORAGE TX_PS_45;
+Array BC_187 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_188 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_189 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_190 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_191 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_192 --> PACKED_TEXT_STORAGE TX_PS_46;
-Array BC_193 --> PACKED_TEXT_STORAGE TX_PS_47;
+Array BC_191 --> PACKED_TEXT_STORAGE TX_PS_46;
+Array BC_192 --> PACKED_TEXT_STORAGE TX_PS_47;
+Array BC_193 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_194 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_195 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_196 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_197 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_198 --> PACKED_TEXT_STORAGE TX_PS_48;
+Array BC_197 --> PACKED_TEXT_STORAGE TX_PS_48;
+Array BC_198 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_199 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_200 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_201 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_202 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_203 --> PACKED_TEXT_STORAGE TX_PS_49;
+Array BC_202 --> PACKED_TEXT_STORAGE TX_PS_49;
+Array BC_203 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_204 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_205 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_206 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_207 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_208 --> PACKED_TEXT_STORAGE TX_PS_50;
+Array BC_207 --> PACKED_TEXT_STORAGE TX_PS_50;
+Array BC_208 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_209 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_210 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_211 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_212 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_213 --> PACKED_TEXT_STORAGE TX_PS_51;
-Array BC_214 --> PACKED_TEXT_STORAGE TX_PS_4;
-Array BC_215 --> PACKED_TEXT_STORAGE TX_PS_3;
-Array BC_216 --> PACKED_TEXT_STORAGE TX_PS_52;
-Array BC_217 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_218 --> PACKED_TEXT_STORAGE TX_PS_53;
-Array BC_219 --> PACKED_TEXT_STORAGE TX_PS_54;
-Array BC_220 --> PACKED_TEXT_STORAGE TX_PS_55;
-Array BC_221 --> PACKED_TEXT_STORAGE TX_PS_56;
-Array BC_222 --> PACKED_TEXT_STORAGE TX_PS_57;
+Array BC_212 --> PACKED_TEXT_STORAGE TX_PS_51;
+Array BC_213 --> PACKED_TEXT_STORAGE TX_PS_4;
+Array BC_214 --> PACKED_TEXT_STORAGE TX_PS_3;
+Array BC_215 --> PACKED_TEXT_STORAGE TX_PS_52;
+Array BC_216 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_217 --> PACKED_TEXT_STORAGE TX_PS_53;
+Array BC_218 --> PACKED_TEXT_STORAGE TX_PS_54;
+Array BC_219 --> PACKED_TEXT_STORAGE TX_PS_55;
+Array BC_220 --> PACKED_TEXT_STORAGE TX_PS_56;
+Array BC_221 --> PACKED_TEXT_STORAGE TX_PS_57;
 
 
 
