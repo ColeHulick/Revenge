@@ -1,5 +1,15 @@
 "Revenge " by Cole Hulick
 
+When play begins: 
+    now left hand status line is "Exits: [exit list]"; 
+    now right hand status line is "[location]".
+To say exit list: 
+	let place be location; 
+	repeat with way running through directions: 
+		let place be the room way from the location; 
+		if place is a room, say " [way]".
+[got this from Get That Cat by Douglas Kiang]
+
 When play begins: say "Welcome to Revenge! A ravenous dragon has reigned terror on your small town for centuries. Your name is James, you have been training and learning magic since you were born. Your teachers name is Thor and its finally your time to avenge everyone that has lost their homes and life's from this dragon!"
 
 Magical staff is a thing.
@@ -19,11 +29,19 @@ after taking spell book: say "You slowly remove the spell book as vines and bark
 Bridging is an action applying to nothing.  Understand "PATHUS" or "say PATHUS" as bridging.
 
 Instead of bridging:
-	if the player is in Deep Crevice, say "A bridge was built in front of you!"
+	if the player is in Deep Crevice, say "A bridge was built in front of you!";
+	
+Deep Crevice is a room. Deep Crevice is north of Trail. "Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found."
 
-Deep Crevice is a room. Deep Crevice is north of Trail. "Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, how can you cross the crevice?"
+Bridge is a door. Bridge is unlocked and open. Bridge is north of Deep Crevice and south of tower. bridge is undescribed.
 
-Tower is a room. Tower is north of bridge.
+
+Understand "cross [something]" as crossing. Crossing is an action applying to one thing.
+
+Instead of crossing bridge:
+	move the player to Tower.
+	
+Tower is a room. 
 
 Cellar is a room. Cellar is northwest of Tower.
 
