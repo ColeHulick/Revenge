@@ -16,7 +16,12 @@ Spell book is a thing in Large Oak tree. Spell book is undescribed. "A mystic lo
 
 after taking spell book: say "You slowly remove the spell book as vines and bark slowly break and fall to the floor."
 
-Bridge is a room. Bridge is north of Trail.
+Bridging is an action applying to nothing.  Understand "ECHO" or "say ECHO" as bridging.
+
+Instead of bridging:
+	if the player is in river, say "a bridge was built in front of you!"
+
+river is a room. river is north of Trail.
 
 Tower is a room. Tower is north of bridge.
 
