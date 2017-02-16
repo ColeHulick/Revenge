@@ -19,6 +19,7 @@ As you head towards the entrance of the town you see your teacher Zyliath. He ha
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1027"></child>
+            <child nodeId="node-1565"></child>
             <child nodeId="node-1007"></child>
             <child nodeId="node-1005"></child>
             <child nodeId="node-1003"></child>
@@ -310,9 +311,7 @@ Suddenly the trail ends. You look down and find a deep crevice with dark blue wa
     </item>
     <item nodeId="node-1560">
         <command xml:space="preserve">cross bridge</command>
-        <result xml:space="preserve">tower
-
-&gt;</result>
+        <result xml:space="preserve">&gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1034">
@@ -846,6 +845,87 @@ In Large oak tree is Spell book.
     <item nodeId="node-1051">
         <command xml:space="preserve">look inside tree</command>
         <result xml:space="preserve">In Large oak tree is Spell book.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1565">
+        <command xml:space="preserve">hello Zyliath</command>
+        <result xml:space="preserve">Hi! how are you...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1566"></child>
+        </children>
+    </item>
+    <item nodeId="node-1566">
+        <command xml:space="preserve">x zyliath</command>
+        <result xml:space="preserve">You see nothing special about Zyliath.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1567"></child>
+        </children>
+    </item>
+    <item nodeId="node-1567">
+        <command xml:space="preserve">hi zyliath</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1568"></child>
+        </children>
+    </item>
+    <item nodeId="node-1568">
+        <command xml:space="preserve">Hi how are you</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1569"></child>
+        </children>
+    </item>
+    <item nodeId="node-1569">
+        <command xml:space="preserve">talk Zyliath</command>
+        <result xml:space="preserve">I didn't understand that sentence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1570"></child>
+        </children>
+    </item>
+    <item nodeId="node-1570">
+        <command xml:space="preserve">Talk to Zyliath</command>
+        <result xml:space="preserve">Hi! how are you...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1577"></child>
+        </children>
+    </item>
+    <item nodeId="node-1577">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Draycott
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1578"></child>
+        </children>
+    </item>
+    <item nodeId="node-1578">
+        <command xml:space="preserve">hello</command>
+        <result xml:space="preserve">(Zyliath)
+Hi! how are you...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1579"></child>
+        </children>
+    </item>
+    <item nodeId="node-1579">
+        <command xml:space="preserve">hello zyliath</command>
+        <result xml:space="preserve">Hi! how are you...
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

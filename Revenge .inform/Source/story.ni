@@ -14,6 +14,14 @@ When play begins: say "Welcome to Revenge! A ravenous dragon has reigned terror 
 
 Zyliath is a man. Zyliath is in Draycott. "As you head towards the entrance of the town you see your teacher Zyliath. He has taught you everything you know about magic and fighting, you should go talk to him before you embark on your journey."
 
+Talking to is  an action applying  to one visible thing. 
+Understand "talk to [someone]" as talking to. 
+
+Understand "hello [someone]" as talking to.
+Understand "Hi [someone]" as talking to.
+
+Instead of talking to Zyliath: say "Hi! how are you..."
+
 Zyliath's Magical staff is a thing. 
 
 Draycott is a room. 
@@ -36,7 +44,6 @@ Instead of bridging:
 Deep Crevice is a room. Deep Crevice is north of Trail. "Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found."
 
 Bridge is a door. Bridge is unlocked and open. Bridge is north of Deep Crevice and south of tower. bridge is undescribed.
-
 
 Understand "cross [bridge]" as crossing. Crossing is an action applying to one thing.
 
