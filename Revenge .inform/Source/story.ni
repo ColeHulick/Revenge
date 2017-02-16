@@ -10,14 +10,14 @@ To say exit list:
 		if place is a room, say " [way]".
 [got this from Get That Cat by Douglas Kiang]
 
-When play begins: say "Welcome to Revenge! A ravenous dragon has reigned terror on your small town for centuries. Your name is James, you have been training and learning magic since you were born. Your teachers name is Thor and its finally your time to avenge everyone that has lost their homes and life's from this dragon!"
+When play begins: say "Welcome to Revenge! A ravenous dragon has reigned terror on your small town Draycott, for centuries. Your name is James, you have been training and learning magic since you were born. Its finally your time to avenge everyone that has lost their homes and life's from this dragon!"
 
-Zyliath is a person. Zyliath is in Town. "As you head towards the entrance of the town you see your teacher Zyliath. He has taught you everything you know about magic and fighting."
+Zyliath is a person. Zyliath is in Draycott. "As you head towards the entrance of the town you see your teacher Zyliath. He has taught you everything you know about magic and fighting."
 
 
 Zyliath's Magical staff is a thing. 
 
-Town is a room. 
+Draycott is a room. 
 
 Trail is a room. Trail is north of Town.
 
