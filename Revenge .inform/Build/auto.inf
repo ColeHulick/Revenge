@@ -43,7 +43,7 @@ Global Story = BC_0;
 Constant Headline BC_1;
 Constant Story_Author BC_2;
 Release 1;
-Serial "170214";
+Serial "170216";
 
 Default Story 0;
 Default Headline 0;
@@ -4402,7 +4402,7 @@ Global lightflag = false;
 ! ListWriter.i6t: Memory
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant REQUISITION_STACK_SIZE = 3*25;
+Constant REQUISITION_STACK_SIZE = 3*26;
 Array requisition_stack --> REQUISITION_STACK_SIZE;
 Global requisition_stack_pointer = 0;
 
@@ -10547,8 +10547,8 @@ Array KindHierarchy --> K0_kind (0) K1_room (0) K2_thing (0) K3_direction (0) K4
 Constant IK1_First = I126_town;
 Constant IK2_First = selfobj;
 Constant IK3_First = I51_north;
-Constant IK4_First = I132_bridge;
-Constant IK5_First = I129_large_oak_tree;
+Constant IK4_First = I133_bridge;
+Constant IK5_First = I130_large_oak_tree;
 Constant IK6_First = nothing;
 Constant IK7_First = nothing;
 Constant IK8_First = selfobj;
@@ -10574,14 +10574,14 @@ Constant DirectionObject_9 = I60_down;
 Constant DirectionObject_10 = in_obj;
 Constant DirectionObject_11 = out_obj;
 Array Map_Storage -->
- I127_trail 0 0 0 0 0 0 0 0 0 0 0 ! Exits from: I126_town
- I131_deep_crevice 0 0 I126_town 0 0 I128_forest 0 0 0 0 0 ! Exits from: I127_trail
- 0 0 0 0 0 0 0 I127_trail 0 0 0 0 ! Exits from: I128_forest
- I132_bridge 0 0 I127_trail 0 0 0 0 0 0 0 0 ! Exits from: I131_deep_crevice
- 0 I135_first_floor I134_cellar I132_bridge 0 0 0 0 0 0 0 0 ! Exits from: I133_tower
- 0 0 0 0 I133_tower 0 0 0 0 0 0 0 ! Exits from: I134_cellar
- 0 0 0 0 0 I133_tower I136_top_of_tower 0 0 0 0 0 ! Exits from: I135_first_floor
- 0 0 0 0 0 0 0 I135_first_floor 0 0 0 0 ! Exits from: I136_top_of_tower
+ I128_trail 0 0 0 0 0 0 0 0 0 0 0 ! Exits from: I126_town
+ I132_deep_crevice 0 0 I126_town 0 0 I129_forest 0 0 0 0 0 ! Exits from: I128_trail
+ 0 0 0 0 0 0 0 I128_trail 0 0 0 0 ! Exits from: I129_forest
+ I133_bridge 0 0 I128_trail 0 0 0 0 0 0 0 0 ! Exits from: I132_deep_crevice
+ 0 I136_first_floor I135_cellar I133_bridge 0 0 0 0 0 0 0 0 ! Exits from: I134_tower
+ 0 0 0 0 I134_tower 0 0 0 0 0 0 0 ! Exits from: I135_cellar
+ 0 0 0 0 0 I134_tower I137_top_of_tower 0 0 0 0 0 ! Exits from: I136_first_floor
+ 0 0 0 0 0 0 0 I136_first_floor 0 0 0 0 ! Exits from: I137_top_of_tower
 ;
 
 Class VPH_Class;
@@ -11033,9 +11033,9 @@ Object selfobj ""
     with cap_short_name BC_143
     has mark_as_thing
     with IK2_Count 0
-    with IK2_Link I125_magical_staff
+    with IK2_Link I125_zyliath
     with IK8_Count 0
-    with IK8_Link nothing
+    with IK8_Link I125_zyliath
     with KD_Count 8
     with parse_name Parse_Name_GV13
     with action_bitmap 0 0 0 0 0 
@@ -11045,136 +11045,156 @@ Object selfobj ""
     with article BC_147
 ;
 
-Object I125_magical_staff ""
-    class K2_thing
-    with short_name BC_148
-    has proper
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 1
-    with IK2_Link I129_large_oak_tree
-    with KD_Count 2
-    with name 'magical' 'staff' 'things//p' 
-    with action_bitmap 0 0 0 0 0 
-    with description BC_149
-    with initial BC_150
-    with list_together BC_151
-    with plural BC_152
-    with article BC_153
-;
-
 Object I126_town ""
     class K1_room
-    with short_name BC_154
+    with short_name BC_148
     has proper
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 0
-    with IK1_Link I127_trail
+    with IK1_Link I128_trail
     with KD_Count 1
     with name 'town' 'rooms//p' 
+    with description BC_149
+    with list_together BC_150
+    with plural BC_151
+    with article BC_152
+;
+
+Object -> I125_zyliath ""
+    class K8_person
+    with short_name BC_153
+    with initial BC_154
+    has proper
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 1
+    with IK2_Link I127_zyliath_s_magical_staff
+    with IK8_Count 1
+    with IK8_Link nothing
+    with KD_Count 8
+    with name 'zyliath' 'people//p' 
+    with action_bitmap 0 0 0 0 0 
     with description BC_155
     with list_together BC_156
     with plural BC_157
     with article BC_158
 ;
 
-Object I127_trail ""
-    class K1_room
+Object I127_zyliath_s_magical_staff ""
+    class K2_thing
     with short_name BC_159
+    has proper
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 2
+    with IK2_Link I130_large_oak_tree
+    with KD_Count 2
+    with name 'zyliath^s' 'magical' 'staff' 'things//p' 
+    with action_bitmap 0 0 0 0 0 
+    with description BC_160
+    with initial BC_161
+    with list_together BC_162
+    with plural BC_163
+    with article BC_164
+;
+
+Object I128_trail ""
+    class K1_room
+    with short_name BC_165
     has proper
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 1
-    with IK1_Link I128_forest
+    with IK1_Link I129_forest
     with KD_Count 1
     with name 'trail' 'rooms//p' 
-    with description BC_160
-    with list_together BC_161
-    with plural BC_162
-    with article BC_163
+    with description BC_166
+    with list_together BC_167
+    with plural BC_168
+    with article BC_169
 ;
 
-Object I128_forest ""
+Object I129_forest ""
     class K1_room
-    with short_name BC_164
-    with description BC_165
+    with short_name BC_170
+    with description BC_171
     has proper
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 2
-    with IK1_Link I131_deep_crevice
+    with IK1_Link I132_deep_crevice
     with KD_Count 1
     with name 'forest' 'rooms//p' 
-    with list_together BC_166
-    with plural BC_167
-    with article BC_168
-;
-
-Object -> I129_large_oak_tree ""
-    class K5_container
-    with short_name BC_169
-    with description BC_170
-    has proper
-    has static
-    has scenery
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 2
-    with IK2_Link I130_spell_book
-    with IK5_Count 0
-    with IK5_Link nothing
-    with KD_Count 5
-    with name 'large' 'oak' 'tree' 'containers//p' 
-    with action_bitmap 0 0 0 0 0 
-    with initial BC_171
     with list_together BC_172
     with plural BC_173
     with article BC_174
 ;
 
-Object -> -> I130_spell_book ""
-    class K2_thing
+Object -> I130_large_oak_tree ""
+    class K5_container
     with short_name BC_175
-    with initial BC_176
+    with description BC_176
     has proper
-    has concealed
+    has static
+    has scenery
     with vector 0
     has mark_as_thing
     with IK2_Count 3
-    with IK2_Link I132_bridge
-    with KD_Count 2
-    with name 'spell' 'book' 'things//p' 
+    with IK2_Link I131_spell_book
+    with IK5_Count 0
+    with IK5_Link nothing
+    with KD_Count 5
+    with name 'large' 'oak' 'tree' 'containers//p' 
     with action_bitmap 0 0 0 0 0 
-    with description BC_177
+    with initial BC_177
     with list_together BC_178
     with plural BC_179
     with article BC_180
 ;
 
-Object I131_deep_crevice ""
-    class K1_room
+Object -> -> I131_spell_book ""
+    class K2_thing
     with short_name BC_181
-    with description BC_182
+    with initial BC_182
+    has proper
+    has concealed
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 4
+    with IK2_Link I133_bridge
+    with KD_Count 2
+    with name 'spell' 'book' 'things//p' 
+    with action_bitmap 0 0 0 0 0 
+    with description BC_183
+    with list_together BC_184
+    with plural BC_185
+    with article BC_186
+;
+
+Object I132_deep_crevice ""
+    class K1_room
+    with short_name BC_187
+    with description BC_188
     has proper
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 3
-    with IK1_Link I133_tower
+    with IK1_Link I134_tower
     with KD_Count 1
     with name 'deep' 'crevice' 'rooms//p' 
-    with list_together BC_183
-    with plural BC_184
-    with article BC_185
+    with list_together BC_189
+    with plural BC_190
+    with article BC_191
 ;
 
-Object I132_bridge ""
+Object I133_bridge ""
     class K4_door
-    with short_name BC_186
+    with short_name BC_192
     has proper
     has concealed
     has open
@@ -11185,84 +11205,84 @@ Object I132_bridge ""
         ;
         loc = location;
         if (loc == thedark) loc = real_location;
-        if (loc == I131_deep_crevice) return I51_north; return I54_south;],
+        if (loc == I132_deep_crevice) return I51_north; return I54_south;],
     with door_to [ 
         loc ! room of actor
         ;
         loc = location;
         if (loc == thedark) loc = real_location;
-        if (loc == I131_deep_crevice) return I133_tower; return I131_deep_crevice;],
-    with found_in I131_deep_crevice I133_tower
+        if (loc == I132_deep_crevice) return I134_tower; return I132_deep_crevice;],
+    with found_in I132_deep_crevice I134_tower
     has mark_as_thing
-    with IK2_Count 4
+    with IK2_Count 5
     with IK2_Link nothing
     with IK4_Count 0
     with IK4_Link nothing
     with KD_Count 4
     with name 'bridge' 'doors//p' 
     with action_bitmap 0 0 0 0 0 
-    with description BC_187
-    with initial BC_188
-    with list_together BC_189
-    with plural BC_190
-    with article BC_191
-;
-
-Object I133_tower ""
-    class K1_room
-    with short_name BC_192
-    has proper
-    with vector 0
-    with room_index -1
-    with cap_short_name BC_193
-    has mark_as_room
-    with IK1_Count 4
-    with IK1_Link I134_cellar
-    with KD_Count 1
-    with name 'tower' 'rooms//p' 
-    with description BC_194
+    with description BC_193
+    with initial BC_194
     with list_together BC_195
     with plural BC_196
     with article BC_197
 ;
 
-Object I134_cellar ""
+Object I134_tower ""
     class K1_room
     with short_name BC_198
     has proper
     with vector 0
     with room_index -1
+    with cap_short_name BC_199
     has mark_as_room
-    with IK1_Count 5
-    with IK1_Link I135_first_floor
+    with IK1_Count 4
+    with IK1_Link I135_cellar
     with KD_Count 1
-    with name 'cellar' 'rooms//p' 
-    with description BC_199
-    with list_together BC_200
-    with plural BC_201
-    with article BC_202
+    with name 'tower' 'rooms//p' 
+    with description BC_200
+    with list_together BC_201
+    with plural BC_202
+    with article BC_203
 ;
 
-Object I135_first_floor ""
+Object I135_cellar ""
     class K1_room
-    with short_name BC_203
+    with short_name BC_204
+    has proper
+    with vector 0
+    with room_index -1
+    has mark_as_room
+    with IK1_Count 5
+    with IK1_Link I136_first_floor
+    with KD_Count 1
+    with name 'cellar' 'rooms//p' 
+    with description BC_205
+    with list_together BC_206
+    with plural BC_207
+    with article BC_208
+;
+
+Object I136_first_floor ""
+    class K1_room
+    with short_name BC_209
     has proper
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 6
-    with IK1_Link I136_top_of_tower
+    with IK1_Link I137_top_of_tower
     with KD_Count 1
     with name 'first' 'floor' 'rooms//p' 
-    with description BC_204
-    with list_together BC_205
-    with plural BC_206
-    with article BC_207
+    with description BC_210
+    with list_together BC_211
+    with plural BC_212
+    with article BC_213
 ;
 
-Object I136_top_of_tower ""
+Object I137_top_of_tower ""
     class K1_room
-    with short_name BC_208
+    with short_name BC_214
     has proper
     with vector 0
     with room_index -1
@@ -11271,10 +11291,10 @@ Object I136_top_of_tower ""
     with IK1_Link nothing
     with KD_Count 1
     with name 'top' 'of' 'tower' 'rooms//p' 
-    with description BC_209
-    with list_together BC_210
-    with plural BC_211
-    with article BC_212
+    with description BC_215
+    with list_together BC_216
+    with plural BC_217
+    with article BC_218
 ;
 
 Constant I71_english_language = 1;
@@ -11328,12 +11348,12 @@ Constant I123_masculine_gender = 2;
 Constant I124_feminine_gender = 3;
 Array Global_Vars -->
   (false) ! 7 darkness witnessed
-  (BC_213) ! 25 command prompt
+  (BC_219) ! 25 command prompt
   (I71_english_language) ! 29 language of play
-  (BC_214) ! 32 story author
-  (BC_215) ! 33 story headline
-  (BC_216) ! 34 story genre
-  (BC_217) ! 35 story description
+  (BC_220) ! 32 story author
+  (BC_221) ! 33 story headline
+  (BC_222) ! 34 story genre
+  (BC_223) ! 35 story description
   (1) ! 36 release number
   (0) ! 37 story creation year
   (0) ! 45 locale paragraph count
@@ -11348,14 +11368,14 @@ Array Global_Vars -->
 
 
 Array T0_final_question_options table  tab_0_0 tab_0_1 tab_0_2 tab_0_3 tab_0_4;
-Array tab_0_0 table $0664 0 (BC_218) (BC_219) (BC_220) (BC_221) (BC_222) ;
+Array tab_0_0 table $0664 0 (BC_224) (BC_225) (BC_226) (BC_227) (BC_228) ;
 Array tab_0_1 table $0465 1 (0) (0) (1) (0) (0) ;
 Array tab_0_2 table $2066 2 (Consult_Grammar_94) (Consult_Grammar_95) (Consult_Grammar_96) (Consult_Grammar_97) (Consult_Grammar_98) ;
 Array tab_0_3 table $0067 3 (IMMEDIATELY_RESTART_VM_R) (IMMEDIATELY_RESTORE_SAVED_R) ( TABLE_NOVALUE) (IMMEDIATELY_QUIT_R) (IMMEDIATELY_UNDO_R) ;
 Array tab_0_4 table $0068 4 ( TABLE_NOVALUE) ( TABLE_NOVALUE) (V27_amusing_a_victorious_pla) ( TABLE_NOVALUE) ( TABLE_NOVALUE) ;
 Array T1_locale_priorities table  tab_1_0 tab_1_1;
-Array tab_1_0 table $0869 NULL ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
-Array tab_1_1 table $446a 5 ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_0 table $0869 NULL ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_1 table $446a 5 ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
 Array TB_Blanks -> 
   ! For table T0_final_question_options
   $00  ! Column 0
@@ -11365,7 +11385,7 @@ Array TB_Blanks ->
   $1b  ! Column 4
   
   ! For table T1_locale_priorities
-  $3f  ! Column 1
+  $7f  ! Column 1
   
   ! End of table
   NULL NULL;
@@ -12578,11 +12598,11 @@ Array ActionHappened --> 0 0 0 0 0;
 ! No specific request
 ! Instead of crossing bridge:
 [ R_804 ;
-    if ((((action ==##A78_crossing) &&  (actor==player) && ((noun == I132_bridge) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##A78_crossing) &&  (actor==player) && ((noun == I133_bridge) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_804, 804);
     ! [2: move the player to tower]
-    MoveObject(player, I133_tower, 0, false);
+    MoveObject(player, I134_tower, 0, false);
     RulebookFails(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_804, 804, 'action');
     rfalse;
@@ -12594,7 +12614,7 @@ Array ActionHappened --> 0 0 0 0 0;
     self = noun;
     if (debug_rules) DB_Rule(R_803, 803);
     ! [2: if the player is in deep crevice]
-    if (((I131_deep_crevice == ContainerOf(player))))
+    if (((I132_deep_crevice == ContainerOf(player))))
     {! [3: say ~A bridge was built in front of you!~]
         say__p=1;! [4: ~A bridge was built in front of you!~]
         ParaContent(); print "A bridge was built in front of you!"; new_line; .L_Say4; .L_SayX4;}
@@ -12612,7 +12632,7 @@ Array ActionHappened --> 0 0 0 0 0;
 ! No specific request
 ! after taking spell book:
 [ R_802 ;
-    if ((((action ==##Take) &&  (actor==player) && ((noun == I130_spell_book) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##Take) &&  (actor==player) && ((noun == I131_spell_book) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_802, 802);
     ! [2: say ~You slowly remove the spell book as vines and bark slowly break and fall to the floor.~]
@@ -28309,7 +28329,7 @@ Array FWMatrix --> NUM_ROOMS*NUM_ROOMS;
 ! Relations.i6t: Relation Route-Finding
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant MAX_ROUTE_LENGTH = 25 + 32;
+Constant MAX_ROUTE_LENGTH = 26 + 32;
 
 [ RelationRouteTo relation from to count  handler;
 	if (count) {
@@ -49215,33 +49235,35 @@ Verb 'pathus'
 
 
 
-Constant TX_PS_51 = ">";
-Constant TX_PS_42 = "A mystic looking leather bound hand sized spell book, you slowly open it and find a word written inside of the book. It says PATHUS?";
+Constant TX_PS_53 = ">";
+Constant TX_PS_44 = "A mystic looking leather bound hand sized spell book, you slowly open it and find a word written inside of the book. It says PATHUS?";
 Constant TX_PS_3 = "An Interactive Fiction";
 Constant TX_PS_32 = "As good-looking as ever.";
-Constant TX_PS_45 = "Bridge";
-Constant TX_PS_48 = "Cellar";
+Constant TX_PS_36 = "As you head towards the entrance of the town you see your teacher Zyliath. He has taught you everything you know about magic and fighting.";
+Constant TX_PS_47 = "Bridge";
+Constant TX_PS_50 = "Cellar";
 Constant TX_PS_4 = "Cole Hulick";
-Constant TX_PS_43 = "Deep Crevice";
-Constant TX_PS_52 = "Fiction";
-Constant TX_PS_49 = "First floor";
-Constant TX_PS_37 = "Forest";
-Constant TX_PS_39 = "Large oak tree";
-Constant TX_PS_34 = "Magical staff";
-Constant TX_PS_56 = "QUIT";
-Constant TX_PS_53 = "RESTART";
-Constant TX_PS_54 = "RESTORE a saved game";
+Constant TX_PS_45 = "Deep Crevice";
+Constant TX_PS_54 = "Fiction";
+Constant TX_PS_51 = "First floor";
+Constant TX_PS_39 = "Forest";
+Constant TX_PS_41 = "Large oak tree";
+Constant TX_PS_58 = "QUIT";
+Constant TX_PS_55 = "RESTART";
+Constant TX_PS_56 = "RESTORE a saved game";
 Constant TX_PS_2 = "Revenge ";
-Constant TX_PS_41 = "Spell book";
-Constant TX_PS_44 = "Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found.";
-Constant TX_PS_50 = "Top of tower";
-Constant TX_PS_47 = "Tower";
-Constant TX_PS_35 = "Town";
-Constant TX_PS_36 = "Trail";
-Constant TX_PS_57 = "UNDO the last command";
-Constant TX_PS_40 = "You look more closely and find a mystic looking leather bound hand sized spell book placed on the outside of the tree.";
-Constant TX_PS_38 = "You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall the whole atmosphere changes. The ground was spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest.";
+Constant TX_PS_43 = "Spell book";
+Constant TX_PS_46 = "Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found.";
+Constant TX_PS_52 = "Top of tower";
+Constant TX_PS_49 = "Tower";
+Constant TX_PS_34 = "Town";
+Constant TX_PS_38 = "Trail";
+Constant TX_PS_59 = "UNDO the last command";
+Constant TX_PS_42 = "You look more closely and find a mystic looking leather bound hand sized spell book placed on the outside of the tree.";
+Constant TX_PS_40 = "You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall the whole atmosphere changes. The ground was spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest.";
 Constant TX_PS_33 = "Yourself";
+Constant TX_PS_35 = "Zyliath";
+Constant TX_PS_37 = "Zyliath's Magical staff";
 Constant TX_PS_9 = "animals";
 Constant TX_PS_14 = "backdrops";
 Constant TX_PS_11 = "containers";
@@ -49259,13 +49281,13 @@ Constant TX_PS_30 = "outside";
 Constant TX_PS_6 = "people";
 Constant TX_PS_13 = "player's holdalls";
 Constant TX_PS_16 = "regions";
-Constant TX_PS_55 = "see some suggestions for AMUSING things to do";
+Constant TX_PS_57 = "see some suggestions for AMUSING things to do";
 Constant TX_PS_22 = "south";
 Constant TX_PS_23 = "southeast";
 Constant TX_PS_24 = "southwest";
 Constant TX_PS_5 = "supporters";
 Constant TX_PS_19 = "the";
-Constant TX_PS_46 = "tower";
+Constant TX_PS_48 = "tower";
 Constant TX_PS_27 = "up";
 Constant TX_PS_12 = "vehicles";
 Constant TX_PS_26 = "west";
@@ -56578,76 +56600,82 @@ Array BC_149 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_150 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_151 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_152 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_153 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_154 --> PACKED_TEXT_STORAGE TX_PS_35;
+Array BC_153 --> PACKED_TEXT_STORAGE TX_PS_35;
+Array BC_154 --> PACKED_TEXT_STORAGE TX_PS_36;
 Array BC_155 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_156 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_157 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_157 --> PACKED_TEXT_STORAGE TX_PS_6;
 Array BC_158 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_159 --> PACKED_TEXT_STORAGE TX_PS_36;
+Array BC_159 --> PACKED_TEXT_STORAGE TX_PS_37;
 Array BC_160 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_161 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_162 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_163 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_164 --> PACKED_TEXT_STORAGE TX_PS_37;
+Array BC_164 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_165 --> PACKED_TEXT_STORAGE TX_PS_38;
 Array BC_166 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_167 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_168 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_169 --> PACKED_TEXT_STORAGE TX_PS_39;
-Array BC_170 --> PACKED_TEXT_STORAGE TX_PS_40;
-Array BC_171 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_169 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_170 --> PACKED_TEXT_STORAGE TX_PS_39;
+Array BC_171 --> PACKED_TEXT_STORAGE TX_PS_40;
 Array BC_172 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_173 --> PACKED_TEXT_STORAGE TX_PS_11;
+Array BC_173 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_174 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_175 --> PACKED_TEXT_STORAGE TX_PS_41;
 Array BC_176 --> PACKED_TEXT_STORAGE TX_PS_42;
 Array BC_177 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_178 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_179 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_179 --> PACKED_TEXT_STORAGE TX_PS_11;
 Array BC_180 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_181 --> PACKED_TEXT_STORAGE TX_PS_43;
 Array BC_182 --> PACKED_TEXT_STORAGE TX_PS_44;
 Array BC_183 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_184 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_185 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_186 --> PACKED_TEXT_STORAGE TX_PS_45;
-Array BC_187 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_188 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_186 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_187 --> PACKED_TEXT_STORAGE TX_PS_45;
+Array BC_188 --> PACKED_TEXT_STORAGE TX_PS_46;
 Array BC_189 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_190 --> PACKED_TEXT_STORAGE TX_PS_10;
+Array BC_190 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_191 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_192 --> PACKED_TEXT_STORAGE TX_PS_46;
-Array BC_193 --> PACKED_TEXT_STORAGE TX_PS_47;
+Array BC_192 --> PACKED_TEXT_STORAGE TX_PS_47;
+Array BC_193 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_194 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_195 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_196 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_196 --> PACKED_TEXT_STORAGE TX_PS_10;
 Array BC_197 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_198 --> PACKED_TEXT_STORAGE TX_PS_48;
-Array BC_199 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_199 --> PACKED_TEXT_STORAGE TX_PS_49;
 Array BC_200 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_201 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_202 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_203 --> PACKED_TEXT_STORAGE TX_PS_49;
-Array BC_204 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_203 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_204 --> PACKED_TEXT_STORAGE TX_PS_50;
 Array BC_205 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_206 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_207 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_208 --> PACKED_TEXT_STORAGE TX_PS_50;
-Array BC_209 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_208 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_209 --> PACKED_TEXT_STORAGE TX_PS_51;
 Array BC_210 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_211 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_212 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_213 --> PACKED_TEXT_STORAGE TX_PS_51;
-Array BC_214 --> PACKED_TEXT_STORAGE TX_PS_4;
-Array BC_215 --> PACKED_TEXT_STORAGE TX_PS_3;
-Array BC_216 --> PACKED_TEXT_STORAGE TX_PS_52;
+Array BC_213 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_214 --> PACKED_TEXT_STORAGE TX_PS_52;
+Array BC_215 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_216 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_217 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_218 --> PACKED_TEXT_STORAGE TX_PS_53;
-Array BC_219 --> PACKED_TEXT_STORAGE TX_PS_54;
-Array BC_220 --> PACKED_TEXT_STORAGE TX_PS_55;
-Array BC_221 --> PACKED_TEXT_STORAGE TX_PS_56;
-Array BC_222 --> PACKED_TEXT_STORAGE TX_PS_57;
+Array BC_218 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_219 --> PACKED_TEXT_STORAGE TX_PS_53;
+Array BC_220 --> PACKED_TEXT_STORAGE TX_PS_4;
+Array BC_221 --> PACKED_TEXT_STORAGE TX_PS_3;
+Array BC_222 --> PACKED_TEXT_STORAGE TX_PS_54;
+Array BC_223 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_224 --> PACKED_TEXT_STORAGE TX_PS_55;
+Array BC_225 --> PACKED_TEXT_STORAGE TX_PS_56;
+Array BC_226 --> PACKED_TEXT_STORAGE TX_PS_57;
+Array BC_227 --> PACKED_TEXT_STORAGE TX_PS_58;
+Array BC_228 --> PACKED_TEXT_STORAGE TX_PS_59;
 
 
 

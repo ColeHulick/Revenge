@@ -11,9 +11,10 @@ Welcome to Revenge! A ravenous dragon has reigned terror on your small town for 
 
 Revenge 
 An Interactive Fiction by Cole Hulick
-Release 1 / Serial number 170214 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 170216 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Town
+As you head towards the entrance of the town you see your teacher Zyliath. He has taught you everything you know about magic and fighting.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -283,7 +284,95 @@ You reach the edge of the forest as you stand in front of tightly knit trees. Yo
             <child nodeId="node-1035"></child>
             <child nodeId="node-1057"></child>
             <child nodeId="node-1045"></child>
+            <child nodeId="node-1169"></child>
         </children>
+    </item>
+    <item nodeId="node-1169">
+        <command xml:space="preserve">x tree</command>
+        <result xml:space="preserve">You look more closely and find a mystic looking leather bound hand sized spell book placed on the outside of the tree.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1170"></child>
+            <child nodeId="node-1515"></child>
+        </children>
+    </item>
+    <item nodeId="node-1515">
+        <command xml:space="preserve">take spell book</command>
+        <result xml:space="preserve">You slowly remove the spell book as vines and bark slowly break and fall to the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1516"></child>
+        </children>
+    </item>
+    <item nodeId="node-1516">
+        <command xml:space="preserve">x spell book</command>
+        <result xml:space="preserve">You see nothing special about Spell book.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1517"></child>
+        </children>
+    </item>
+    <item nodeId="node-1517">
+        <command xml:space="preserve">look sPELL BOOK</command>
+        <result xml:space="preserve">You see nothing special about Spell book.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1518"></child>
+        </children>
+    </item>
+    <item nodeId="node-1518">
+        <command xml:space="preserve">slepp book</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1519"></child>
+        </children>
+    </item>
+    <item nodeId="node-1519">
+        <command xml:space="preserve">spell book</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1520"></child>
+        </children>
+    </item>
+    <item nodeId="node-1520">
+        <command xml:space="preserve">x spell book</command>
+        <result xml:space="preserve">You see nothing special about Spell book.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1170">
+        <command xml:space="preserve">take book</command>
+        <result xml:space="preserve">You slowly remove the spell book as vines and bark slowly break and fall to the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1171"></child>
+        </children>
+    </item>
+    <item nodeId="node-1171">
+        <command xml:space="preserve">x book</command>
+        <result xml:space="preserve">You see nothing special about Spell book.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1172"></child>
+        </children>
+    </item>
+    <item nodeId="node-1172">
+        <command xml:space="preserve">x spell book</command>
+        <result xml:space="preserve">You see nothing special about Spell book.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1045">
         <command xml:space="preserve">x oak tree</command>
@@ -369,7 +458,24 @@ Tower
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1069"></child>
+            <child nodeId="node-1176"></child>
         </children>
+    </item>
+    <item nodeId="node-1176">
+        <command xml:space="preserve">x spell book</command>
+        <result xml:space="preserve">You see nothing special about Spell book.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1177"></child>
+        </children>
+    </item>
+    <item nodeId="node-1177">
+        <command xml:space="preserve">spell book</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1069">
         <command xml:space="preserve">w</command>
@@ -387,8 +493,6 @@ Trail
 Deep Crevice
 Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found.
 
-You can see Bridge here.
-
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1098"></child>
@@ -399,9 +503,7 @@ You can see Bridge here.
     </item>
     <item nodeId="node-1125">
         <command xml:space="preserve">n</command>
-        <result xml:space="preserve">
-tower
-You can see Bridge here.
+        <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -464,7 +566,8 @@ You can see Bridge here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1137"></child>
+        <children><child nodeId="node-1530"></child>
+            <child nodeId="node-1137"></child>
         </children>
     </item>
     <item nodeId="node-1137">
@@ -488,6 +591,22 @@ You can see Bridge here.
     <item nodeId="node-1139">
         <command xml:space="preserve">cross bridge</command>
         <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1530">
+        <command xml:space="preserve">bridge</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1531"></child>
+        </children>
+    </item>
+    <item nodeId="node-1531">
+        <command xml:space="preserve">x bridge</command>
+        <result xml:space="preserve">You see nothing special about Bridge.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

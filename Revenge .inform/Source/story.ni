@@ -12,7 +12,10 @@ To say exit list:
 
 When play begins: say "Welcome to Revenge! A ravenous dragon has reigned terror on your small town for centuries. Your name is James, you have been training and learning magic since you were born. Your teachers name is Thor and its finally your time to avenge everyone that has lost their homes and life's from this dragon!"
 
-Magical staff is a thing.
+Zyliath is a person. Zyliath is in Town. "As you head towards the entrance of the town you see your teacher Zyliath. He has taught you everything you know about magic and fighting."
+
+
+Zyliath's Magical staff is a thing. 
 
 Town is a room. 
 
@@ -27,6 +30,7 @@ Spell book is a thing in Large Oak tree. Spell book is undescribed. "A mystic lo
 after taking spell book: say "You slowly remove the spell book as vines and bark slowly break and fall to the floor."
 
 Bridging is an action applying to nothing.  Understand "PATHUS" or "say PATHUS" as bridging.
+
 
 Instead of bridging:
 	if the player is in Deep Crevice, say "A bridge was built in front of you!";
