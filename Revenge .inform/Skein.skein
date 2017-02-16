@@ -7,14 +7,14 @@
         <result xml:space="preserve">
 
 
-Welcome to Revenge! A ravenous dragon has reigned terror on your small town for centuries. Your name is James, you have been training and learning magic since you were born. Your teachers name is Thor and its finally your time to avenge everyone that has lost their homes and life's from this dragon!
+Welcome to Revenge! A ravenous dragon has reigned terror on your small town Draycott, for centuries. Your name is James, you have been training and learning magic since you were born. Its finally your time to avenge everyone that has lost their homes and life's from this dragon!
 
 Revenge 
 An Interactive Fiction by Cole Hulick
 Release 1 / Serial number 170216 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Draycott
-As you head towards the entrance of the town you see your teacher Zyliath. He has taught you everything you know about magic and fighting.
+As you head towards the entrance of the town you see your teacher Zyliath. He has taught you everything you know about magic and fighting, you should go talk to him before you embark on your journey.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -22,7 +22,24 @@ As you head towards the entrance of the town you see your teacher Zyliath. He ha
             <child nodeId="node-1007"></child>
             <child nodeId="node-1005"></child>
             <child nodeId="node-1003"></child>
+            <child nodeId="node-1533"></child>
         </children>
+    </item>
+    <item nodeId="node-1533">
+        <command xml:space="preserve">x Zyliath</command>
+        <result xml:space="preserve">You see nothing special about Zyliath.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1534"></child>
+        </children>
+    </item>
+    <item nodeId="node-1534">
+        <command xml:space="preserve">talk to zyliath</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1003">
         <command xml:space="preserve">s</command>
@@ -62,10 +79,12 @@ Forest
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Trail
+Your jounrey begins here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1034"></child>
+            <child nodeId="node-1558"></child>
             <child nodeId="node-1024"></child>
             <child nodeId="node-1008"></child>
         </children>
@@ -269,6 +288,33 @@ Trail
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-1558">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Deep Crevice
+Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1559"></child>
+        </children>
+    </item>
+    <item nodeId="node-1559">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1560"></child>
+        </children>
+    </item>
+    <item nodeId="node-1560">
+        <command xml:space="preserve">cross bridge</command>
+        <result xml:space="preserve">tower
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1034">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
@@ -280,7 +326,9 @@ You reach the edge of the forest as you stand in front of tightly knit trees. Yo
         <children><child nodeId="node-1051"></child>
             <child nodeId="node-1054"></child>
             <child nodeId="node-1042"></child>
+            <child nodeId="node-1537"></child>
             <child nodeId="node-1068"></child>
+            <child nodeId="node-1555"></child>
             <child nodeId="node-1035"></child>
             <child nodeId="node-1057"></child>
             <child nodeId="node-1045"></child>
@@ -451,6 +499,22 @@ Tower
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-1555">
+        <command xml:space="preserve">take spell book</command>
+        <result xml:space="preserve">You slowly remove the spell book as vines and bark slowly break and fall to the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1556"></child>
+        </children>
+    </item>
+    <item nodeId="node-1556">
+        <command xml:space="preserve">x spell book</command>
+        <result xml:space="preserve">A mystic looking leather bound hand sized spell book, you slowly open it and find a word written inside of the book. It says PATHUS?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1068">
         <command xml:space="preserve">take book</command>
         <result xml:space="preserve">You slowly remove the spell book as vines and bark slowly break and fall to the floor.
@@ -481,6 +545,7 @@ Tower
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Trail
+Your jounrey begins here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -672,16 +737,92 @@ You can see Bridge here.
     </item>
     <item nodeId="node-1099">
         <command xml:space="preserve">cross bridge</command>
-        <result xml:space="preserve">You can't see any such thing.
+        <result xml:space="preserve">tower
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1100"></child>
+            <child nodeId="node-1552"></child>
         </children>
+    </item>
+    <item nodeId="node-1552">
+        <command xml:space="preserve">x spell book</command>
+        <result xml:space="preserve">You see nothing special about Spell book.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1100">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1537">
+        <command xml:space="preserve">pathus</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1538"></child>
+        </children>
+    </item>
+    <item nodeId="node-1538">
+        <command xml:space="preserve">PATHUS</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1539"></child>
+        </children>
+    </item>
+    <item nodeId="node-1539">
+        <command xml:space="preserve">take book</command>
+        <result xml:space="preserve">You slowly remove the spell book as vines and bark slowly break and fall to the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1540"></child>
+        </children>
+    </item>
+    <item nodeId="node-1540">
+        <command xml:space="preserve">PATHUS</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1541"></child>
+        </children>
+    </item>
+    <item nodeId="node-1541">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Trail
+Your jounrey begins here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1542"></child>
+        </children>
+    </item>
+    <item nodeId="node-1542">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Deep Crevice
+Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1543"></child>
+        </children>
+    </item>
+    <item nodeId="node-1543">
+        <command xml:space="preserve">PATHUS</command>
+        <result xml:space="preserve">A bridge was built in front of you!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1544"></child>
+        </children>
+    </item>
+    <item nodeId="node-1544">
+        <command xml:space="preserve">cross bridge</command>
+        <result xml:space="preserve">tower
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
