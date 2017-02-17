@@ -14,17 +14,27 @@ An Interactive Fiction by Cole Hulick
 Release 1 / Serial number 170216 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Draycott
-As you head towards the entrance of the town you see your teacher Zyliath. He has taught you everything you know about magic and fighting, you should go talk to him before you embark on your journey.
+Welcome to the town of Draycott, this town is in poverty, their crops are burnt to a crisp and their livestalk is at an all time low.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1027"></child>
+        <children><child nodeId="node-1598"></child>
+            <child nodeId="node-1027"></child>
             <child nodeId="node-1565"></child>
             <child nodeId="node-1007"></child>
             <child nodeId="node-1005"></child>
             <child nodeId="node-1003"></child>
+            <child nodeId="node-1604"></child>
             <child nodeId="node-1533"></child>
+            <child nodeId="node-1597"></child>
         </children>
+    </item>
+    <item nodeId="node-1597">
+        <command xml:space="preserve">x zyliath</command>
+        <result xml:space="preserve">You see nothing special about Zyliath.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1533">
         <command xml:space="preserve">x Zyliath</command>
@@ -38,6 +48,13 @@ As you head towards the entrance of the town you see your teacher Zyliath. He ha
     <item nodeId="node-1534">
         <command xml:space="preserve">talk to zyliath</command>
         <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1604">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">There are none at all available!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -741,12 +758,20 @@ You can see Bridge here.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1100"></child>
+            <child nodeId="node-1596"></child>
             <child nodeId="node-1552"></child>
         </children>
     </item>
     <item nodeId="node-1552">
         <command xml:space="preserve">x spell book</command>
         <result xml:space="preserve">You see nothing special about Spell book.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1596">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -933,6 +958,22 @@ Hi! how are you...
     <item nodeId="node-1027">
         <command xml:space="preserve">N</command>
         <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1598">
+        <command xml:space="preserve">Hi Zyliath</command>
+        <result xml:space="preserve">Hi! how are you... 
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1599"></child>
+        </children>
+    </item>
+    <item nodeId="node-1599">
+        <command xml:space="preserve">inventory</command>
+        <result xml:space="preserve">You are carrying:
+  Zyliath's Magical staff
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

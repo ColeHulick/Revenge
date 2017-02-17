@@ -11048,6 +11048,7 @@ Object selfobj ""
 Object I126_draycott ""
     class K1_room
     with short_name BC_148
+    with description BC_149
     has proper
     with vector 0
     with room_index -1
@@ -11056,7 +11057,6 @@ Object I126_draycott ""
     with IK1_Link I128_trail
     with KD_Count 1
     with name 'draycott' 'rooms//p' 
-    with description BC_149
     with list_together BC_150
     with plural BC_151
     with article BC_152
@@ -11067,6 +11067,7 @@ Object -> I125_zyliath ""
     with short_name BC_153
     with initial BC_154
     has proper
+    has concealed
     with vector 0
     has mark_as_thing
     with IK2_Count 1
@@ -11087,6 +11088,7 @@ Object -> I125_zyliath ""
 Object I127_zyliath_s_magical_staff ""
     class K2_thing
     with short_name BC_159
+    with initial BC_160
     has proper
     with vector 0
     has mark_as_thing
@@ -11095,8 +11097,7 @@ Object I127_zyliath_s_magical_staff ""
     with KD_Count 2
     with name 'zyliath^s' 'magical' 'staff' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_160
-    with initial BC_161
+    with description BC_161
     with list_together BC_162
     with plural BC_163
     with article BC_164
@@ -11105,7 +11106,6 @@ Object I127_zyliath_s_magical_staff ""
 Object I128_trail ""
     class K1_room
     with short_name BC_165
-    with description BC_166
     has proper
     with vector 0
     with room_index -1
@@ -11114,6 +11114,7 @@ Object I128_trail ""
     with IK1_Link I129_forest
     with KD_Count 1
     with name 'trail' 'rooms//p' 
+    with description BC_166
     with list_together BC_167
     with plural BC_168
     with article BC_169
@@ -12606,41 +12607,43 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! Instead of crossing bridge when player has spell book:
-[ R_805 ;
+[ R_806 ;
     if ((((action ==##A79_crossing) &&  (actor==player) && ((noun == I133_bridge) && (true)) && (self=actor,true) && (((player == OwnerOf(I131_spell_book))))))) { ! Runs only when pattern matches
     self = noun;
-    if (debug_rules) DB_Rule(R_805, 805);
+    if (debug_rules) DB_Rule(R_806, 806);
     ! [2: move the player to tower]
     MoveObject(player, I134_tower, 0, false);
     RulebookFails(); rtrue;
-    } else if (debug_rules > 1) DB_Rule(R_805, 805, 'action');
+    } else if (debug_rules > 1) DB_Rule(R_806, 806, 'action');
     rfalse;
 ];
 ! No specific request
 ! Instead of talking to Zyliath:
-[ R_802 ;
+[ R_803 ;
     if ((((action ==##A77_talking_to) &&  (actor==player) && ((noun == I125_zyliath) && (true))))) { ! Runs only when pattern matches
     self = noun;
-    if (debug_rules) DB_Rule(R_802, 802);
-    ! [2: say ~Hi! how are you...~]
-    say__p=1;! [3: ~Hi! how are you...~]
-    ParaContent(); print "Hi! how are you..."; new_line; .L_Say4; .L_SayX4;RulebookFails(); rtrue;
-    } else if (debug_rules > 1) DB_Rule(R_802, 802, 'action');
+    if (debug_rules) DB_Rule(R_803, 803);
+    ! [2: say ~Hello James, ohyeah I almost forgot here take my staff, this will deffinitly come in handy. With my old body I now spend my days reading and gardening its no use to me anymore.~]
+    say__p=1;! [3: ~Hello James, ohyeah I almost forgot here take my staff, this will deffinitly come in handy. With my old body I now spend my days reading and gardening its no use to me anymore.~]
+    ParaContent(); print "Hello James, ohyeah I almost forgot here take my staff, this will deffinitly come in handy. With my old body I now spend my days reading and gardening its no use to me anymore."; new_line; .L_Say4; .L_SayX4;! [4: move zyliath's magical staff to player]
+    MoveObject(I127_zyliath_s_magical_staff, player, 0, false);
+    RulebookFails(); rtrue;
+    } else if (debug_rules > 1) DB_Rule(R_803, 803, 'action');
     rfalse;
 ];
 ! No specific request
 ! Instead of bridging:
-[ R_804 ;
+[ R_805 ;
     if ((((action ==##A78_bridging) &&  (actor==player)))) { ! Runs only when pattern matches
     self = noun;
-    if (debug_rules) DB_Rule(R_804, 804);
+    if (debug_rules) DB_Rule(R_805, 805);
     ! [2: if the player is in deep crevice]
     if (((I132_deep_crevice == ContainerOf(player))))
     {! [3: say ~A bridge was built in front of you!~]
         say__p=1;! [4: ~A bridge was built in front of you!~]
         ParaContent(); print "A bridge was built in front of you!"; new_line; .L_Say5; .L_SayX5;}
         RulebookFails(); rtrue;
-        } else if (debug_rules > 1) DB_Rule(R_804, 804, 'action');
+        } else if (debug_rules > 1) DB_Rule(R_805, 805, 'action');
         rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
@@ -12652,14 +12655,14 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! ----------------------------------------------------------------------------------------------------
 ! No specific request
 ! after taking spell book:
-[ R_803 ;
+[ R_804 ;
     if ((((action ==##Take) &&  (actor==player) && ((noun == I131_spell_book) && (true))))) { ! Runs only when pattern matches
     self = noun;
-    if (debug_rules) DB_Rule(R_803, 803);
+    if (debug_rules) DB_Rule(R_804, 804);
     ! [2: say ~You slowly remove the spell book as vines and bark slowly break and fall to the floor.~]
     say__p=1;! [3: ~You slowly remove the spell book as vines and bark slowly break and fall to the floor.~]
     ParaContent(); print "You slowly remove the spell book as vines and bark slowly break and fall to the floor."; new_line; .L_Say6; .L_SayX6;RulebookSucceeds(); rtrue;
-    } else if (debug_rules > 1) DB_Rule(R_803, 803, 'action');
+    } else if (debug_rules > 1) DB_Rule(R_804, 804, 'action');
     rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
@@ -12788,15 +12791,17 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! ----------------------------------------------------------------------------------------------------
 ! Rules in rulebook: for Deciding whether all includes (B87_for_deciding_whether_all)
 ! ----------------------------------------------------------------------------------------------------
-! Rule 1/5 ! Rule for deciding whether all includes a person while dropping or throwing or inserting or putting ( this is the exclude people from drop all rule ):
+! Rule 1/6 ! Rule for deciding whether all includes a person while dropping or throwing or inserting or putting ( this is the exclude people from drop all rule ):
 !   >>> III - When/while requirement >>>
-! Rule 2/5 ! Rule for deciding whether all includes scenery while taking or taking off or removing ( this is the exclude scenery from take all rule ):
+! Rule 2/6 ! Rule for deciding whether all includes scenery while taking or taking off or removing ( this is the exclude scenery from take all rule ):
 !   >>> III.1 - Object To Which Rule Applies >>>
-! Rule 3/5 ! Rule for deciding whether all includes things enclosed by the person reaching while taking or taking off or removing ( this is the exclude indirect possessions from take all rule ):
+! Rule 3/6 ! Rule for deciding whether all includes things enclosed by the person reaching while taking or taking off or removing ( this is the exclude indirect possessions from take all rule ):
 !   >>> III.1 - Object To Which Rule Applies >>>
-! Rule 4/5 ! Rule for deciding whether all includes fixed in place things while taking or taking off or removing ( this is the exclude fixed in place things from take all rule ):
+! Rule 4/6 ! Rule for deciding whether all includes fixed in place things while taking or taking off or removing ( this is the exclude fixed in place things from take all rule ):
 !   >>> III.1 - Object To Which Rule Applies >>>
-! Rule 5/5 ! Rule for deciding whether all includes people while taking or taking off or removing ( this is the exclude people from take all rule ):
+! Rule 5/6 ! Rule for deciding whether all includes people while taking or taking off or removing ( this is the exclude people from take all rule ):
+!   >>> I - Number of aspects constrained >>>
+! Rule 6/6 ! Rule for deciding whether all includes something:
 ! ----------------------------------------------------------------------------------------------------
 ! From the Standard Rules
 ! No specific request
@@ -12871,6 +12876,18 @@ Array ActionHappened --> 0 0 0 0 0 0;
     RulebookSucceeds(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_71, 71, 'context');
     } else if (debug_rules > 1) DB_Rule(R_71, 71, 'action');
+    rfalse;
+];
+! No specific request
+! Rule for deciding whether all includes something:
+[ R_802 ;
+    if (((((parameter_value ofclass K2_thing))))) { ! Runs only when pattern matches
+    if (debug_rules) DB_Rule(R_802, 802);
+    ! [2: it does not]
+    RulebookFails(22, RBNO_11); rtrue;
+
+    RulebookSucceeds(); rtrue;
+    } else if (debug_rules > 1) DB_Rule(R_802, 802, 'action');
     rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
@@ -21962,10 +21979,10 @@ Constant B19_before = EMPTY_RULEBOOK;
     ;
     original_deadflag = deadflag;
     if (action == ##A79_crossing) {
-        rv = R_805();
+        rv = R_806();
         if (rv) {
             if (rv == 2) return reason_the_action_failed;
-            return R_805;
+            return R_806;
         }
         latest_rule_result-->0 = 0;
     } else {
@@ -21974,10 +21991,10 @@ Constant B19_before = EMPTY_RULEBOOK;
     if (action == ##A77_talking_to) {
         if (original_deadflag ~= deadflag) return 0;
         if (say__p) RulebookParBreak(forbid_breaks);
-        rv = R_802();
+        rv = R_803();
         if (rv) {
             if (rv == 2) return reason_the_action_failed;
-            return R_802;
+            return R_803;
         }
         latest_rule_result-->0 = 0;
     } else {
@@ -21986,10 +22003,10 @@ Constant B19_before = EMPTY_RULEBOOK;
     if (action == ##A78_bridging) {
         if (original_deadflag ~= deadflag) return 0;
         if (say__p) RulebookParBreak(forbid_breaks);
-        rv = R_804();
+        rv = R_805();
         if (rv) {
             if (rv == 2) return reason_the_action_failed;
-            return R_804;
+            return R_805;
         }
         latest_rule_result-->0 = 0;
     } else {
@@ -22004,10 +22021,10 @@ Constant B22_carry_out = EMPTY_RULEBOOK;
     rv ! return value
     ;
     if (action == ##Take) {
-        rv = R_803();
+        rv = R_804();
         if (rv) {
             if (rv == 2) return reason_the_action_failed;
-            return R_803;
+            return R_804;
         }
         latest_rule_result-->0 = 0;
     } else {
@@ -22242,7 +22259,16 @@ Constant B86_before_deciding_whether_ = EMPTY_RULEBOOK;
         return R_71;
     }
     latest_rule_result-->0 = 0;
-    return 0; ! 5 rule(s)
+    if (original_deadflag ~= deadflag) return 0;
+    if (say__p) RulebookParBreak(forbid_breaks);
+    parameter_value = p;
+    rv = R_802();
+    if (rv) {
+        if (rv == 2) return reason_the_action_failed;
+        return R_802;
+    }
+    latest_rule_result-->0 = 0;
+    return 0; ! 6 rule(s)
 ];
 Constant B88_after_deciding_whether_a = EMPTY_RULEBOOK;
 Constant B89_before_clarifying_the_pa = EMPTY_RULEBOOK;
@@ -29886,10 +29912,11 @@ Array RulebookNames -->
         if (R == R_242) { print "Does the player mean taking off something worn"; rtrue; } ! rule 347
         if (R == R_799) { print "When play begins"; rtrue; } ! rule 348
         if (R == R_801) { print "When play begins"; rtrue; } ! rule 349
-        if (R == R_802) { print "Instead of talking to Zyliath"; rtrue; } ! rule 350
-        if (R == R_803) { print "after taking spell book"; rtrue; } ! rule 351
-        if (R == R_804) { print "Instead of bridging"; rtrue; } ! rule 352
-        if (R == R_805) { print "Instead of crossing bridge when player has spell book"; rtrue; } ! rule 353
+        if (R == R_802) { print "Rule for deciding whether all includes something"; rtrue; } ! rule 350
+        if (R == R_803) { print "Instead of talking to Zyliath"; rtrue; } ! rule 351
+        if (R == R_804) { print "after taking spell book"; rtrue; } ! rule 352
+        if (R == R_805) { print "Instead of bridging"; rtrue; } ! rule 353
+        if (R == R_806) { print "Instead of crossing bridge when player has spell book"; rtrue; } ! rule 354
 
 		print "(nameless rule at address ", R, ")";
 	}
@@ -49290,36 +49317,37 @@ Verb 'pathus'
 
 
 
-Constant TX_PS_54 = ">";
-Constant TX_PS_45 = "A mystic looking leather bound hand sized spell book, you slowly open it and find a word written inside of the book. It says PATHUS?";
+Constant TX_PS_55 = ">";
+Constant TX_PS_46 = "A mystic looking leather bound hand sized spell book, you slowly open it and find a word written inside of the book. It says PATHUS?";
 Constant TX_PS_3 = "An Interactive Fiction";
 Constant TX_PS_32 = "As good-looking as ever.";
-Constant TX_PS_36 = "As you head towards the entrance of the town you see your teacher Zyliath. He has taught you everything you know about magic and fighting, you should go talk to him before you embark on your journey.";
-Constant TX_PS_48 = "Bridge";
-Constant TX_PS_51 = "Cellar";
+Constant TX_PS_49 = "Bridge";
+Constant TX_PS_52 = "Cellar";
 Constant TX_PS_4 = "Cole Hulick";
-Constant TX_PS_46 = "Deep Crevice";
+Constant TX_PS_47 = "Deep Crevice";
 Constant TX_PS_34 = "Draycott";
-Constant TX_PS_55 = "Fiction";
-Constant TX_PS_52 = "First floor";
-Constant TX_PS_40 = "Forest";
-Constant TX_PS_42 = "Large oak tree";
-Constant TX_PS_59 = "QUIT";
-Constant TX_PS_56 = "RESTART";
-Constant TX_PS_57 = "RESTORE a saved game";
+Constant TX_PS_56 = "Fiction";
+Constant TX_PS_53 = "First floor";
+Constant TX_PS_41 = "Forest";
+Constant TX_PS_37 = "He is a tall old man, a blue robe surrounds him and drags to the floor. A large great white beard droops down to his chest, and a blue wizard hat sits on his head. In his right hand he holds a tall staff.";
+Constant TX_PS_43 = "Large oak tree";
+Constant TX_PS_60 = "QUIT";
+Constant TX_PS_57 = "RESTART";
+Constant TX_PS_58 = "RESTORE a saved game";
 Constant TX_PS_2 = "Revenge ";
-Constant TX_PS_44 = "Spell book";
-Constant TX_PS_47 = "Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found.";
-Constant TX_PS_53 = "Top of tower";
-Constant TX_PS_50 = "Tower";
-Constant TX_PS_38 = "Trail";
-Constant TX_PS_60 = "UNDO the last command";
-Constant TX_PS_43 = "You look more closely and find a mystic looking leather bound hand sized spell book placed on the outside of the tree.";
-Constant TX_PS_41 = "You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall the whole atmosphere changes. The ground was spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest.";
-Constant TX_PS_39 = "Your jounrey begins here.";
+Constant TX_PS_45 = "Spell book";
+Constant TX_PS_48 = "Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found.";
+Constant TX_PS_54 = "Top of tower";
+Constant TX_PS_51 = "Tower";
+Constant TX_PS_40 = "Trail";
+Constant TX_PS_61 = "UNDO the last command";
+Constant TX_PS_35 = "Welcome to the town of Draycott, this town is in poverty, their crops are burnt to a crisp and their livestalk is at an all time low.";
+Constant TX_PS_44 = "You look more closely and find a mystic looking leather bound hand sized spell book placed on the outside of the tree.";
+Constant TX_PS_39 = "You look more closley at the staff. The body of the staff is made from while pearly wood and is intwined with gold.";
+Constant TX_PS_42 = "You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall the whole atmosphere changes. The ground was spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest.";
 Constant TX_PS_33 = "Yourself";
-Constant TX_PS_35 = "Zyliath";
-Constant TX_PS_37 = "Zyliath's Magical staff";
+Constant TX_PS_36 = "Zyliath";
+Constant TX_PS_38 = "Zyliath's Magical staff";
 Constant TX_PS_9 = "animals";
 Constant TX_PS_14 = "backdrops";
 Constant TX_PS_11 = "containers";
@@ -49337,13 +49365,13 @@ Constant TX_PS_30 = "outside";
 Constant TX_PS_6 = "people";
 Constant TX_PS_13 = "player's holdalls";
 Constant TX_PS_16 = "regions";
-Constant TX_PS_58 = "see some suggestions for AMUSING things to do";
+Constant TX_PS_59 = "see some suggestions for AMUSING things to do";
 Constant TX_PS_22 = "south";
 Constant TX_PS_23 = "southeast";
 Constant TX_PS_24 = "southwest";
 Constant TX_PS_5 = "supporters";
 Constant TX_PS_19 = "the";
-Constant TX_PS_49 = "tower";
+Constant TX_PS_50 = "tower";
 Constant TX_PS_27 = "up";
 Constant TX_PS_12 = "vehicles";
 Constant TX_PS_26 = "west";
@@ -56652,86 +56680,86 @@ Array BC_145 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_146 --> PACKED_TEXT_STORAGE TX_PS_6;
 Array BC_147 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_148 --> PACKED_TEXT_STORAGE TX_PS_34;
-Array BC_149 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_149 --> PACKED_TEXT_STORAGE TX_PS_35;
 Array BC_150 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_151 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_152 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_153 --> PACKED_TEXT_STORAGE TX_PS_35;
-Array BC_154 --> PACKED_TEXT_STORAGE TX_PS_36;
+Array BC_153 --> PACKED_TEXT_STORAGE TX_PS_36;
+Array BC_154 --> PACKED_TEXT_STORAGE TX_PS_37;
 Array BC_155 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_156 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_157 --> PACKED_TEXT_STORAGE TX_PS_7;
 Array BC_158 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_159 --> PACKED_TEXT_STORAGE TX_PS_37;
-Array BC_160 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_159 --> PACKED_TEXT_STORAGE TX_PS_38;
+Array BC_160 --> PACKED_TEXT_STORAGE TX_PS_39;
 Array BC_161 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_162 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_163 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_164 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_165 --> PACKED_TEXT_STORAGE TX_PS_38;
-Array BC_166 --> PACKED_TEXT_STORAGE TX_PS_39;
+Array BC_165 --> PACKED_TEXT_STORAGE TX_PS_40;
+Array BC_166 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_167 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_168 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_169 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_170 --> PACKED_TEXT_STORAGE TX_PS_40;
-Array BC_171 --> PACKED_TEXT_STORAGE TX_PS_41;
+Array BC_170 --> PACKED_TEXT_STORAGE TX_PS_41;
+Array BC_171 --> PACKED_TEXT_STORAGE TX_PS_42;
 Array BC_172 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_173 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_174 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_175 --> PACKED_TEXT_STORAGE TX_PS_42;
-Array BC_176 --> PACKED_TEXT_STORAGE TX_PS_43;
+Array BC_175 --> PACKED_TEXT_STORAGE TX_PS_43;
+Array BC_176 --> PACKED_TEXT_STORAGE TX_PS_44;
 Array BC_177 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_178 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_179 --> PACKED_TEXT_STORAGE TX_PS_11;
 Array BC_180 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_181 --> PACKED_TEXT_STORAGE TX_PS_44;
-Array BC_182 --> PACKED_TEXT_STORAGE TX_PS_45;
+Array BC_181 --> PACKED_TEXT_STORAGE TX_PS_45;
+Array BC_182 --> PACKED_TEXT_STORAGE TX_PS_46;
 Array BC_183 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_184 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_185 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_186 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_187 --> PACKED_TEXT_STORAGE TX_PS_46;
-Array BC_188 --> PACKED_TEXT_STORAGE TX_PS_47;
+Array BC_187 --> PACKED_TEXT_STORAGE TX_PS_47;
+Array BC_188 --> PACKED_TEXT_STORAGE TX_PS_48;
 Array BC_189 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_190 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_191 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_192 --> PACKED_TEXT_STORAGE TX_PS_48;
+Array BC_192 --> PACKED_TEXT_STORAGE TX_PS_49;
 Array BC_193 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_194 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_195 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_196 --> PACKED_TEXT_STORAGE TX_PS_10;
 Array BC_197 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_198 --> PACKED_TEXT_STORAGE TX_PS_49;
-Array BC_199 --> PACKED_TEXT_STORAGE TX_PS_50;
+Array BC_198 --> PACKED_TEXT_STORAGE TX_PS_50;
+Array BC_199 --> PACKED_TEXT_STORAGE TX_PS_51;
 Array BC_200 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_201 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_202 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_203 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_204 --> PACKED_TEXT_STORAGE TX_PS_51;
+Array BC_204 --> PACKED_TEXT_STORAGE TX_PS_52;
 Array BC_205 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_206 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_207 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_208 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_209 --> PACKED_TEXT_STORAGE TX_PS_52;
+Array BC_209 --> PACKED_TEXT_STORAGE TX_PS_53;
 Array BC_210 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_211 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_212 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_213 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_214 --> PACKED_TEXT_STORAGE TX_PS_53;
+Array BC_214 --> PACKED_TEXT_STORAGE TX_PS_54;
 Array BC_215 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_216 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_217 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_218 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_219 --> PACKED_TEXT_STORAGE TX_PS_54;
+Array BC_219 --> PACKED_TEXT_STORAGE TX_PS_55;
 Array BC_220 --> PACKED_TEXT_STORAGE TX_PS_4;
 Array BC_221 --> PACKED_TEXT_STORAGE TX_PS_3;
-Array BC_222 --> PACKED_TEXT_STORAGE TX_PS_55;
+Array BC_222 --> PACKED_TEXT_STORAGE TX_PS_56;
 Array BC_223 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_224 --> PACKED_TEXT_STORAGE TX_PS_56;
-Array BC_225 --> PACKED_TEXT_STORAGE TX_PS_57;
-Array BC_226 --> PACKED_TEXT_STORAGE TX_PS_58;
-Array BC_227 --> PACKED_TEXT_STORAGE TX_PS_59;
-Array BC_228 --> PACKED_TEXT_STORAGE TX_PS_60;
+Array BC_224 --> PACKED_TEXT_STORAGE TX_PS_57;
+Array BC_225 --> PACKED_TEXT_STORAGE TX_PS_58;
+Array BC_226 --> PACKED_TEXT_STORAGE TX_PS_59;
+Array BC_227 --> PACKED_TEXT_STORAGE TX_PS_60;
+Array BC_228 --> PACKED_TEXT_STORAGE TX_PS_61;
 
 
 
