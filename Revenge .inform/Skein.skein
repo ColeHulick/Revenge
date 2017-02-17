@@ -14,24 +14,156 @@ An Interactive Fiction by Cole Hulick
 Release 1 / Serial number 170216 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Draycott
-Welcome to the town of Draycott, this town is in poverty, their crops are burnt to a crisp and their livestalk is at an all time low.
+Welcome to the town of Draycott. Crops are burnt to a crisp and livestalk is at an all time low. Houses are in ashes and there are no townspeople to be seen.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1598"></child>
             <child nodeId="node-1027"></child>
+            <child nodeId="node-1605"></child>
             <child nodeId="node-1565"></child>
             <child nodeId="node-1007"></child>
             <child nodeId="node-1005"></child>
             <child nodeId="node-1003"></child>
             <child nodeId="node-1604"></child>
             <child nodeId="node-1533"></child>
+            <child nodeId="node-1607"></child>
             <child nodeId="node-1597"></child>
         </children>
     </item>
     <item nodeId="node-1597">
         <command xml:space="preserve">x zyliath</command>
         <result xml:space="preserve">You see nothing special about Zyliath.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1607">
+        <command xml:space="preserve">x me</command>
+        <result xml:space="preserve">You are a young man.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1608"></child>
+        </children>
+    </item>
+    <item nodeId="node-1608">
+        <command xml:space="preserve">inventory</command>
+        <result xml:space="preserve">You are carrying nothing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1609"></child>
+        </children>
+    </item>
+    <item nodeId="node-1609">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Trail
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1610"></child>
+        </children>
+    </item>
+    <item nodeId="node-1610">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Forest
+You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall the whole atmosphere changes. The ground was spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1611"></child>
+        </children>
+    </item>
+    <item nodeId="node-1611">
+        <command xml:space="preserve">take book</command>
+        <result xml:space="preserve">You slowly remove the spell book as vines and bark slowly break and fall to the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1612"></child>
+        </children>
+    </item>
+    <item nodeId="node-1612">
+        <command xml:space="preserve">x book</command>
+        <result xml:space="preserve">A mystic looking leather bound hand sized spell book, you slowly open it and find a word written inside of the book. It says PATHUS?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1613"></child>
+        </children>
+    </item>
+    <item nodeId="node-1613">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Trail
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1614"></child>
+        </children>
+    </item>
+    <item nodeId="node-1614">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Deep Crevice
+Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1615"></child>
+        </children>
+    </item>
+    <item nodeId="node-1615">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1616"></child>
+        </children>
+    </item>
+    <item nodeId="node-1616">
+        <command xml:space="preserve">PATHUS</command>
+        <result xml:space="preserve">A bridge was built in front of you!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1617"></child>
+        </children>
+    </item>
+    <item nodeId="node-1617">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1618"></child>
+        </children>
+    </item>
+    <item nodeId="node-1618">
+        <command xml:space="preserve">cross bridge</command>
+        <result xml:space="preserve">tower
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1619"></child>
+        </children>
+    </item>
+    <item nodeId="node-1619">
+        <command xml:space="preserve">cross bridge</command>
+        <result xml:space="preserve">tower
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1620"></child>
+        </children>
+    </item>
+    <item nodeId="node-1620">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -951,6 +1083,22 @@ Hi! how are you...
     <item nodeId="node-1579">
         <command xml:space="preserve">hello zyliath</command>
         <result xml:space="preserve">Hi! how are you...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1605">
+        <command xml:space="preserve">attack</command>
+        <result xml:space="preserve">What do you want to attack?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1606"></child>
+        </children>
+    </item>
+    <item nodeId="node-1606">
+        <command xml:space="preserve">attack zyliath</command>
+        <result xml:space="preserve">Violence isn't the answer to this one.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
