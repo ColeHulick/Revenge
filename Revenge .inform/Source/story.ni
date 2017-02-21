@@ -13,11 +13,10 @@ To say exit list:
 When play begins: say "Welcome to Revenge! A ravenous dragon has reigned terror on your small town Draycott, for centuries. Your name is James, you have been training and learning magic since you were born. Its finally your time to avenge everyone that has lost their homes and life's from this dragon!"
 
 
-
 [ROOMS]
-Draycott is a room. "Welcome to the town of Draycott. Crops are burnt to a crisp and livestalk is at an all time low. Houses are in ashes and there are no townspeople to be seen."
+Draycott is a room. "Welcome to the town of Draycott. Crops are burnt to a crisp and livestalk is at an all time low. Houses are in ashes and there are no townspeople to be seen. As you head near the end of the town you see your Master Zyliath."
 
-Trail is a room. Trail is north of Draycott.
+Trail is a room. Trail is north of Draycott. 
 
 Forest is a room. Forest is east of Trail. "You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall the whole atmosphere changes. The ground was spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest."
 
@@ -31,6 +30,8 @@ First floor is a room. First floor is northeast of Tower.
 
 Top of tower is a room. Top of tower is east of first floor. 
 
+[ENEMIES]
+Defender of the Forest is a person.
 
 
 [PUZZLES]
@@ -50,7 +51,16 @@ Understand "cross [bridge]" as crossing. Crossing is an action applying to one t
 Instead of crossing bridge when player has spell book:
 	move the player to Tower.
 
+[Puzzle #2]
+Old Door is southeast of tower. Old Door is a door. Old Door is lockable and locked. 
 
+Rusty Key unlocks Old Door. Rusty Key is in tower. Rusty Key is undescribed.
+
+Instead of taking Brick: Say "After taking the brick you see a Rusty key in its place.";
+	Move Rusty Key to player.
+	
+Brick is a thing in tower.
+	
 
 [NPC]
 Zyliath is a man. Zyliath is in Draycott. Zyliath is undescribed. "He is a tall old man, a blue robe surrounds him and drags to the floor. A large great white beard droops down to his chest, and a blue wizard hat sits on his head. In his right hand he holds a tall staff."
@@ -60,7 +70,7 @@ Understand "talk to [someone]" as talking to.
 Understand "hello [someone]" as talking to.
 Understand "Hi [someone]" as talking to.
 
-Rule for deciding whether all includes something: It does not. 
+
 
 Instead of talking to Zyliath: say "Hello James, ohyeah I almost forgot here take my staff, this will deffinitly come in handy. With my old body I now spend my days reading and gardening its no use to me anymore.";
 	move Zyliath's Magical staff to player.
@@ -77,6 +87,15 @@ Zyliath's Magical staff is a thing. "You look more closley at the staff. The bod
 [need to finish description of staff]
 
 Spell book is a thing in Large Oak tree. Spell book is undescribed. The description of spell book is "A mystic looking leather bound hand sized spell book, you slowly open it and find a word written inside of the book. It says PATHUS?"
+
+Flying shoes is a thing. Flyshing shoes are wearable. 
+
+[REMOVED TAKE ALL]
+Rule for deciding whether all includes something: It does not. 
+
+
+
+
 
 	
 
