@@ -1099,7 +1099,8 @@ You can see Bridge here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1670"></child>
+        <children><child nodeId="node-1732"></child>
+            <child nodeId="node-1670"></child>
         </children>
     </item>
     <item nodeId="node-1670">
@@ -1157,14 +1158,58 @@ Suddenly the trail ends. You look down and find a deep crevice with dark blue wa
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-1732">
+        <command xml:space="preserve">cross bridge</command>
+        <result xml:space="preserve">Tower
+You slowly enter the tower, and find yourself surrounded by Dungeon-like walls on everyside. You see an old door northwest of you and stairs northeast of you.
+
+You can see Old Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1733"></child>
+        </children>
+    </item>
+    <item nodeId="node-1733">
+        <command xml:space="preserve">ne</command>
+        <result xml:space="preserve">
+First floor
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1734"></child>
+        </children>
+    </item>
+    <item nodeId="node-1734">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Tower
+You slowly enter the tower, and find yourself surrounded by Dungeon-like walls on everyside. You see an old door northwest of you and stairs northeast of you.
+
+You can see Old Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1735"></child>
+        </children>
+    </item>
+    <item nodeId="node-1735">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">(first opening Old Door)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1099">
         <command xml:space="preserve">cross bridge</command>
         <result xml:space="preserve">Tower
-You can see Old Door and Brick here.
+You slowly enter the tower, and find yourself surrounded by Dungeon-like walls on everyside. You see an old door northwest of you and stairs northeast of you.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1100"></child>
+            <child nodeId="node-1715"></child>
             <child nodeId="node-1596"></child>
             <child nodeId="node-1683"></child>
             <child nodeId="node-1552"></child>
@@ -1232,6 +1277,24 @@ Cellar
     </item>
     <item nodeId="node-1596">
         <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1715">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">
+Cellar
+You can see Old Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1724"></child>
+        </children>
+    </item>
+    <item nodeId="node-1724">
+        <command xml:space="preserve">nw</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
@@ -1558,7 +1621,99 @@ Hi! how are you...
     </item>
     <item nodeId="node-1027">
         <command xml:space="preserve">N</command>
-        <result xml:space="preserve">You can't go that way.
+        <result xml:space="preserve">
+Trail
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1690"></child>
+        </children>
+    </item>
+    <item nodeId="node-1690">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Forest
+You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall the whole atmosphere changes. The ground was spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1691"></child>
+        </children>
+    </item>
+    <item nodeId="node-1691">
+        <command xml:space="preserve">take book</command>
+        <result xml:space="preserve">You slowly remove the spell book as vines and bark slowly break and fall to the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1692"></child>
+        </children>
+    </item>
+    <item nodeId="node-1692">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Trail
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1693"></child>
+        </children>
+    </item>
+    <item nodeId="node-1693">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Deep Crevice
+Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1694"></child>
+        </children>
+    </item>
+    <item nodeId="node-1694">
+        <command xml:space="preserve">PATHUS</command>
+        <result xml:space="preserve">A bridge was built in front of you!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1695"></child>
+        </children>
+    </item>
+    <item nodeId="node-1695">
+        <command xml:space="preserve">cross bridge</command>
+        <result xml:space="preserve">Tower
+You slowly enter the tower, and find yourself surrounded by Dungeon-like walls on everyside. You see an old door northwest of you and stairs northeast of you.
+
+You can see Old Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1696"></child>
+        </children>
+    </item>
+    <item nodeId="node-1696">
+        <command xml:space="preserve">x wall</command>
+        <result xml:space="preserve">The bricks of the wall had started to crubmle and blacken in age, Cobwebs cover the walls and give you a sense of foreboding. You look more closely and notice a brick out of place?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1697"></child>
+        </children>
+    </item>
+    <item nodeId="node-1697">
+        <command xml:space="preserve">take brick</command>
+        <result xml:space="preserve">(Brick wall)
+That's hardly portable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1707"></child>
+        </children>
+    </item>
+    <item nodeId="node-1707">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">
+Cellar
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

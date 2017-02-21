@@ -12,7 +12,6 @@ To say exit list:
 
 When play begins: say "Welcome to Revenge! A ravenous dragon has reigned terror on your small town Draycott, for centuries. Your name is James, you have been training and learning magic since you were born. Its finally your time to avenge everyone that has lost their homes and life's from this dragon!"
 
-
 [ROOMS]
 Draycott is a room. "Welcome to the town of Draycott. Crops are burnt to a crisp and livestalk is at an all time low. Houses are in ashes and there are no townspeople to be seen. As you head near the end of the town you see your Master Zyliath."
 
@@ -22,9 +21,11 @@ Forest is a room. Forest is east of Trail. "You reach the edge of the forest as 
 
 Deep Crevice is a room. Deep Crevice is north of Trail. "Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found."
 
-Tower is a room. 
+Tower is a room. "You slowly enter the tower, and find yourself surrounded by Dungeon-like walls on everyside. You see an old door northwest of you and stairs northeast of you."
 
-Cellar is a room. Cellar is northwest of Tower.
+Brick wall is scenery in Tower. "The bricks of the wall had started to crubmle and blacken in age, Cobwebs cover the walls and give you a sense of foreboding. You look more closely and notice a brick out of place?"
+
+Cellar is a room. 
 
 First floor is a room. First floor is northeast of Tower.
 
@@ -52,14 +53,14 @@ Instead of crossing bridge when player has spell book:
 	move the player to Tower.
 
 [Puzzle #2]
-Old Door is southeast of tower. Old Door is a door. Old Door is lockable and locked. 
+Old Door is southeast of Cellar. Old Door is northwest of tower. Old Door is a door. Old Door is lockable and locked. 
 
 Rusty Key unlocks Old Door. Rusty Key is in tower. Rusty Key is undescribed.
 
-Instead of taking Brick: Say "After taking the brick you see a Rusty key in its place.";
+Instead of taking Old Brick: Say "After taking the brick you see a Rusty key in its place, you reach your hand into the hole and grab the key.";
 	Move Rusty Key to player.
 	
-Brick is a thing in tower.
+Old Brick is a thing in tower. Old Brick is undescribed. "An old dirty brick."
 	
 
 [NPC]
@@ -69,8 +70,6 @@ Talking to is an action applying to one visible thing.
 Understand "talk to [someone]" as talking to. 
 Understand "hello [someone]" as talking to.
 Understand "Hi [someone]" as talking to.
-
-
 
 Instead of talking to Zyliath: say "Hello James, ohyeah I almost forgot here take my staff, this will deffinitly come in handy. With my old body I now spend my days reading and gardening its no use to me anymore.";
 	move Zyliath's Magical staff to player.
@@ -88,7 +87,8 @@ Zyliath's Magical staff is a thing. "You look more closley at the staff. The bod
 
 Spell book is a thing in Large Oak tree. Spell book is undescribed. The description of spell book is "A mystic looking leather bound hand sized spell book, you slowly open it and find a word written inside of the book. It says PATHUS?"
 
-Flying shoes is a thing. Flyshing shoes are wearable. 
+
+
 
 [REMOVED TAKE ALL]
 Rule for deciding whether all includes something: It does not. 
