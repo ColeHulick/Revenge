@@ -29,22 +29,36 @@ Brick wall is scenery in Tower. "The bricks of the wall had started to crubmle a
 
 Cellar is a room. "The door slowly creaks open, a musty smell fills your nose. The outdoor sunlight fills the darkend room. As your eyes adjust something shiny grabs your attention. You walk towards it and wipe off the thick layer of dust settling on the item, and notice its Chainmail armour."
 
-First floor is a room. First floor is northeast of Tower. 
+First floor is a room. First floor is northeast of Tower. "As you head up the stairs a deep roar echos through the tower. As you reach the top of the steps you find yourself surrounded by burnt dead corpses and dungeon-like walls. The whole feeling of the room creeps you out."
+
+Dead Corpses is scenery. Dead Corpses is in First floor. "All of these people must have died trying to slay the dragon. As you search the dead bodies or whats left of them you find a wierd stone in someones pocket?"
 
 Top of tower is a room. Top of tower is east of first floor. 
 
 [ENEMIES]
-Dragon is a person. Dragon is a thing in Top of tower. 
 
-Instead of attacking Dragon when player has Infinity staff: Say "You lift your staff in the air and kill the dragon."
+Defender of the Forest is a person. Defender of the Forest is a thing in Forest. Defender of the Forest is undescribed. "Vines and moss wrap around its body, its eyes are emerald green and shining with life. A long wooden spear is found in his right hand."
 
-Instead of attacking Dragon when player does not have Infinity staff: Say "Before you could react the dragon hurls fire at you burning you to a crisp."
+Instead of attacking Defender of the Forest when player has Zyliath's Magical staff: Say  "You raise your staff in the air, an orb of blue light appears from your staff and strikes your opponent killing him in an instant. As the defender gets vaporized its heart slowly falls to the ground.";
+move heart to player;
+say "you now have the defender of the forest's heart.".
+
+Instead of attacking Defender of the Forest when player does not have Zyliath's Magical staff: Say "You try to punch the Defender he is not fazed by it. He grabs you by the neck and throws you to the ground instantly killing you.";
+end the story finally.
+
+Dragon is a person. Dragon is a thing in Top of tower. "Fierce eyes sit deep within the dragon's skull. Two horns sit atop its head, several rows of small crystal growths run down the dragons spine. Colossal wings grow from its side, large ruby scales cover the dragon's body."
+
+Instead of attacking Dragon when player has Infinity staff: Say "You lift your staff in the air and kill the dragon.";
+end the story finally.
+
+Instead of attacking Dragon when player does not have Infinity staff: Say "Before you could react the dragon hurls fire at you burning you to a crisp.";
+End the story finally.
 
 
 [PUZZLES]
 Large oak tree is a container in forest. Large oak tree is scenery in forest. "You look more closely and find a mystic looking leather bound hand sized spell book placed on the outside of the tree."
 
-after taking spell book: say "You slowly remove the spell book as vines and bark slowly break and fall to the floor."
+after taking spell book: say "You slowly remove the spell book as vines and bark slowly break and fall to the floor. Suddenly you hear a thud behind you! As you slowly turn your head you notice a large darkness infront of you blocking your path."
 
 Bridging is an action applying to nothing.  Understand "PATHUS" or "say PATHUS" as bridging.
 
@@ -71,10 +85,9 @@ Old Brick is a thing in tower. Old Brick is undescribed. "An old dirty brick."
 [Puzzle #3]
 [Got help with combining things using Informstudents.wikispace]
 
-
 Defender of the Forests heart is a thing. The description of the Forest Defender heart is "A heart made of pure emerald."
 
-Onyx Stone is a thing. The description of Onyx Stone is "A spherical stone pulsating with magic and power."
+Onyx Stone is a thing. Onyx stone is in the first floor. Onyx stone is undescribed. The description of Onyx Stone is "A spherical stone pulsating with magic and power."
 
 Saga is a thing. "An orb of pure power, dark light emits from the object."
 
@@ -96,7 +109,7 @@ move Saga to player.
 Infinity staff is a thing. "The staff contains a huge amount of magical power. Green and dark light runs down the side of the staff like veins."
 
 Instead of combining Zyliath's Magical staff with Saga:
-say "You combine Zyliath's Magical staff and Saga to make Infinity Staff, a imensly more powerfull staff that will be needed to defeat the Dragon.";
+say "You combine Zyliath's Magical staff and Saga to make Infinity Staff, a imensly powerfull staff that will be needed to defeat the Dragon.";
 remove Saga from play;
 remove Zyliath's Magical staff from play;
 move Infinity Staff to player.
@@ -113,10 +126,8 @@ Instead of talking to Zyliath: say "Hello James, ohyeah I almost forgot here tak
 	move Zyliath's Magical staff to player.
 
 
-
 [THE PLAYER]
 The description of player is "You are a young man."
-
 
 
 [ITEMS]
