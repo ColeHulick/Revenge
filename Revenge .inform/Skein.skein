@@ -11,7 +11,7 @@ Welcome to Revenge! A ravenous dragon has reigned terror on your small town Dray
 
 Revenge 
 An Interactive Fiction by Cole Hulick
-Release 1 / Serial number 170221 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 170222 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Draycott
 Welcome to the town of Draycott. Crops are burnt to a crisp and livestalk is at an all time low. Houses are in ashes and there are no townspeople to be seen. As you head near the end of the town you see your Master Zyliath.
@@ -29,6 +29,8 @@ Welcome to the town of Draycott. Crops are burnt to a crisp and livestalk is at 
             <child nodeId="node-1005"></child>
             <child nodeId="node-1003"></child>
             <child nodeId="node-1604"></child>
+            <child nodeId="node-1736"></child>
+            <child nodeId="node-1738"></child>
             <child nodeId="node-1637"></child>
             <child nodeId="node-1533"></child>
             <child nodeId="node-1607"></child>
@@ -252,6 +254,268 @@ Suddenly the trail ends. You look down and find a deep crevice with dark blue wa
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-1738">
+        <command xml:space="preserve">talk to master</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1739"></child>
+        </children>
+    </item>
+    <item nodeId="node-1739">
+        <command xml:space="preserve">talk to zyliath</command>
+        <result xml:space="preserve">Hello James, ohyeah I almost forgot here take my staff, this will deffinitly come in handy. With my old body I now spend my days reading and gardening its no use to me anymore.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1740"></child>
+        </children>
+    </item>
+    <item nodeId="node-1740">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Trail
+As you leave the town a dirt path is found underneath you. As you venture on further you find an opening to the forest to the east of you. Ahead of you the trail ends and seems to drop off?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1741"></child>
+        </children>
+    </item>
+    <item nodeId="node-1741">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Forest
+You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall the whole atmosphere changes. The ground was spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1742"></child>
+        </children>
+    </item>
+    <item nodeId="node-1742">
+        <command xml:space="preserve">x oak tree</command>
+        <result xml:space="preserve">You look more closely and find a mystic looking leather bound hand sized spell book placed on the outside of the tree.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1743"></child>
+        </children>
+    </item>
+    <item nodeId="node-1743">
+        <command xml:space="preserve">take book</command>
+        <result xml:space="preserve">You slowly remove the spell book as vines and bark slowly break and fall to the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1744"></child>
+        </children>
+    </item>
+    <item nodeId="node-1744">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Trail
+As you leave the town a dirt path is found underneath you. As you venture on further you find an opening to the forest to the east of you. Ahead of you the trail ends and seems to drop off?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1745"></child>
+        </children>
+    </item>
+    <item nodeId="node-1745">
+        <command xml:space="preserve">x book</command>
+        <result xml:space="preserve">A mystic looking leather bound hand sized spell book, you slowly open it and find a word written inside of the book. It says PATHUS?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1746"></child>
+        </children>
+    </item>
+    <item nodeId="node-1746">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Deep Crevice
+Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1747"></child>
+        </children>
+    </item>
+    <item nodeId="node-1747">
+        <command xml:space="preserve">PATHUS</command>
+        <result xml:space="preserve">A bridge was built in front of you!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1748"></child>
+        </children>
+    </item>
+    <item nodeId="node-1748">
+        <command xml:space="preserve">cross bridge</command>
+        <result xml:space="preserve">Tower
+You slowly enter the tower, and find yourself surrounded by Dungeon-like walls on everyside. You see an old door northwest of you and stairs northeast of you.
+
+You can see Old Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1749"></child>
+        </children>
+    </item>
+    <item nodeId="node-1749">
+        <command xml:space="preserve">ne</command>
+        <result xml:space="preserve">
+First floor
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1750"></child>
+        </children>
+    </item>
+    <item nodeId="node-1750">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Tower
+You slowly enter the tower, and find yourself surrounded by Dungeon-like walls on everyside. You see an old door northwest of you and stairs northeast of you.
+
+You can see Old Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1751"></child>
+        </children>
+    </item>
+    <item nodeId="node-1751">
+        <command xml:space="preserve">ne</command>
+        <result xml:space="preserve">
+First floor
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1752"></child>
+        </children>
+    </item>
+    <item nodeId="node-1752">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Tower
+You slowly enter the tower, and find yourself surrounded by Dungeon-like walls on everyside. You see an old door northwest of you and stairs northeast of you.
+
+You can see Old Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1753"></child>
+        </children>
+    </item>
+    <item nodeId="node-1753">
+        <command xml:space="preserve">ne</command>
+        <result xml:space="preserve">
+First floor
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1754"></child>
+        </children>
+    </item>
+    <item nodeId="node-1754">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Tower
+You slowly enter the tower, and find yourself surrounded by Dungeon-like walls on everyside. You see an old door northwest of you and stairs northeast of you.
+
+You can see Old Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1755"></child>
+        </children>
+    </item>
+    <item nodeId="node-1755">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">(first opening Old Door)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1756"></child>
+        </children>
+    </item>
+    <item nodeId="node-1756">
+        <command xml:space="preserve">x wall</command>
+        <result xml:space="preserve">The bricks of the wall had started to crubmle and blacken in age, Cobwebs cover the walls and give you a sense of foreboding. You look more closely and notice a brick out of place?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1757"></child>
+        </children>
+    </item>
+    <item nodeId="node-1757">
+        <command xml:space="preserve">take brick</command>
+        <result xml:space="preserve">(Brick wall)
+That's hardly portable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1758"></child>
+        </children>
+    </item>
+    <item nodeId="node-1758">
+        <command xml:space="preserve">x brick</command>
+        <result xml:space="preserve">(Brick wall)
+The bricks of the wall had started to crubmle and blacken in age, Cobwebs cover the walls and give you a sense of foreboding. You look more closely and notice a brick out of place?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1759"></child>
+        </children>
+    </item>
+    <item nodeId="node-1759">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1760"></child>
+        </children>
+    </item>
+    <item nodeId="node-1760">
+        <command xml:space="preserve">take brick</command>
+        <result xml:space="preserve">(Brick wall)
+That's hardly portable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1761"></child>
+        </children>
+    </item>
+    <item nodeId="node-1761">
+        <command xml:space="preserve">take old brick</command>
+        <result xml:space="preserve">After taking the brick you see a Rusty key in its place, you reach your hand into the hole and grab the key.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1736">
+        <command xml:space="preserve">talk to Zyliath</command>
+        <result xml:space="preserve">Hello James, ohyeah I almost forgot here take my staff, this will deffinitly come in handy. With my old body I now spend my days reading and gardening its no use to me anymore.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1737"></child>
+        </children>
+    </item>
+    <item nodeId="node-1737">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Trail
+As you leave the town a dirt path is found underneath you. As you venture on further you find an opening to the forest to the east of you. Ahead of you the trail ends and seems to drop off?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1604">
         <command xml:space="preserve">take all</command>
         <result xml:space="preserve">There are none at all available!
@@ -297,6 +561,7 @@ Forest
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Trail
+As you leave the town a dirt path is found underneath you. As you venture on further you find an opening to the forest to the east of you. Ahead of you the trail ends and seems to drop off?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -903,6 +1168,7 @@ Tower
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Trail
+As you leave the town a dirt path is found underneath you. As you venture on further you find an opening to the forest to the east of you. Ahead of you the trail ends and seems to drop off?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -1206,6 +1472,8 @@ It seems to be locked.
         <result xml:space="preserve">Tower
 You slowly enter the tower, and find yourself surrounded by Dungeon-like walls on everyside. You see an old door northwest of you and stairs northeast of you.
 
+You can see Old Door here.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1100"></child>
@@ -1303,6 +1571,73 @@ You can see Old Door here.
     <item nodeId="node-1100">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1770"></child>
+        </children>
+    </item>
+    <item nodeId="node-1770">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">(first opening Old Door)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1771"></child>
+        </children>
+    </item>
+    <item nodeId="node-1771">
+        <command xml:space="preserve">ne</command>
+        <result xml:space="preserve">
+First floor
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1772"></child>
+        </children>
+    </item>
+    <item nodeId="node-1772">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1773"></child>
+        </children>
+    </item>
+    <item nodeId="node-1773">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Top of tower
+You can see Dragon here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1774"></child>
+        </children>
+    </item>
+    <item nodeId="node-1774">
+        <command xml:space="preserve">attack dragon</command>
+        <result xml:space="preserve">Before you could react the dragon hurls fire at you burning you to a crisp.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1775"></child>
+        </children>
+    </item>
+    <item nodeId="node-1775">
+        <command xml:space="preserve">x dragon</command>
+        <result xml:space="preserve">You see nothing special about Dragon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1790"></child>
+        </children>
+    </item>
+    <item nodeId="node-1790">
+        <command xml:space="preserve">attack dragon</command>
+        <result xml:space="preserve">Before you could react the dragon hurls fire at you burning you to a crisp.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
