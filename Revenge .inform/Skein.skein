@@ -249,7 +249,7 @@ Suddenly the trail ends. You look down and find a deep crevice with dark blue wa
     </item>
     <item nodeId="node-1637">
         <command xml:space="preserve">talk to zyliath</command>
-        <result xml:space="preserve">Hello James, ohyeah I almost forgot here take my staff, this will deffinitly come in handy. With my old body I now spend my days reading and gardening its no use to me anymore.
+        <result xml:space="preserve">Hello James, I've known you since you were a child and look at you now im so proud to be your teacher. I almost forgot here take my staff, this will deffinitly come in handy who knows what you will run into on your adventure. With my old body I now spend my days reading and gardening its no use to me anymore. I wish you the best of luck james you can do it!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -280,7 +280,7 @@ You reach the edge of the forest as you stand in front of tightly knit trees. Yo
     </item>
     <item nodeId="node-1801">
         <command xml:space="preserve">take book</command>
-        <result xml:space="preserve">You slowly remove the spell book as vines and bark slowly break and fall to the floor. Suddenly you hear a thud behind you! As you slowly turn your head you notice a wooden beast infront of you! he must be the defender of the forest!
+        <result xml:space="preserve">You slowly remove the spell book as vines and bark slowly break and fall to the floor. Suddenly you hear a thud behind you! As you slowly turn your head you notice a large darkness infront of you blocking your path.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -289,8 +289,30 @@ You reach the edge of the forest as you stand in front of tightly knit trees. Yo
     </item>
     <item nodeId="node-1802">
         <command xml:space="preserve">attack defender</command>
-        <result xml:space="preserve">You raise your staff in the air an orb of blue light appears from your staff and strikes your opponent killing him in an instant. As the defender gets vaporized in an instant its heart slowly falls to the ground.
+        <result xml:space="preserve">You raise your staff in the air, an orb of blue light appears from your staff and strikes your opponent killing him in an instant. As the defender gets vaporized its heart slowly falls to the ground.
 you now have the defender of the forest's heart.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1910"></child>
+        </children>
+    </item>
+    <item nodeId="node-1910">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Trail
+As you leave the town a dirt path is found underneath you. As you venture on further you find an opening to the forest east of you. Ahead of you the trail ends and seems to drop off?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1911"></child>
+        </children>
+    </item>
+    <item nodeId="node-1911">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Deep Crevice
+Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -797,13 +819,15 @@ As you leave the town a dirt path is found underneath you. As you venture on fur
     <item nodeId="node-1008">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
-Trail
+Draycott
+Welcome to the town of Draycott. Crops are burnt to a crisp and livestalk is at an all time low. Houses are in ashes and there are no townspeople to be seen. As you head near the end of the town you see your Master Zyliath.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1020"></child>
             <child nodeId="node-1018"></child>
             <child nodeId="node-1011"></child>
+            <child nodeId="node-1891"></child>
             <child nodeId="node-1009"></child>
         </children>
     </item>
@@ -848,6 +872,135 @@ tower (581355)
 cellar (581387) 
 first floor (581419) 
 top of tower (581451) 
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1891">
+        <command xml:space="preserve">talk to zyliath</command>
+        <result xml:space="preserve">Hello James, ohyeah I almost forgot here take my staff, this will deffinitly come in handy. With my old body I now spend my days reading and gardening its no use to me anymore.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1892"></child>
+        </children>
+    </item>
+    <item nodeId="node-1892">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Trail
+As you leave the town a dirt path is found underneath you. As you venture on further you find an opening to the forest east of you. Ahead of you the trail ends and seems to drop off?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1893"></child>
+        </children>
+    </item>
+    <item nodeId="node-1893">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Forest
+You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall the whole atmosphere changes. The ground was spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1894"></child>
+        </children>
+    </item>
+    <item nodeId="node-1894">
+        <command xml:space="preserve">take book</command>
+        <result xml:space="preserve">You slowly remove the spell book as vines and bark slowly break and fall to the floor. Suddenly you hear a thud behind you! As you slowly turn your head you notice a large darkness infront of you blocking your path.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1895"></child>
+        </children>
+    </item>
+    <item nodeId="node-1895">
+        <command xml:space="preserve">attack defender</command>
+        <result xml:space="preserve">You raise your staff in the air, an orb of blue light appears from your staff and strikes your opponent killing him in an instant. As the defender gets vaporized its heart slowly falls to the ground.
+you now have the defender of the forest's heart.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1896"></child>
+        </children>
+    </item>
+    <item nodeId="node-1896">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Trail
+As you leave the town a dirt path is found underneath you. As you venture on further you find an opening to the forest east of you. Ahead of you the trail ends and seems to drop off?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1897"></child>
+        </children>
+    </item>
+    <item nodeId="node-1897">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Deep Crevice
+Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1898"></child>
+        </children>
+    </item>
+    <item nodeId="node-1898">
+        <command xml:space="preserve">PATHUS</command>
+        <result xml:space="preserve">A bridge was built in front of you!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1899"></child>
+        </children>
+    </item>
+    <item nodeId="node-1899">
+        <command xml:space="preserve">cross bridge</command>
+        <result xml:space="preserve">Tower
+You slowly enter the tower, and find yourself surrounded by Dungeon-like walls on everyside. You see an old door northwest of you and stairs northeast of you.
+
+You can see Old Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1900"></child>
+        </children>
+    </item>
+    <item nodeId="node-1900">
+        <command xml:space="preserve">ne</command>
+        <result xml:space="preserve">
+First floor
+As you head up the stairs a deep roar echos through the tower. As you reach the top of the steps you find yourself surrounded by burnt dead corpses and dungeon-like walls. The whole feeling of the room creeps you out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1901"></child>
+        </children>
+    </item>
+    <item nodeId="node-1901">
+        <command xml:space="preserve">x dead corpses</command>
+        <result xml:space="preserve">All of these people must have died trying to slay the dragon. As you search the dead bodies or whats left of them you find a wierd stone in someones pocket?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1902"></child>
+        </children>
+    </item>
+    <item nodeId="node-1902">
+        <command xml:space="preserve">take stone</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1903"></child>
+        </children>
+    </item>
+    <item nodeId="node-1903">
+        <command xml:space="preserve">x stone</command>
+        <result xml:space="preserve">A spherical stone pulsating with magic and power.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

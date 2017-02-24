@@ -11349,6 +11349,7 @@ Object -> I144_onyx_stone ""
 Object I134_top_of_tower ""
     class K1_room
     with short_name BC_237
+    with description BC_238
     has proper
     with vector 0
     with room_index -1
@@ -11357,7 +11358,6 @@ Object I134_top_of_tower ""
     with IK1_Link nothing
     with KD_Count 1
     with name 'top' 'of' 'tower' 'rooms//p' 
-    with description BC_238
     with list_together BC_239
     with plural BC_240
     with article BC_241
@@ -12921,9 +12921,9 @@ Array ActionHappened --> 0 0 0 0 0 0;
     if ((((action ==##Attack) &&  (actor==player) && ((noun == I136_dragon) && (true)) && (self=actor,true) && (((player == OwnerOf(I146_infinity_staff))))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_804, 804);
-    ! [2: say ~You lift your staff in the air and kill the dragon.~]
-    say__p=1;! [3: ~You lift your staff in the air and kill the dragon.~]
-    ParaContent(); print "You lift your staff in the air and kill the dragon."; new_line; .L_Say8; .L_SayX8;! [4: end the story finally]
+    ! [2: say ~You lift your staff in the air. An immensely powerful dark orb starts to form; electricity begins to run through it. With one sweeping motion the Orb fly's quickly towards the dragon. With a great flash of light, the orb pierces the Dragons scales and explodes into dark flames. Once the debris clears all that's left of the dragon is the head.~]
+    say__p=1;! [3: ~You lift your staff in the air. An immensely powerful dark orb starts to form; electricity begins to run through it. With one sweeping motion the Orb fly's quickly towards the dragon. With a great flash of light, the orb pierces the Dragons scales and explodes into dark flames. Once the debris clears all that's left of the dragon is the head.~]
+    ParaContent(); print "You lift your staff in the air. An immensely powerful dark orb starts to form; electricity begins to run through it. With one sweeping motion the Orb fly's quickly towards the dragon. With a great flash of light, the orb pierces the Dragons scales and explodes into dark flames. Once the debris clears all that's left of the dragon is the head."; new_line; .L_Say8; .L_SayX8;! [4: end the story finally]
     deadflag=3; story_complete=true;
     RulebookFails(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_804, 804, 'action');
@@ -13015,9 +13015,9 @@ Array ActionHappened --> 0 0 0 0 0 0;
     if ((((action ==##A80_talking_to) &&  (actor==player) && ((noun == I147_zyliath) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_813, 813);
-    ! [2: say ~Hello James, ohyeah I almost forgot here take my staff, this will deffinitly come in handy. With my old body I now spend my days reading and gardening its no use to me anymore.~]
-    say__p=1;! [3: ~Hello James, ohyeah I almost forgot here take my staff, this will deffinitly come in handy. With my old body I now spend my days reading and gardening its no use to me anymore.~]
-    ParaContent(); print "Hello James, ohyeah I almost forgot here take my staff, this will deffinitly come in handy. With my old body I now spend my days reading and gardening its no use to me anymore."; new_line; .L_Say13; .L_SayX13;! [4: move zyliath's magical staff to player]
+    ! [2: say ~Hello James, I've known you since you were a child and look at you now im so proud to be your teacher. I almost forgot here take my staff, this will deffinitly come in handy who knows what you will run into on your adventure. With my old body I now spend my days reading and gardening its no use to me anymore. I wish you the best of luck james you can do it!~]
+    say__p=1;! [3: ~Hello James, I've known you since you were a child and look at you now im so proud to be your teacher. I almost forgot here take my staff, this will deffinitly come in handy who knows what you will run into on your adventure. With my old body I now spend my days reading and gardening its no use to me anymore. I wish you the best of luck james you can do it!~]
+    ParaContent(); print "Hello James, I've known you since you were a child and look at you now im so proud to be your teacher. I almost forgot here take my staff, this will deffinitly come in handy who knows what you will run into on your adventure. With my old body I now spend my days reading and gardening its no use to me anymore. I wish you the best of luck james you can do it!"; new_line; .L_Say13; .L_SayX13;! [4: move zyliath's magical staff to player]
     MoveObject(I148_zyliath_s_magical_staff, player, 0, false);
     RulebookFails(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_813, 813, 'action');
@@ -49802,62 +49802,63 @@ Verb 'hi'
 
 
 
-Constant TX_PS_79 = ">";
-Constant TX_PS_72 = "A heart made of pure emerald.";
+Constant TX_PS_80 = ">";
+Constant TX_PS_73 = "A heart made of pure emerald.";
 Constant TX_PS_47 = "A mystic looking leather bound hand sized spell book, you slowly open it and find a word written inside of the book. It says PATHUS?";
 Constant TX_PS_64 = "A spherical stone pulsating with magic and power.";
-Constant TX_PS_62 = "All of these people must have died trying to slay the dragon. As you search the dead bodies or whats left of them you find a wierd stone in someones pocket?";
+Constant TX_PS_62 = "All of these people must have died trying to slay the dragon. As you search the dead bodies or whats left of them you find an onyx stone an extremly rare mage rock. East of you are stairs leading to the top of the tower.";
 Constant TX_PS_3 = "An Interactive Fiction";
 Constant TX_PS_56 = "An old dirty brick.";
-Constant TX_PS_74 = "An orb of pure power, dark light emits from the object.";
+Constant TX_PS_75 = "An orb of pure power, dark light emits from the object.";
 Constant TX_PS_60 = "As you head up the stairs a deep roar echos through the tower. As you reach the top of the steps you find yourself surrounded by burnt dead corpses and dungeon-like walls. The whole feeling of the room creeps you out.";
 Constant TX_PS_39 = "As you leave the town a dirt path is found underneath you. As you venture on further you find an opening to the forest east of you. Ahead of you the trail ends and seems to drop off?";
+Constant TX_PS_66 = "As you take each step the whole atmosphere begins to change, as if a dark powerfull presence is watching your everystep. You soon reach the top of the tower, the wind blows rapidly into your face and clouds begin to form above you blocking out the sun. You look ahead and see the Dragon! It screaches out a roar and stares right into your eyes. Your heart starts rapidly speeding up! YOU NEED TO SLAY THE DRAGON NOW!";
 Constant TX_PS_52 = "Brick wall";
-Constant TX_PS_68 = "Bridge";
+Constant TX_PS_69 = "Bridge";
 Constant TX_PS_57 = "Cellar";
 Constant TX_PS_4 = "Cole Hulick";
 Constant TX_PS_61 = "Dead Corpses";
 Constant TX_PS_48 = "Deep Crevice";
 Constant TX_PS_42 = "Defender of the Forest";
-Constant TX_PS_70 = "Defender of the Forests heart";
-Constant TX_PS_66 = "Dragon";
+Constant TX_PS_71 = "Defender of the Forests heart";
+Constant TX_PS_67 = "Dragon";
 Constant TX_PS_34 = "Draycott";
-Constant TX_PS_80 = "Fiction";
-Constant TX_PS_67 = "Fierce eyes sit deep within the dragon's skull. Two horns sit atop its head, several rows of small crystal growths run down the dragons spine. Colossal wings grow from its side, large ruby scales cover the dragon's body.";
+Constant TX_PS_81 = "Fiction";
+Constant TX_PS_68 = "Fierce eyes sit deep within the dragon's skull. Two horns sit atop its head, several rows of small crystal growths run down the dragons spine. Colossal wings grow from its side, large ruby scales cover the dragon's body.";
 Constant TX_PS_59 = "First floor";
-Constant TX_PS_71 = "Forest Defender heart";
+Constant TX_PS_72 = "Forest Defender heart";
 Constant TX_PS_40 = "Forest";
 Constant TX_PS_37 = "He is a tall old man, a blue robe surrounds him and drags to the floor. A large great white beard droops down to his chest, and a blue wizard hat sits on his head. In his right hand he holds a tall staff.";
-Constant TX_PS_75 = "Infinity staff";
+Constant TX_PS_76 = "Infinity staff";
 Constant TX_PS_44 = "Large oak tree";
 Constant TX_PS_55 = "Old Brick";
-Constant TX_PS_69 = "Old Door";
+Constant TX_PS_70 = "Old Door";
 Constant TX_PS_63 = "Onyx Stone";
-Constant TX_PS_84 = "QUIT";
-Constant TX_PS_81 = "RESTART";
-Constant TX_PS_82 = "RESTORE a saved game";
+Constant TX_PS_85 = "QUIT";
+Constant TX_PS_82 = "RESTART";
+Constant TX_PS_83 = "RESTORE a saved game";
 Constant TX_PS_2 = "Revenge ";
 Constant TX_PS_54 = "Rusty Key";
-Constant TX_PS_73 = "Saga";
+Constant TX_PS_74 = "Saga";
 Constant TX_PS_46 = "Spell book";
 Constant TX_PS_49 = "Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found.";
 Constant TX_PS_53 = "The bricks of the wall had started to crubmle and blacken in age, Cobwebs cover the walls and give you a sense of foreboding. You look more closely and notice a brick out of place?";
 Constant TX_PS_58 = "The door slowly creaks open, a musty smell fills your nose. The outdoor sunlight fills the darkend room. As your eyes adjust something shiny grabs your attention. You walk towards it and wipe off the thick layer of dust settling on the item, and notice its Chainmail armour.";
-Constant TX_PS_76 = "The staff contains a huge amount of magical power. Green and dark light runs down the side of the staff like veins.";
+Constant TX_PS_77 = "The staff contains a huge amount of magical power. Green and dark light runs down the side of the staff like veins.";
 Constant TX_PS_65 = "Top of tower";
 Constant TX_PS_50 = "Tower";
 Constant TX_PS_38 = "Trail";
-Constant TX_PS_85 = "UNDO the last command";
+Constant TX_PS_86 = "UNDO the last command";
 Constant TX_PS_43 = "Vines and moss wrap around its body, its eyes are emerald green and shining with life. A long wooden spear is found in his right hand.";
 Constant TX_PS_35 = "Welcome to the town of Draycott. Crops are burnt to a crisp and livestalk is at an all time low. Houses are in ashes and there are no townspeople to be seen. As you head near the end of the town you see your Master Zyliath.";
 Constant TX_PS_32 = "You are a young man.";
 Constant TX_PS_45 = "You look more closely and find a mystic looking leather bound hand sized spell book placed on the outside of the tree.";
-Constant TX_PS_78 = "You look more closley at the staff. The body of the staff is made from while pearly wood and is intwined with gold.";
+Constant TX_PS_79 = "You look more closley at the staff. The body of the staff is made from while pearly wood and is intwined with gold.";
 Constant TX_PS_41 = "You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall the whole atmosphere changes. The ground was spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest.";
 Constant TX_PS_51 = "You slowly enter the tower, and find yourself surrounded by Dungeon-like walls on everyside. You see an old door northwest of you and stairs northeast of you.";
 Constant TX_PS_33 = "Yourself";
 Constant TX_PS_36 = "Zyliath";
-Constant TX_PS_77 = "Zyliath's Magical staff";
+Constant TX_PS_78 = "Zyliath's Magical staff";
 Constant TX_PS_9 = "animals";
 Constant TX_PS_14 = "backdrops";
 Constant TX_PS_11 = "containers";
@@ -49875,7 +49876,7 @@ Constant TX_PS_30 = "outside";
 Constant TX_PS_6 = "people";
 Constant TX_PS_13 = "player's holdalls";
 Constant TX_PS_16 = "regions";
-Constant TX_PS_83 = "see some suggestions for AMUSING things to do";
+Constant TX_PS_84 = "see some suggestions for AMUSING things to do";
 Constant TX_PS_22 = "south";
 Constant TX_PS_23 = "southeast";
 Constant TX_PS_24 = "southwest";
@@ -57278,68 +57279,68 @@ Array BC_234 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_235 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_236 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_237 --> PACKED_TEXT_STORAGE TX_PS_65;
-Array BC_238 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_238 --> PACKED_TEXT_STORAGE TX_PS_66;
 Array BC_239 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_240 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_241 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_242 --> PACKED_TEXT_STORAGE TX_PS_66;
-Array BC_243 --> PACKED_TEXT_STORAGE TX_PS_67;
+Array BC_242 --> PACKED_TEXT_STORAGE TX_PS_67;
+Array BC_243 --> PACKED_TEXT_STORAGE TX_PS_68;
 Array BC_244 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_245 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_246 --> PACKED_TEXT_STORAGE TX_PS_6;
 Array BC_247 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_248 --> PACKED_TEXT_STORAGE TX_PS_68;
+Array BC_248 --> PACKED_TEXT_STORAGE TX_PS_69;
 Array BC_249 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_250 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_251 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_252 --> PACKED_TEXT_STORAGE TX_PS_10;
 Array BC_253 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_254 --> PACKED_TEXT_STORAGE TX_PS_69;
+Array BC_254 --> PACKED_TEXT_STORAGE TX_PS_70;
 Array BC_255 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_256 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_257 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_258 --> PACKED_TEXT_STORAGE TX_PS_10;
 Array BC_259 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_260 --> PACKED_TEXT_STORAGE TX_PS_70;
+Array BC_260 --> PACKED_TEXT_STORAGE TX_PS_71;
 Array BC_261 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_262 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_263 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_264 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_265 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_266 --> PACKED_TEXT_STORAGE TX_PS_71;
-Array BC_267 --> PACKED_TEXT_STORAGE TX_PS_72;
+Array BC_266 --> PACKED_TEXT_STORAGE TX_PS_72;
+Array BC_267 --> PACKED_TEXT_STORAGE TX_PS_73;
 Array BC_268 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_269 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_270 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_271 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_272 --> PACKED_TEXT_STORAGE TX_PS_73;
-Array BC_273 --> PACKED_TEXT_STORAGE TX_PS_74;
+Array BC_272 --> PACKED_TEXT_STORAGE TX_PS_74;
+Array BC_273 --> PACKED_TEXT_STORAGE TX_PS_75;
 Array BC_274 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_275 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_276 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_277 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_278 --> PACKED_TEXT_STORAGE TX_PS_75;
-Array BC_279 --> PACKED_TEXT_STORAGE TX_PS_76;
+Array BC_278 --> PACKED_TEXT_STORAGE TX_PS_76;
+Array BC_279 --> PACKED_TEXT_STORAGE TX_PS_77;
 Array BC_280 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_281 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_282 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_283 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_284 --> PACKED_TEXT_STORAGE TX_PS_77;
-Array BC_285 --> PACKED_TEXT_STORAGE TX_PS_78;
+Array BC_284 --> PACKED_TEXT_STORAGE TX_PS_78;
+Array BC_285 --> PACKED_TEXT_STORAGE TX_PS_79;
 Array BC_286 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_287 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_288 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_289 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_290 --> PACKED_TEXT_STORAGE TX_PS_79;
+Array BC_290 --> PACKED_TEXT_STORAGE TX_PS_80;
 Array BC_291 --> PACKED_TEXT_STORAGE TX_PS_4;
 Array BC_292 --> PACKED_TEXT_STORAGE TX_PS_3;
-Array BC_293 --> PACKED_TEXT_STORAGE TX_PS_80;
+Array BC_293 --> PACKED_TEXT_STORAGE TX_PS_81;
 Array BC_294 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_295 --> PACKED_TEXT_STORAGE TX_PS_81;
-Array BC_296 --> PACKED_TEXT_STORAGE TX_PS_82;
-Array BC_297 --> PACKED_TEXT_STORAGE TX_PS_83;
-Array BC_298 --> PACKED_TEXT_STORAGE TX_PS_84;
-Array BC_299 --> PACKED_TEXT_STORAGE TX_PS_85;
+Array BC_295 --> PACKED_TEXT_STORAGE TX_PS_82;
+Array BC_296 --> PACKED_TEXT_STORAGE TX_PS_83;
+Array BC_297 --> PACKED_TEXT_STORAGE TX_PS_84;
+Array BC_298 --> PACKED_TEXT_STORAGE TX_PS_85;
+Array BC_299 --> PACKED_TEXT_STORAGE TX_PS_86;
 
 
 

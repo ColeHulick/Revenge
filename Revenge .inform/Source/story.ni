@@ -1,6 +1,6 @@
 "Revenge " by Cole Hulick
 
-[Shortest route to win game. Talk to zyliath, north, east, take book, west, north, PATHUS, cross bridge, take brick, open old door,]
+[Shortest route to win game. Talk to zyliath, north, east, take book, attack defender, west, north, PATHUS, cross bridge, northeast, search dead corpses, take onyx stone, combine onyx stone, cobine saga with magic staff, east, attack dragon.]
 
 When play begins: 
     now left hand status line is "Exits: [exit list]"; 
@@ -31,9 +31,10 @@ Cellar is a room. "The door slowly creaks open, a musty smell fills your nose. T
 
 First floor is a room. First floor is northeast of Tower. "As you head up the stairs a deep roar echos through the tower. As you reach the top of the steps you find yourself surrounded by burnt dead corpses and dungeon-like walls. The whole feeling of the room creeps you out."
 
-Dead Corpses is scenery. Dead Corpses is in First floor. "All of these people must have died trying to slay the dragon. As you search the dead bodies or whats left of them you find a wierd stone in someones pocket?"
+Dead Corpses is scenery. Dead Corpses is in First floor. "All of these people must have died trying to slay the dragon. As you search the dead bodies or whats left of them you find an onyx stone an extremly rare mage rock. East of you are stairs leading to the top of the tower."
 
-Top of tower is a room. Top of tower is east of first floor. 
+Top of tower is a room. Top of tower is east of first floor. "As you take each step the whole atmosphere begins to change, as if a dark powerfull presence is watching your everystep. You soon reach the top of the tower, the wind blows rapidly into your face and clouds begin to form above you blocking out the sun. You look ahead and see the Dragon! It screaches out a roar and stares right into your eyes. Your heart starts rapidly speeding up! YOU NEED TO SLAY THE DRAGON NOW!"
+
 
 [ENEMIES]
 
@@ -48,8 +49,8 @@ end the story finally.
 
 Dragon is a person. Dragon is a thing in Top of tower. "Fierce eyes sit deep within the dragon's skull. Two horns sit atop its head, several rows of small crystal growths run down the dragons spine. Colossal wings grow from its side, large ruby scales cover the dragon's body."
 
-Instead of attacking Dragon when player has Infinity staff: Say "You lift your staff in the air and kill the dragon.";
-end the story finally.
+Instead of attacking Dragon when player has Infinity staff: Say "You lift your staff in the air. An immensely powerful dark orb starts to form; electricity begins to run through it. With one sweeping motion the Orb fly's quickly towards the dragon. With a great flash of light, the orb pierces the Dragons scales and explodes into dark flames. Once the debris clears all that's left of the dragon is the head.";
+End the story finally.
 
 Instead of attacking Dragon when player does not have Infinity staff: Say "Before you could react the dragon hurls fire at you burning you to a crisp.";
 End the story finally.
@@ -122,7 +123,7 @@ Understand "talk to [someone]" as talking to.
 Understand "hello [someone]" as talking to.
 Understand "Hi [someone]" as talking to.
 
-Instead of talking to Zyliath: say "Hello James, ohyeah I almost forgot here take my staff, this will deffinitly come in handy. With my old body I now spend my days reading and gardening its no use to me anymore.";
+Instead of talking to Zyliath: say "Hello James, I've known you since you were a child and look at you now im so proud to be your teacher. I almost forgot here take my staff, this will deffinitly come in handy who knows what you will run into on your adventure. With my old body I now spend my days reading and gardening its no use to me anymore. I wish you the best of luck james you can do it!";
 	move Zyliath's Magical staff to player.
 
 
