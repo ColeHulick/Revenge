@@ -12426,9 +12426,9 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! When play begins:
 [ R_801 ;
     if (debug_rules) DB_Rule(R_801, 801);
-    ! [2: say ~Welcome to Revenge! A ravenous dragon has reigned terror on your small town Draycott, for centuries. Your name is James, you have been training and learning magic since you were born. Its finally your time to avenge everyone that has lost their homes and lives from this dragon!~]
-    say__p=1;! [3: ~Welcome to Revenge! A ravenous dragon has reigned terror on your small town Draycott, for centuries. Your name is James, you have been training and learning magic since you were born. Its finally your time to avenge everyone that has lost their homes and lives from this dragon!~]
-    ParaContent(); print "Welcome to Revenge! A ravenous dragon has reigned terror on your small town Draycott, for centuries. Your name is James, you have been training and learning magic since you were born. Its finally your time to avenge everyone that has lost their homes and lives from this dragon!"; new_line; .L_Say1; .L_SayX1;rfalse;
+    ! [2: say ~Welcome to Revenge! A ravenous dragon has reigned terror on your small town, Draycott, for centuries. Your name is James and you have been training and learning magic since you were born. It's finally your time to avenge everyone that has lost their homes and lives because of this dragon!~]
+    say__p=1;! [3: ~Welcome to Revenge! A ravenous dragon has reigned terror on your small town, Draycott, for centuries. Your name is James and you have been training and learning magic since you were born. It's finally your time to avenge everyone that has lost their homes and lives because of this dragon!~]
+    ParaContent(); print "Welcome to Revenge! A ravenous dragon has reigned terror on your small town, Draycott, for centuries. Your name is James and you have been training and learning magic since you were born. It's finally your time to avenge everyone that has lost their homes and lives because of this dragon!"; new_line; .L_Say1; .L_SayX1;rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
 
@@ -12952,9 +12952,9 @@ Array ActionHappened --> 0 0 0 0 0 0;
     if ((((action ==##Attack) &&  (actor==player) && ((noun == I135_defender_of_the_forest) && (true)) && (self=actor,true) && (((~~((player == OwnerOf(I147_zyliath_s_magical_staff))))))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_803, 803);
-    ! [2: say ~You try to punch the Defender he is not fazed by it. He grabs you by the neck and throws you to the ground instantly killing you.~]
-    say__p=1;! [3: ~You try to punch the Defender he is not fazed by it. He grabs you by the neck and throws you to the ground instantly killing you.~]
-    ParaContent(); print "You try to punch the Defender he is not fazed by it. He grabs you by the neck and throws you to the ground instantly killing you."; new_line; .L_Say4; .L_SayX4;! [4: end the story finally]
+    ! [2: say ~You try to punch the Defender, but he is not fazed by it. He grabs you by the neck and throws you to the ground instantly killing you.~]
+    say__p=1;! [3: ~You try to punch the Defender, but he is not fazed by it. He grabs you by the neck and throws you to the ground instantly killing you.~]
+    ParaContent(); print "You try to punch the Defender, but he is not fazed by it. He grabs you by the neck and throws you to the ground instantly killing you."; new_line; .L_Say4; .L_SayX4;! [4: end the story finally]
     deadflag=3; story_complete=true;
     RulebookFails(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_803, 803, 'action');
@@ -12980,13 +12980,13 @@ Array ActionHappened --> 0 0 0 0 0 0;
     if ((((action ==##Attack) &&  (actor==player) && ((noun == I135_defender_of_the_forest) && (true)) && (self=actor,true) && (((player == OwnerOf(I147_zyliath_s_magical_staff))))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_802, 802);
-    ! [2: say ~You raise your staff in the air, an orb of blue light appears from your staff and strikes your opponent killing him in an instant. As the defender gets vaporized its heart slowly falls to the ground.~]
-    say__p=1;! [3: ~You raise your staff in the air, an orb of blue light appears from your staff and strikes your opponent killing him in an instant. As the defender gets vaporized its heart slowly falls to the ground.~]
-    ParaContent(); print "You raise your staff in the air, an orb of blue light appears from your staff and strikes your opponent killing him in an instant. As the defender gets vaporized its heart slowly falls to the ground."; new_line; .L_Say6; .L_SayX6;! [4: move heart to player]
+    ! [2: say ~When you raise your staff in the air, an orb of blue light appears from your staff and strikes your opponent killing him in an instant. As the Defender gets vaporized, his heart slowly falls to the ground.~]
+    say__p=1;! [3: ~When you raise your staff in the air, an orb of blue light appears from your staff and strikes your opponent killing him in an instant. As the Defender gets vaporized, his heart slowly falls to the ground.~]
+    ParaContent(); print "When you raise your staff in the air, an orb of blue light appears from your staff and strikes your opponent killing him in an instant. As the Defender gets vaporized, his heart slowly falls to the ground."; new_line; .L_Say6; .L_SayX6;! [4: move heart to player]
     MoveObject(I143_forest_defender_heart, player, 0, false);
-    ! [5: say ~you now have the defender of the forest's heart.~]
-    say__p=1;! [6: ~you now have the defender of the forest's heart.~]
-    ParaContent(); print "you now have the defender of the forest's heart."; new_line; .L_Say7; .L_SayX7;RulebookFails(); rtrue;
+    ! [5: say ~You now have the Defender of the forest's heart.~]
+    say__p=1;! [6: ~You now have the Defender of the forest's heart.~]
+    ParaContent(); print "You now have the Defender of the forest's heart."; new_line; .L_Say7; .L_SayX7;RulebookFails(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_802, 802, 'action');
     rfalse;
 ];
@@ -50307,13 +50307,13 @@ Constant TX_PS_80 = ">";
 Constant TX_PS_73 = "A heart made of pure emerald. This item is great for combining with stones to make powerful magic.";
 Constant TX_PS_47 = "A mystic looking leather bound hand sized spell book, you slowly open it and find a word written inside of the book. It says PATHUS?";
 Constant TX_PS_60 = "A spherical stone pulsating with magic and power. This is just the stone you need to combine with your heart you got.";
-Constant TX_PS_64 = "All of these people must have died trying to slay the dragon. You look below your feet and find bodies scattered about. East of you are stairs leading to the top of the tower.";
+Constant TX_PS_64 = "All of these people must have died trying to slay the dragon. You look at your feet and find bodies scattered about. East of you are stairs leading to the top of the tower.";
 Constant TX_PS_3 = "An Interactive Fiction";
 Constant TX_PS_56 = "An old dirty brick.";
 Constant TX_PS_75 = "An orb of pure power and destruction, dark light emits from the object.";
-Constant TX_PS_62 = "As you head up the stairs a deep roar echo's through the tower. As you reach the top of the steps you find yourself surrounded by burnt dead corpses and dungeon-like walls. The whole feeling of the room creeps you out.";
-Constant TX_PS_39 = "As you leave the town a dirt path is found underneath you. As you venture on further you find an opening to the forest east of you. Ahead of you the trail keeps heading north.";
-Constant TX_PS_66 = "As you take each step the whole atmosphere begins to change, as if a dark powerful presence is watching your every step. You soon reach the top of the tower, the wind blows rapidly into your face and clouds begin to form above you blocking out the sun. You look ahead and see the Dragon! It screeches out a roar and stares right into your eyes. Your heart starts rapidly speeding up! YOU NEED TO SLAY THE DRAGON NOW!";
+Constant TX_PS_62 = "As you head up the stairs, a deep roar echos through the tower. As you reach the top of the steps, you find yourself surrounded by burnt dead corpses and dungeon-like walls. The whole feeling of the room creeps you out.";
+Constant TX_PS_39 = "As you leave the town, a dirt path is found underneath you. As you venture on further, you find an opening to the forest east of you. Ahead of you, the trail keeps heading north.";
+Constant TX_PS_66 = "As you take each step, the whole atmosphere begins to change, as if a dark powerful presence is watching your every step. You soon reach the top of the tower and the wind blows rapidly into your face while clouds begin to form above you blocking out the sun. You look ahead and see the Dragon! It screeches out a roar and stares right into your eyes. Your heart starts rapidly speeding up! YOU NEED TO SLAY THE DRAGON NOW!";
 Constant TX_PS_69 = "Bridge";
 Constant TX_PS_57 = "Cellar";
 Constant TX_PS_4 = "Cole Hulick";
@@ -50343,21 +50343,21 @@ Constant TX_PS_83 = "RESTORE a saved game";
 Constant TX_PS_2 = "Revenge ";
 Constant TX_PS_54 = "Rusty Key";
 Constant TX_PS_46 = "Spell book";
-Constant TX_PS_49 = "Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found.";
-Constant TX_PS_53 = "The bricks of the wall had started to crumble and blacken in age, Cobwebs cover the walls and give you a sense of foreboding. You look more closely and notice a brick out of place?";
+Constant TX_PS_49 = "Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, and this might be the time to use that spell you found.";
+Constant TX_PS_53 = "The bricks of the wall have started to crumble and blacken in age. Cobwebs cover the walls and give you a sense of foreboding. You look more closely and notice a brick out of place?";
 Constant TX_PS_58 = "The door slowly creaks open; a musty smell fills your nose. The outdoor sunlight fills the darkened room. As your eyes adjust something shiny grabs your attention. You walk towards it and wipe off the thick layer of dust settling on the item, and notice its an Onyx stone!";
 Constant TX_PS_79 = "The staff contains a huge amount of magical power. Green and dark light runs down the side of the staff like veins. This staff will surely defeat any foe you run into.";
 Constant TX_PS_65 = "Top of tower";
 Constant TX_PS_50 = "Tower";
 Constant TX_PS_38 = "Trail";
 Constant TX_PS_86 = "UNDO the last command";
-Constant TX_PS_43 = "Vines and moss wrap around its body, its eyes are emerald green and shining with life. A long wooden spear is found in his right hand.";
-Constant TX_PS_35 = "Welcome to the town of Draycott. Crops are burnt to a crisp and live stalk is at an all-time low. Houses are in ashes and there are no townspeople to be seen. As you head near the end of the town you see your Master Zyliath, you should go talk to him.";
+Constant TX_PS_43 = "Vines and moss wrap around its body and its eyes are emerald green and shining with life. A long wooden spear is found in his right hand.";
+Constant TX_PS_35 = "Welcome to the town of Draycott. Crops are burnt to a crisp and livestock is at an all-time low. Houses are in ashes and there are no townspeople to be seen. As you head near the end of the town you see Master Zyliath and speaking to him is greatly advised.";
 Constant TX_PS_32 = "You are a young man. Blond locks of hair run down to your shoulders. Your eyes are as blue as sapphires and your skin is silky and brown.";
 Constant TX_PS_45 = "You look more closely and find a mystic looking leather bound hand sized spell book placed on the outside of the tree.";
 Constant TX_PS_77 = "You look more closely at the staff. The body of the staff is made from while pearly wood and is entwined with gold.";
-Constant TX_PS_41 = "You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall the whole atmosphere changes. The ground was spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest.";
-Constant TX_PS_51 = "You slowly enter the tower, and find yourself surrounded by Dungeon-like walls on every side. The brick walls are covered in dust and cobwebs there must be something hidden within these walls. You see an old door northwest of you and stairs northeast of you.";
+Constant TX_PS_41 = "You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall, the whole atmosphere changes. The ground is spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest.";
+Constant TX_PS_51 = "You slowly enter the tower, and find yourself surrounded by dungeon-like walls on every side. The brick walls are covered in dust and cobwebs and you feel like there must be something hidden within these walls. You see an old door northwest of you and stairs northeast of you.";
 Constant TX_PS_33 = "Yourself";
 Constant TX_PS_76 = "Zyliath's Magical staff";
 Constant TX_PS_9 = "animals";

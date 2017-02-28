@@ -7,14 +7,14 @@
         <result xml:space="preserve">
 
 
-Welcome to Revenge! A ravenous dragon has reigned terror on your small town Draycott, for centuries. Your name is James, you have been training and learning magic since you were born. Its finally your time to avenge everyone that has lost their homes and lives from this dragon!
+Welcome to Revenge! A ravenous dragon has reigned terror on your small town, Draycott, for centuries. Your name is James and you have been training and learning magic since you were born. It's finally your time to avenge everyone that has lost their homes and lives because of this dragon!
 
 Revenge 
 An Interactive Fiction by Cole Hulick
 Release 1 / Serial number 170227 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Draycott
-Welcome to the town of Draycott. Crops are burnt to a crisp and live stalk is at an all-time low. Houses are in ashes and there are no townspeople to be seen. As you head near the end of the town you see your Master Zyliath, you should go talk to him.
+Welcome to the town of Draycott. Crops are burnt to a crisp and livestock is at an all-time low. Houses are in ashes and there are no townspeople to be seen. As you head near the end of the town you see Master Zyliath and speaking to him is greatly advised.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -264,7 +264,7 @@ Suddenly the trail ends. You look down and find a deep crevice with dark blue wa
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Trail
-As you leave the town a dirt path is found underneath you. As you venture on further you find an opening to the forest east of you. Ahead of you the trail keeps heading north.
+As you leave the town, a dirt path is found underneath you. As you venture on further, you find an opening to the forest east of you. Ahead of you, the trail keeps heading north.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -275,7 +275,7 @@ As you leave the town a dirt path is found underneath you. As you venture on fur
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
 Forest
-You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall the whole atmosphere changes. The ground was spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest.
+You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall, the whole atmosphere changes. The ground is spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -363,8 +363,8 @@ You can see Old Door here.
     </item>
     <item nodeId="node-1030">
         <command xml:space="preserve">attack defender</command>
-        <result xml:space="preserve">You raise your staff in the air, an orb of blue light appears from your staff and strikes your opponent killing him in an instant. As the defender gets vaporized its heart slowly falls to the ground.
-you now have the defender of the forest's heart.
+        <result xml:space="preserve">When you raise your staff in the air, an orb of blue light appears from your staff and strikes your opponent killing him in an instant. As the Defender gets vaporized, his heart slowly falls to the ground.
+You now have the Defender of the forest's heart.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -414,7 +414,7 @@ Suddenly the trail ends. You look down and find a deep crevice with dark blue wa
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Trail
-As you leave the town a dirt path is found underneath you. As you venture on further you find an opening to the forest east of you. Ahead of you the trail keeps heading north.
+As you leave the town, a dirt path is found underneath you. As you venture on further, you find an opening to the forest east of you. Ahead of you, the trail keeps heading north.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -425,7 +425,7 @@ As you leave the town a dirt path is found underneath you. As you venture on fur
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Deep Crevice
-Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found.
+Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, and this might be the time to use that spell you found.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -453,7 +453,7 @@ Suddenly the trail ends. You look down and find a deep crevice with dark blue wa
     <item nodeId="node-1993">
         <command xml:space="preserve">cross bridge</command>
         <result xml:space="preserve">Tower
-You slowly enter the tower, and find yourself surrounded by Dungeon-like walls on every side. The brick walls are covered in dust and cobwebs there must be something hidden within these walls. You see an old door northwest of you and stairs northeast of you.
+You slowly enter the tower, and find yourself surrounded by dungeon-like walls on every side. The brick walls are covered in dust and cobwebs and you feel like there must be something hidden within these walls. You see an old door northwest of you and stairs northeast of you.
 
 You can see Old Door here.
 
@@ -464,7 +464,7 @@ You can see Old Door here.
     </item>
     <item nodeId="node-1994">
         <command xml:space="preserve">x walls</command>
-        <result xml:space="preserve">You can't see any such thing.
+        <result xml:space="preserve">The bricks of the wall have started to crumble and blacken in age. Cobwebs cover the walls and give you a sense of foreboding. You look more closely and notice a brick out of place?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -473,7 +473,7 @@ You can see Old Door here.
     </item>
     <item nodeId="node-1995">
         <command xml:space="preserve">x wall</command>
-        <result xml:space="preserve">The bricks of the wall had started to crumble and blacken in age, Cobwebs cover the walls and give you a sense of foreboding. You look more closely and notice a brick out of place?
+        <result xml:space="preserve">The bricks of the wall have started to crumble and blacken in age. Cobwebs cover the walls and give you a sense of foreboding. You look more closely and notice a brick out of place?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

@@ -12,40 +12,40 @@ To say exit list:
 		if place is a room, say " [way]".
 [got this from Get That Cat by Douglas Kiang]
 
-When play begins: say "Welcome to Revenge! A ravenous dragon has reigned terror on your small town Draycott, for centuries. Your name is James, you have been training and learning magic since you were born. Its finally your time to avenge everyone that has lost their homes and lives from this dragon!"
+When play begins: say "Welcome to Revenge! A ravenous dragon has reigned terror on your small town, Draycott, for centuries. Your name is James and you have been training and learning magic since you were born. It's finally your time to avenge everyone that has lost their homes and lives because of this dragon!"
 
 [ROOMS]
-Draycott is a room. "Welcome to the town of Draycott. Crops are burnt to a crisp and live stalk is at an all-time low. Houses are in ashes and there are no townspeople to be seen. As you head near the end of the town you see your Master Zyliath, you should go talk to him."
+Draycott is a room. "Welcome to the town of Draycott. Crops are burnt to a crisp and livestock is at an all-time low. Houses are in ashes and there are no townspeople to be seen. As you head near the end of the town you see Master Zyliath and speaking to him is greatly advised."
 
-Trail is a room. Trail is north of Draycott. "As you leave the town a dirt path is found underneath you. As you venture on further you find an opening to the forest east of you. Ahead of you the trail keeps heading north."
+Trail is a room. Trail is north of Draycott. "As you leave the town, a dirt path is found underneath you. As you venture on further, you find an opening to the forest east of you. Ahead of you, the trail keeps heading north."
 
-Forest is a room. Forest is east of Trail. "You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall the whole atmosphere changes. The ground was spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest."
+Forest is a room. Forest is east of Trail. "You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall, the whole atmosphere changes. The ground is spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest."
 
-Deep Crevice is a room. Deep Crevice is north of Trail. "Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found."
+Deep Crevice is a room. Deep Crevice is north of Trail. "Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, and this might be the time to use that spell you found."
 
-Tower is a room. "You slowly enter the tower, and find yourself surrounded by Dungeon-like walls on every side. The brick walls are covered in dust and cobwebs there must be something hidden within these walls. You see an old door northwest of you and stairs northeast of you."
+Tower is a room. "You slowly enter the tower, and find yourself surrounded by dungeon-like walls on every side. The brick walls are covered in dust and cobwebs and you feel like there must be something hidden within these walls. You see an old door northwest of you and stairs northeast of you."
 
-Dungeon like wall is scenery in Tower. "The bricks of the wall had started to crumble and blacken in age, Cobwebs cover the walls and give you a sense of foreboding. You look more closely and notice a brick out of place?"
+Dungeon like wall is scenery in Tower. "The bricks of the wall have started to crumble and blacken in age. Cobwebs cover the walls and give you a sense of foreboding. You look more closely and notice a brick out of place?"
 Understand "Dungeon walls" as Dungeon like wall.
 Understand "Walls" as Dungeon like wall. 
 
 Cellar is a room. "The door slowly creaks open; a musty smell fills your nose. The outdoor sunlight fills the darkened room. As your eyes adjust something shiny grabs your attention. You walk towards it and wipe off the thick layer of dust settling on the item, and notice its an Onyx stone!"
 
-First floor is a room. First floor is northeast of Tower. "As you head up the stairs a deep roar echo's through the tower. As you reach the top of the steps you find yourself surrounded by burnt dead corpses and dungeon-like walls. The whole feeling of the room creeps you out."
+First floor is a room. First floor is northeast of Tower. "As you head up the stairs, a deep roar echos through the tower. As you reach the top of the steps, you find yourself surrounded by burnt dead corpses and dungeon-like walls. The whole feeling of the room creeps you out."
 
-Dead Corpses is scenery. Dead Corpses is in First floor. "All of these people must have died trying to slay the dragon. You look below your feet and find bodies scattered about. East of you are stairs leading to the top of the tower."
+Dead Corpses is scenery. Dead Corpses is in First floor. "All of these people must have died trying to slay the dragon. You look at your feet and find bodies scattered about. East of you are stairs leading to the top of the tower."
 
-Top of tower is a room. Top of tower is east of first floor. "As you take each step the whole atmosphere begins to change, as if a dark powerful presence is watching your every step. You soon reach the top of the tower, the wind blows rapidly into your face and clouds begin to form above you blocking out the sun. You look ahead and see the Dragon! It screeches out a roar and stares right into your eyes. Your heart starts rapidly speeding up! YOU NEED TO SLAY THE DRAGON NOW!"
+Top of tower is a room. Top of tower is east of first floor. "As you take each step, the whole atmosphere begins to change, as if a dark powerful presence is watching your every step. You soon reach the top of the tower and the wind blows rapidly into your face while clouds begin to form above you blocking out the sun. You look ahead and see the Dragon! It screeches out a roar and stares right into your eyes. Your heart starts rapidly speeding up! YOU NEED TO SLAY THE DRAGON NOW!"
 
 [ENEMIES]
 
-Defender of the Forest is a person. Defender of the Forest is a thing in Forest. Defender of the Forest is undescribed. "Vines and moss wrap around its body, its eyes are emerald green and shining with life. A long wooden spear is found in his right hand."
+Defender of the Forest is a person. Defender of the Forest is a thing in Forest. Defender of the Forest is undescribed. "Vines and moss wrap around its body and its eyes are emerald green and shining with life. A long wooden spear is found in his right hand."
 
-Instead of attacking Defender of the Forest when player has Zyliath's Magical staff: Say "You raise your staff in the air, an orb of blue light appears from your staff and strikes your opponent killing him in an instant. As the defender gets vaporized its heart slowly falls to the ground.";
+Instead of attacking Defender of the Forest when player has Zyliath's Magical staff: Say "When you raise your staff in the air, an orb of blue light appears from your staff and strikes your opponent killing him in an instant. As the Defender gets vaporized, his heart slowly falls to the ground.";
 move heart to player;
-say "you now have the defender of the forest's heart.".
+say "You now have the Defender of the forest's heart.".
 
-Instead of attacking Defender of the Forest when player does not have Zyliath's Magical staff: Say "You try to punch the Defender he is not fazed by it. He grabs you by the neck and throws you to the ground instantly killing you.";
+Instead of attacking Defender of the Forest when player does not have Zyliath's Magical staff: Say "You try to punch the Defender, but he is not fazed by it. He grabs you by the neck and throws you to the ground instantly killing you.";
 end the story finally.
 
 Dragon is a person. Dragon is a thing in Top of tower. "Fierce eyes sit deep within the dragon's skull. Two horns sit atop its head, several rows of small crystal growths run down the dragon's spine. Colossal wings grow from its side; large ruby scales cover the dragon's body."
