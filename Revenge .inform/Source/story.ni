@@ -1,6 +1,7 @@
 "Revenge " by Cole Hulick
 
-[Shortest route to win game. Talk to Zyliath, north, east, take book, attack defender, west, north, PATHUS, cross bridge, search wall, take brick, take key, Unlock door with key, northwest, take Onyx stone, southeast, northeast,  Combine stone with heart, Coming orb with staff, east, attack dragon.]
+[Shortest route to win game. 
+Talk to Zyliath, north, east, take book, attack defender, west, north, PATHUS, cross bridge, search wall, take brick, take key, Unlock door with key, northwest, take Onyx stone, southeast, northeast,  Combine stone with heart, Coming orb with staff, east, attack dragon.]
 
 When play begins: 
     now left hand status line is "Exits: [exit list]"; 
@@ -11,6 +12,7 @@ To say exit list:
 		let place be the room way from the location; 
 		if place is a room, say " [way]".
 [got this from Get That Cat by Douglas Kiang]
+[puts exit list at top of screen]
 
 When play begins: say "Welcome to Revenge! A ravenous dragon has reigned terror on your small town, Draycott, for centuries. Your name is James and you have been training and learning magic since you were born. It's finally your time to avenge everyone that has lost their homes and lives because of this dragon!"
 
@@ -19,11 +21,16 @@ Draycott is a room. "Welcome to the town of Draycott. Crops are burnt to a crisp
 
 Trail is a room. Trail is north of Draycott. "As you leave the town, a dirt path is found underneath you. As you venture on further, you find an opening to the forest east of you. Ahead of you, the trail keeps heading north."
 
+Dirt path is scenery in trail. "Just a brown dirt path."
+Understand "Path" as Dirt Path.
+
 Forest is a room. Forest is east of Trail. "You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall, the whole atmosphere changes. The ground is spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest."
 
 Deep Crevice is a room. Deep Crevice is north of Trail. "Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, and this might be the time to use that spell you found."
 
 Tower is a room. "You slowly enter the tower, and find yourself surrounded by dungeon-like walls on every side. The brick walls are covered in dust and cobwebs and you feel like there must be something hidden within these walls. You see an old door northwest of you and stairs northeast of you."
+
+Cobwebs is scenery in tower. "Long silky webs stretch along the walls."
 
 Dungeon like wall is scenery in Tower. "The bricks of the wall have started to crumble and blacken in age. Cobwebs cover the walls and give you a sense of foreboding. You look more closely and notice a brick out of place?"
 Understand "Dungeon walls" as Dungeon like wall.
@@ -34,8 +41,10 @@ Cellar is a room. "The door slowly creaks open; a musty smell fills your nose. T
 First floor is a room. First floor is northeast of Tower. "As you head up the stairs, a deep roar echos through the tower. As you reach the top of the steps, you find yourself surrounded by burnt dead corpses and dungeon-like walls. The whole feeling of the room creeps you out."
 
 Dead Corpses is scenery. Dead Corpses is in First floor. "All of these people must have died trying to slay the dragon. You look at your feet and find bodies scattered about. East of you are stairs leading to the top of the tower."
+Understand "Corpses" as Dead Corpses.
+Understand "Bodies" as dead Corpses.
 
-Top of tower is a room. Top of tower is east of first floor. "As you take each step, the whole atmosphere begins to change, as if a dark powerful presence is watching your every step. You soon reach the top of the tower and the wind blows rapidly into your face while clouds begin to form above you blocking out the sun. You look ahead and see the Dragon! It screeches out a roar and stares right into your eyes. Your heart starts rapidly speeding up! YOU NEED TO SLAY THE DRAGON NOW!"
+Top of tower is a room. Top of tower is east of first floor. "As you take each step, the whole atmosphere begins to change, as if a dark powerful presence is watching your every step. You soon reach the top of the tower, the wind blows rapidly into your face. Clouds begin to form above you blocking out the sun. You look ahead and see the Dragon! It screeches out a roar and stares right into your eyes. Your heart starts rapidly speeding up! YOU NEED TO SLAY THE DRAGON NOW!"
 
 [ENEMIES]
 
@@ -48,14 +57,13 @@ say "You now have the Defender of the forest's heart.".
 Instead of attacking Defender of the Forest when player does not have Zyliath's Magical staff: Say "You try to punch the Defender, but he is not fazed by it. He grabs you by the neck and throws you to the ground instantly killing you.";
 end the story finally.
 
-Dragon is a person. Dragon is a thing in Top of tower. "Fierce eyes sit deep within the dragon's skull. Two horns sit atop its head, several rows of small crystal growths run down the dragon's spine. Colossal wings grow from its side; large ruby scales cover the dragon's body."
+Dragon is a person. Dragon is a thing in Top of tower. "Fierce eyes sit deep within the dragon's skull. Two horns sit atop its head, several rows of small crystal growths run down the dragon's spine. Colossal wings grow from its side; large ruby scales cover the dragon's body.".
 
 Instead of attacking Dragon when player has Infinity staff: Say "You lift your staff in the air. An immensely powerful dark orb starts to form; electricity begins to run through it. With one sweeping motion the Orb fly's quickly towards the dragon. With a great flash of light, the orb pierces the Dragons scales and explodes into dark flames. Once the debris clears all that's left of the dragon is the head.";
-End the story finally.
+End the story finally saying "Congratulations! You have saved the town of Draycott, citizens can now live in peace. You will be remembered as a hero for centuries."
 
 Instead of attacking Dragon when player does not have Infinity staff: Say "Before you could react the dragon hurls fire at you burning you to a crisp.";
 End the story finally.
-
 
 [PUZZLES]
 Large oak tree is a container in forest. Large oak tree is scenery in forest. "You look more closely and find a mystic looking leather bound hand sized spell book placed on the outside of the tree."
@@ -73,9 +81,11 @@ Understand "cross [bridge]" as crossing. Crossing is an action applying to one t
 
 Instead of crossing bridge when player has spell book:
 	move the player to Tower.
+	
+[got from life of a teenage wizard]
 
 [Puzzle #2]
-Old Door is southeast of Cellar. Old Door is northwest of tower. Old Door is a door. Old Door is lockable and locked. 
+Old Door is southeast of Cellar. Old Door is northwest of tower. Old Door is a door. Old Door is lockable and locked. "A big old wooden door."
 Understand "Door" as Old Door.
 
 Rusty Key unlocks Old Door. Rusty Key is in tower. Rusty Key is undescribed.
@@ -150,8 +160,7 @@ Instead of talking to Zyliath: say "Hello James, I've known you since you were a
 
 
 [THE PLAYER]
-The description of player is "You are a young man. Blond locks of hair run down to your shoulders. Your eyes are as blue as sapphires and your skin is silky and brown."
-
+The description of player is "You are a young man. Blonde locks of hair run down to your shoulders. Your eyes are as blue as sapphires and your skin is rough and brown."
 
 [ITEMS]
 Zyliath's Magical staff is a thing. "You look more closely at the staff. The body of the staff is made from while pearly wood and is entwined with gold."

@@ -269,7 +269,82 @@ As you leave the town, a dirt path is found underneath you. As you venture on fu
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1028"></child>
+            <child nodeId="node-2287"></child>
         </children>
+    </item>
+    <item nodeId="node-2287">
+        <command xml:space="preserve">x path</command>
+        <result xml:space="preserve">Just a brown dirt path.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2288"></child>
+        </children>
+    </item>
+    <item nodeId="node-2288">
+        <command xml:space="preserve">x dirt path</command>
+        <result xml:space="preserve">Just a brown dirt path.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2293"></child>
+        </children>
+    </item>
+    <item nodeId="node-2293">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Forest
+You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall, the whole atmosphere changes. The ground is spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2294"></child>
+        </children>
+    </item>
+    <item nodeId="node-2294">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Trail
+As you leave the town, a dirt path is found underneath you. As you venture on further, you find an opening to the forest east of you. Ahead of you, the trail keeps heading north.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2295"></child>
+        </children>
+    </item>
+    <item nodeId="node-2295">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Deep Crevice
+Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, and this might be the time to use that spell you found.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2296"></child>
+        </children>
+    </item>
+    <item nodeId="node-2296">
+        <command xml:space="preserve">x tower</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2305"></child>
+        </children>
+    </item>
+    <item nodeId="node-2305">
+        <command xml:space="preserve">PATHUS</command>
+        <result xml:space="preserve">A bridge was built in front of you! You can now go on your way and cross over the bridge.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2306"></child>
+        </children>
+    </item>
+    <item nodeId="node-2306">
+        <command xml:space="preserve">cross bridge</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1028">
         <command xml:space="preserve">e</command>
@@ -376,7 +451,7 @@ You now have the Defender of the forest's heart.
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Trail
-As you leave the town a dirt path is found underneath you. As you venture on further you find an opening to the forest east of you. Ahead of you the trail ends and seems to drop off?
+As you leave the town, a dirt path is found underneath you. As you venture on further, you find an opening to the forest east of you. Ahead of you, the trail keeps heading north.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -387,7 +462,186 @@ As you leave the town a dirt path is found underneath you. As you venture on fur
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Deep Crevice
-Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, this might be the time to use that spell you found.
+Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, and this might be the time to use that spell you found.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2314"></child>
+        </children>
+    </item>
+    <item nodeId="node-2314">
+        <command xml:space="preserve">PATHUS</command>
+        <result xml:space="preserve">A bridge was built in front of you! You can now go on your way and cross over the bridge.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2315"></child>
+        </children>
+    </item>
+    <item nodeId="node-2315">
+        <command xml:space="preserve">cross bridge</command>
+        <result xml:space="preserve">Tower
+You slowly enter the tower, and find yourself surrounded by dungeon-like walls on every side. The brick walls are covered in dust and cobwebs and you feel like there must be something hidden within these walls. You see an old door northwest of you and stairs northeast of you.
+
+A big old wooden door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2316"></child>
+        </children>
+    </item>
+    <item nodeId="node-2316">
+        <command xml:space="preserve">x walls</command>
+        <result xml:space="preserve">The bricks of the wall have started to crumble and blacken in age. Cobwebs cover the walls and give you a sense of foreboding. You look more closely and notice a brick out of place?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2317"></child>
+        </children>
+    </item>
+    <item nodeId="node-2317">
+        <command xml:space="preserve">take brick</command>
+        <result xml:space="preserve">After taking the brick you see a Rusty key in its place, you reach your hand into the hole and grab the key.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2318"></child>
+        </children>
+    </item>
+    <item nodeId="node-2318">
+        <command xml:space="preserve">x key</command>
+        <result xml:space="preserve">You see nothing special about Rusty Key.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2319"></child>
+        </children>
+    </item>
+    <item nodeId="node-2319">
+        <command xml:space="preserve">unlock door</command>
+        <result xml:space="preserve">What do you want to unlock Old Door with?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2320"></child>
+        </children>
+    </item>
+    <item nodeId="node-2320">
+        <command xml:space="preserve">unlock door with key</command>
+        <result xml:space="preserve">You unlock Old Door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2321"></child>
+        </children>
+    </item>
+    <item nodeId="node-2321">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">(first opening Old Door)
+
+Cellar
+The door slowly creaks open; a musty smell fills your nose. The outdoor sunlight fills the darkened room. As your eyes adjust something shiny grabs your attention. You walk towards it and wipe off the thick layer of dust settling on the item, and notice its an Onyx stone!
+
+A big old wooden door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2322"></child>
+        </children>
+    </item>
+    <item nodeId="node-2322">
+        <command xml:space="preserve">x old door</command>
+        <result xml:space="preserve">You see nothing special about Old Door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2323"></child>
+        </children>
+    </item>
+    <item nodeId="node-2323">
+        <command xml:space="preserve">x door</command>
+        <result xml:space="preserve">You see nothing special about Old Door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2324"></child>
+        </children>
+    </item>
+    <item nodeId="node-2324">
+        <command xml:space="preserve">x old door</command>
+        <result xml:space="preserve">You see nothing special about Old Door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2325"></child>
+        </children>
+    </item>
+    <item nodeId="node-2325">
+        <command xml:space="preserve">se</command>
+        <result xml:space="preserve">
+Tower
+You slowly enter the tower, and find yourself surrounded by dungeon-like walls on every side. The brick walls are covered in dust and cobwebs and you feel like there must be something hidden within these walls. You see an old door northwest of you and stairs northeast of you.
+
+A big old wooden door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2326"></child>
+        </children>
+    </item>
+    <item nodeId="node-2326">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">
+Cellar
+The door slowly creaks open; a musty smell fills your nose. The outdoor sunlight fills the darkened room. As your eyes adjust something shiny grabs your attention. You walk towards it and wipe off the thick layer of dust settling on the item, and notice its an Onyx stone!
+
+A big old wooden door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2327"></child>
+        </children>
+    </item>
+    <item nodeId="node-2327">
+        <command xml:space="preserve">se</command>
+        <result xml:space="preserve">
+Tower
+You slowly enter the tower, and find yourself surrounded by dungeon-like walls on every side. The brick walls are covered in dust and cobwebs and you feel like there must be something hidden within these walls. You see an old door northwest of you and stairs northeast of you.
+
+A big old wooden door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2328"></child>
+        </children>
+    </item>
+    <item nodeId="node-2328">
+        <command xml:space="preserve">ne</command>
+        <result xml:space="preserve">
+First floor
+As you head up the stairs, a deep roar echos through the tower. As you reach the top of the steps, you find yourself surrounded by burnt dead corpses and dungeon-like walls. The whole feeling of the room creeps you out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2329"></child>
+        </children>
+    </item>
+    <item nodeId="node-2329">
+        <command xml:space="preserve">x corpses</command>
+        <result xml:space="preserve">All of these people must have died trying to slay the dragon. You look at your feet and find bodies scattered about. East of you are stairs leading to the top of the tower.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2330"></child>
+        </children>
+    </item>
+    <item nodeId="node-2330">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Top of tower
+As you take each step, the whole atmosphere begins to change, as if a dark powerful presence is watching your every step. You soon reach the top of the tower, the wind blows rapidly into your face. Clouds begin to form above you blocking out the sun. You look ahead and see the Dragon! It screeches out a roar and stares right into your eyes. Your heart starts rapidly speeding up! YOU NEED TO SLAY THE DRAGON NOW!
+
+Fierce eyes sit deep within the dragon's skull. Two horns sit atop its head, several rows of small crystal growths run down the dragon's spine. Colossal wings grow from its side; large ruby scales cover the dragon's body.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -1217,11 +1471,12 @@ Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
     </item>
     <item nodeId="node-1070">
         <command xml:space="preserve">talk to master</command>
-        <result xml:space="preserve">You can't see any such thing.
+        <result xml:space="preserve">Hello James, I've known you since you were a child and look at you now I am so proud to be your teacher. I almost forgot here take my staff, this will definitely come in handy. Who knows what you will run into on your adventure. With my old body I now spend my days reading and gardening it's no use to me anymore. I wish you the best of luck James you can do it!
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1071"></child>
+        <children><child nodeId="node-2053"></child>
+            <child nodeId="node-1071"></child>
         </children>
     </item>
     <item nodeId="node-1071">
@@ -1457,6 +1712,598 @@ That's hardly portable.
         <result xml:space="preserve">After taking the brick you see a Rusty key in its place, you reach your hand into the hole and grab the key.
 
 &gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2053">
+        <command xml:space="preserve">take staff</command>
+        <result xml:space="preserve">You already have that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2054"></child>
+        </children>
+    </item>
+    <item nodeId="node-2054">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Trail
+As you leave the town, a dirt path is found underneath you. As you venture on further, you find an opening to the forest east of you. Ahead of you, the trail keeps heading north.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2055"></child>
+        </children>
+    </item>
+    <item nodeId="node-2055">
+        <command xml:space="preserve">x path</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2056"></child>
+        </children>
+    </item>
+    <item nodeId="node-2056">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Forest
+You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall, the whole atmosphere changes. The ground is spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2057"></child>
+        </children>
+    </item>
+    <item nodeId="node-2057">
+        <command xml:space="preserve">x tree</command>
+        <result xml:space="preserve">You look more closely and find a mystic looking leather bound hand sized spell book placed on the outside of the tree.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2058"></child>
+        </children>
+    </item>
+    <item nodeId="node-2058">
+        <command xml:space="preserve">take book</command>
+        <result xml:space="preserve">You slowly remove the spell book as vines and bark slowly break and fall to the floor. Suddenly you hear a thud behind you! You turn your head and find the Defender of the Forest approaching you! You have to attack the Defender of the Forest now!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2059"></child>
+        </children>
+    </item>
+    <item nodeId="node-2059">
+        <command xml:space="preserve">attack defender</command>
+        <result xml:space="preserve">When you raise your staff in the air, an orb of blue light appears from your staff and strikes your opponent killing him in an instant. As the Defender gets vaporized, his heart slowly falls to the ground.
+You now have the Defender of the forest's heart.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2060"></child>
+        </children>
+    </item>
+    <item nodeId="node-2060">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a Forest Defender heart
+  Spell book
+  Zyliath's Magical staff
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2061"></child>
+        </children>
+    </item>
+    <item nodeId="node-2061">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Trail
+As you leave the town, a dirt path is found underneath you. As you venture on further, you find an opening to the forest east of you. Ahead of you, the trail keeps heading north.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2062"></child>
+        </children>
+    </item>
+    <item nodeId="node-2062">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Deep Crevice
+Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, and this might be the time to use that spell you found.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2063"></child>
+        </children>
+    </item>
+    <item nodeId="node-2063">
+        <command xml:space="preserve">use spell</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2064"></child>
+        </children>
+    </item>
+    <item nodeId="node-2064">
+        <command xml:space="preserve">read book</command>
+        <result xml:space="preserve">A mystic looking leather bound hand sized spell book, you slowly open it and find a word written inside of the book. It says PATHUS?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2065"></child>
+        </children>
+    </item>
+    <item nodeId="node-2065">
+        <command xml:space="preserve">pathus</command>
+        <result xml:space="preserve">A bridge was built in front of you! You can now go on your way and cross over the bridge.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2066"></child>
+        </children>
+    </item>
+    <item nodeId="node-2066">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2067"></child>
+        </children>
+    </item>
+    <item nodeId="node-2067">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2068"></child>
+        </children>
+    </item>
+    <item nodeId="node-2068">
+        <command xml:space="preserve">cross bridge</command>
+        <result xml:space="preserve">Tower
+You slowly enter the tower, and find yourself surrounded by dungeon-like walls on every side. The brick walls are covered in dust and cobwebs and you feel like there must be something hidden within these walls. You see an old door northwest of you and stairs northeast of you.
+
+A big old wooden door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2069"></child>
+        </children>
+    </item>
+    <item nodeId="node-2069">
+        <command xml:space="preserve">x door</command>
+        <result xml:space="preserve">You see nothing special about Old Door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2070"></child>
+        </children>
+    </item>
+    <item nodeId="node-2070">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a Forest Defender heart
+  Spell book
+  Zyliath's Magical staff
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2071"></child>
+        </children>
+    </item>
+    <item nodeId="node-2071">
+        <command xml:space="preserve">ne</command>
+        <result xml:space="preserve">
+First floor
+As you head up the stairs, a deep roar echos through the tower. As you reach the top of the steps, you find yourself surrounded by burnt dead corpses and dungeon-like walls. The whole feeling of the room creeps you out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2072"></child>
+        </children>
+    </item>
+    <item nodeId="node-2072">
+        <command xml:space="preserve">x corpe</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2073"></child>
+        </children>
+    </item>
+    <item nodeId="node-2073">
+        <command xml:space="preserve">x corpse</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2074"></child>
+        </children>
+    </item>
+    <item nodeId="node-2074">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Top of tower
+As you take each step, the whole atmosphere begins to change, as if a dark powerful presence is watching your every step. You soon reach the top of the tower and the wind blows rapidly into your face while clouds begin to form above you blocking out the sun. You look ahead and see the Dragon! It screeches out a roar and stares right into your eyes. Your heart starts rapidly speeding up! YOU NEED TO SLAY THE DRAGON NOW!
+
+Fierce eyes sit deep within the dragon's skull. Two horns sit atop its head, several rows of small crystal growths run down the dragon's spine. Colossal wings grow from its side; large ruby scales cover the dragon's body.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2075"></child>
+        </children>
+    </item>
+    <item nodeId="node-2075">
+        <command xml:space="preserve">attack dragon</command>
+        <result xml:space="preserve">Before you could react the dragon hurls fire at you burning you to a crisp.
+
+
+
+    *** The End ***
+
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2076"></child>
+        </children>
+    </item>
+    <item nodeId="node-2076">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Top of tower
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2077"></child>
+        </children>
+    </item>
+    <item nodeId="node-2077">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+First floor
+As you head up the stairs, a deep roar echos through the tower. As you reach the top of the steps, you find yourself surrounded by burnt dead corpses and dungeon-like walls. The whole feeling of the room creeps you out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2078"></child>
+        </children>
+    </item>
+    <item nodeId="node-2078">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Tower
+You slowly enter the tower, and find yourself surrounded by dungeon-like walls on every side. The brick walls are covered in dust and cobwebs and you feel like there must be something hidden within these walls. You see an old door northwest of you and stairs northeast of you.
+
+A big old wooden door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2079"></child>
+        </children>
+    </item>
+    <item nodeId="node-2079">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">(first opening Old Door)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2080"></child>
+        </children>
+    </item>
+    <item nodeId="node-2080">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2081"></child>
+        </children>
+    </item>
+    <item nodeId="node-2081">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2082"></child>
+        </children>
+    </item>
+    <item nodeId="node-2082">
+        <command xml:space="preserve">ne</command>
+        <result xml:space="preserve">
+First floor
+As you head up the stairs, a deep roar echos through the tower. As you reach the top of the steps, you find yourself surrounded by burnt dead corpses and dungeon-like walls. The whole feeling of the room creeps you out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2083"></child>
+        </children>
+    </item>
+    <item nodeId="node-2083">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Top of tower
+As you take each step, the whole atmosphere begins to change, as if a dark powerful presence is watching your every step. You soon reach the top of the tower and the wind blows rapidly into your face while clouds begin to form above you blocking out the sun. You look ahead and see the Dragon! It screeches out a roar and stares right into your eyes. Your heart starts rapidly speeding up! YOU NEED TO SLAY THE DRAGON NOW!
+
+Fierce eyes sit deep within the dragon's skull. Two horns sit atop its head, several rows of small crystal growths run down the dragon's spine. Colossal wings grow from its side; large ruby scales cover the dragon's body.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2084"></child>
+        </children>
+    </item>
+    <item nodeId="node-2084">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+First floor
+As you head up the stairs, a deep roar echos through the tower. As you reach the top of the steps, you find yourself surrounded by burnt dead corpses and dungeon-like walls. The whole feeling of the room creeps you out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2085"></child>
+        </children>
+    </item>
+    <item nodeId="node-2085">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Tower
+You slowly enter the tower, and find yourself surrounded by dungeon-like walls on every side. The brick walls are covered in dust and cobwebs and you feel like there must be something hidden within these walls. You see an old door northwest of you and stairs northeast of you.
+
+A big old wooden door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2086"></child>
+        </children>
+    </item>
+    <item nodeId="node-2086">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2087"></child>
+        </children>
+    </item>
+    <item nodeId="node-2087">
+        <command xml:space="preserve">cross bridge</command>
+        <result xml:space="preserve">Tower
+You slowly enter the tower, and find yourself surrounded by dungeon-like walls on every side. The brick walls are covered in dust and cobwebs and you feel like there must be something hidden within these walls. You see an old door northwest of you and stairs northeast of you.
+
+A big old wooden door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2088"></child>
+        </children>
+    </item>
+    <item nodeId="node-2088">
+        <command xml:space="preserve">x walls</command>
+        <result xml:space="preserve">The bricks of the wall have started to crumble and blacken in age. Cobwebs cover the walls and give you a sense of foreboding. You look more closely and notice a brick out of place?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2089"></child>
+        </children>
+    </item>
+    <item nodeId="node-2089">
+        <command xml:space="preserve">remove brick</command>
+        <result xml:space="preserve">You aren't wearing Old Brick.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2090"></child>
+        </children>
+    </item>
+    <item nodeId="node-2090">
+        <command xml:space="preserve">take brick</command>
+        <result xml:space="preserve">After taking the brick you see a Rusty key in its place, you reach your hand into the hole and grab the key.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2091"></child>
+        </children>
+    </item>
+    <item nodeId="node-2091">
+        <command xml:space="preserve">take key</command>
+        <result xml:space="preserve">You already have that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2092"></child>
+        </children>
+    </item>
+    <item nodeId="node-2092">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  Rusty Key
+  a Forest Defender heart
+  Spell book
+  Zyliath's Magical staff
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2093"></child>
+        </children>
+    </item>
+    <item nodeId="node-2093">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">(first opening Old Door)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2094"></child>
+        </children>
+    </item>
+    <item nodeId="node-2094">
+        <command xml:space="preserve">unlock door</command>
+        <result xml:space="preserve">What do you want to unlock Old Door with?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2095"></child>
+        </children>
+    </item>
+    <item nodeId="node-2095">
+        <command xml:space="preserve">unlock door with key</command>
+        <result xml:space="preserve">You unlock Old Door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2096"></child>
+        </children>
+    </item>
+    <item nodeId="node-2096">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">(first opening Old Door)
+
+Cellar
+The door slowly creaks open; a musty smell fills your nose. The outdoor sunlight fills the darkened room. As your eyes adjust something shiny grabs your attention. You walk towards it and wipe off the thick layer of dust settling on the item, and notice its an Onyx stone!
+
+A big old wooden door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2097"></child>
+        </children>
+    </item>
+    <item nodeId="node-2097">
+        <command xml:space="preserve">take onyx stone</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2098"></child>
+        </children>
+    </item>
+    <item nodeId="node-2098">
+        <command xml:space="preserve">smell</command>
+        <result xml:space="preserve">You smell nothing unexpected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2099"></child>
+        </children>
+    </item>
+    <item nodeId="node-2099">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2100"></child>
+        </children>
+    </item>
+    <item nodeId="node-2100">
+        <command xml:space="preserve">se</command>
+        <result xml:space="preserve">
+Tower
+You slowly enter the tower, and find yourself surrounded by dungeon-like walls on every side. The brick walls are covered in dust and cobwebs and you feel like there must be something hidden within these walls. You see an old door northwest of you and stairs northeast of you.
+
+A big old wooden door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2101"></child>
+        </children>
+    </item>
+    <item nodeId="node-2101">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  Onyx Stone
+  Rusty Key
+  a Forest Defender heart
+  Spell book
+  Zyliath's Magical staff
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2102"></child>
+        </children>
+    </item>
+    <item nodeId="node-2102">
+        <command xml:space="preserve">x stone</command>
+        <result xml:space="preserve">A spherical stone pulsating with magic and power. This is just the stone you need to combine with your heart you got.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2103"></child>
+        </children>
+    </item>
+    <item nodeId="node-2103">
+        <command xml:space="preserve">combine stone with heart</command>
+        <result xml:space="preserve">You now have Elemental Orb!
+You combine the Defender of the Forests Heart and Onyx Stone to make Elemental orb, a powerful orb of magic and pure destruction. You need something to use this immense power... could the staff work?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2104"></child>
+        </children>
+    </item>
+    <item nodeId="node-2104">
+        <command xml:space="preserve">combine orb with staff</command>
+        <result xml:space="preserve">You now have Infinity staff!
+You combine Zyliath's Magical staff and Elemental orb to make Infinity Staff, an immensely powerful staff that will defeat any foe you encounter.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2105"></child>
+        </children>
+    </item>
+    <item nodeId="node-2105">
+        <command xml:space="preserve">ne</command>
+        <result xml:space="preserve">
+First floor
+As you head up the stairs, a deep roar echos through the tower. As you reach the top of the steps, you find yourself surrounded by burnt dead corpses and dungeon-like walls. The whole feeling of the room creeps you out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2106"></child>
+        </children>
+    </item>
+    <item nodeId="node-2106">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Top of tower
+As you take each step, the whole atmosphere begins to change, as if a dark powerful presence is watching your every step. You soon reach the top of the tower and the wind blows rapidly into your face while clouds begin to form above you blocking out the sun. You look ahead and see the Dragon! It screeches out a roar and stares right into your eyes. Your heart starts rapidly speeding up! YOU NEED TO SLAY THE DRAGON NOW!
+
+Fierce eyes sit deep within the dragon's skull. Two horns sit atop its head, several rows of small crystal growths run down the dragon's spine. Colossal wings grow from its side; large ruby scales cover the dragon's body.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2107"></child>
+        </children>
+    </item>
+    <item nodeId="node-2107">
+        <command xml:space="preserve">kill dragon with staff</command>
+        <result xml:space="preserve">I only understood you as far as wanting to kill Dragon.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2108"></child>
+        </children>
+    </item>
+    <item nodeId="node-2108">
+        <command xml:space="preserve">attack dragon</command>
+        <result xml:space="preserve">You lift your staff in the air. An immensely powerful dark orb starts to form; electricity begins to run through it. With one sweeping motion the Orb fly's quickly towards the dragon. With a great flash of light, the orb pierces the Dragons scales and explodes into dark flames. Once the debris clears all that's left of the dragon is the head.
+
+
+
+    *** The End ***
+
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
         <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1094">

@@ -4402,7 +4402,7 @@ Global lightflag = false;
 ! ListWriter.i6t: Memory
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant REQUISITION_STACK_SIZE = 3*38;
+Constant REQUISITION_STACK_SIZE = 3*40;
 Array requisition_stack --> REQUISITION_STACK_SIZE;
 Global requisition_stack_pointer = 0;
 
@@ -10547,13 +10547,13 @@ Array KindHierarchy --> K0_kind (0) K1_room (0) K2_thing (0) K3_direction (0) K4
 Constant IK1_First = I125_draycott;
 Constant IK2_First = selfobj;
 Constant IK3_First = I51_north;
-Constant IK4_First = I138_bridge;
-Constant IK5_First = I137_large_oak_tree;
+Constant IK4_First = I140_bridge;
+Constant IK5_First = I139_large_oak_tree;
 Constant IK6_First = nothing;
 Constant IK7_First = nothing;
 Constant IK8_First = selfobj;
 Constant IK9_First = nothing;
-Constant IK10_First = I146_master_zyliath;
+Constant IK10_First = I148_master_zyliath;
 Constant IK11_First = nothing;
 Constant IK12_First = nothing;
 Constant IK13_First = nothing;
@@ -10575,13 +10575,13 @@ Constant DirectionObject_10 = in_obj;
 Constant DirectionObject_11 = out_obj;
 Array Map_Storage -->
  I126_trail 0 0 0 0 0 0 0 0 0 0 0 ! Exits from: I125_draycott
- I128_deep_crevice 0 0 I125_draycott 0 0 I127_forest 0 0 0 0 0 ! Exits from: I126_trail
- 0 0 0 0 0 0 0 I126_trail 0 0 0 0 ! Exits from: I127_forest
- I138_bridge 0 0 I126_trail 0 0 0 0 0 0 0 0 ! Exits from: I128_deep_crevice
- 0 I132_first_floor I139_old_door I138_bridge 0 0 0 0 0 0 0 0 ! Exits from: I129_tower
- 0 0 0 0 I139_old_door 0 0 0 0 0 0 0 ! Exits from: I131_cellar
- 0 0 0 0 0 I129_tower I134_top_of_tower 0 0 0 0 0 ! Exits from: I132_first_floor
- 0 0 0 0 0 0 0 I132_first_floor 0 0 0 0 ! Exits from: I134_top_of_tower
+ I129_deep_crevice 0 0 I125_draycott 0 0 I128_forest 0 0 0 0 0 ! Exits from: I126_trail
+ 0 0 0 0 0 0 0 I126_trail 0 0 0 0 ! Exits from: I128_forest
+ I140_bridge 0 0 I126_trail 0 0 0 0 0 0 0 0 ! Exits from: I129_deep_crevice
+ 0 I134_first_floor I141_old_door I140_bridge 0 0 0 0 0 0 0 0 ! Exits from: I130_tower
+ 0 0 0 0 I141_old_door 0 0 0 0 0 0 0 ! Exits from: I133_cellar
+ 0 0 0 0 0 I130_tower I136_top_of_tower 0 0 0 0 0 ! Exits from: I134_first_floor
+ 0 0 0 0 0 0 0 I134_first_floor 0 0 0 0 ! Exits from: I136_top_of_tower
 ;
 
 Class VPH_Class;
@@ -11033,9 +11033,9 @@ Object selfobj ""
     with cap_short_name BC_143
     has mark_as_thing
     with IK2_Count 0
-    with IK2_Link I146_master_zyliath
+    with IK2_Link I148_master_zyliath
     with IK8_Count 0
-    with IK8_Link I146_master_zyliath
+    with IK8_Link I148_master_zyliath
     with KD_Count 8
     with parse_name Parse_Name_GV13
     with action_bitmap 0 0 0 0 0 0 
@@ -11062,7 +11062,7 @@ Object I125_draycott ""
     with article BC_152
 ;
 
-Object -> I146_master_zyliath ""
+Object -> I148_master_zyliath ""
     class K10_man
     with short_name BC_153
     with initial BC_154
@@ -11070,10 +11070,10 @@ Object -> I146_master_zyliath ""
     has concealed
     with vector 0
     has mark_as_thing
-    with IK2_Count 14
-    with IK2_Link I135_defender_of_the_forest
+    with IK2_Count 16
+    with IK2_Link I127_dirt_path
     with IK8_Count 3
-    with IK8_Link I135_defender_of_the_forest
+    with IK8_Link I137_defender_of_the_forest
     with IK10_Count 0
     with IK10_Link nothing
     with KD_Count 10
@@ -11094,7 +11094,7 @@ Object I126_trail ""
     with room_index -1
     has mark_as_room
     with IK1_Count 1
-    with IK1_Link I127_forest
+    with IK1_Link I128_forest
     with KD_Count 1
     with name 'trail' 'rooms//p' 
     with list_together BC_161
@@ -11102,78 +11102,80 @@ Object I126_trail ""
     with article BC_163
 ;
 
-Object I127_forest ""
-    class K1_room
+Object -> I127_dirt_path ""
+    class K2_thing
     with short_name BC_164
     with description BC_165
-    has proper
-    with vector 0
-    with room_index -1
-    has mark_as_room
-    with IK1_Count 2
-    with IK1_Link I128_deep_crevice
-    with KD_Count 1
-    with name 'forest' 'rooms//p' 
-    with list_together BC_166
-    with plural BC_167
-    with article BC_168
-;
-
-Object -> I135_defender_of_the_forest ""
-    class K8_person
-    with short_name BC_169
-    with initial BC_170
-    has proper
-    has concealed
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 3
-    with IK2_Link I137_large_oak_tree
-    with IK8_Count 1
-    with IK8_Link I136_dragon
-    with KD_Count 8
-    with name 'defender' 'of' 'the' 'forest' 'people//p' 
-    with action_bitmap 0 0 0 0 0 0 
-    with description BC_171
-    with list_together BC_172
-    with plural BC_173
-    with article BC_174
-;
-
-Object -> I137_large_oak_tree ""
-    class K5_container
-    with short_name BC_175
-    with description BC_176
     has proper
     has static
     has scenery
     with vector 0
     has mark_as_thing
-    with IK2_Count 5
-    with IK2_Link I148_spell_book
-    with IK5_Count 0
-    with IK5_Link nothing
-    with KD_Count 5
-    with name 'large' 'oak' 'tree' 'containers//p' 
+    with IK2_Count 1
+    with IK2_Link I137_defender_of_the_forest
+    with KD_Count 2
+    with name 'dirt' 'path' 'things//p' 'path' 
+    with parse_name Parse_Name_GV93
     with action_bitmap 0 0 0 0 0 0 
-    with initial BC_177
+    with initial BC_166
+    with list_together BC_167
+    with plural BC_168
+    with article BC_169
+;
+
+Object I128_forest ""
+    class K1_room
+    with short_name BC_170
+    with description BC_171
+    has proper
+    with vector 0
+    with room_index -1
+    has mark_as_room
+    with IK1_Count 2
+    with IK1_Link I129_deep_crevice
+    with KD_Count 1
+    with name 'forest' 'rooms//p' 
+    with list_together BC_172
+    with plural BC_173
+    with article BC_174
+;
+
+Object -> I137_defender_of_the_forest ""
+    class K8_person
+    with short_name BC_175
+    with initial BC_176
+    has proper
+    has concealed
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 5
+    with IK2_Link I139_large_oak_tree
+    with IK8_Count 1
+    with IK8_Link I138_dragon
+    with KD_Count 8
+    with name 'defender' 'of' 'the' 'forest' 'people//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with description BC_177
     with list_together BC_178
     with plural BC_179
     with article BC_180
 ;
 
-Object -> -> I148_spell_book ""
-    class K2_thing
+Object -> I139_large_oak_tree ""
+    class K5_container
     with short_name BC_181
     with description BC_182
     has proper
-    has concealed
+    has static
+    has scenery
     with vector 0
     has mark_as_thing
-    with IK2_Count 16
-    with IK2_Link I130_dungeon_like_wall
-    with KD_Count 2
-    with name 'spell' 'book' 'things//p' 
+    with IK2_Count 7
+    with IK2_Link I150_spell_book
+    with IK5_Count 0
+    with IK5_Link nothing
+    with KD_Count 5
+    with name 'large' 'oak' 'tree' 'containers//p' 
     with action_bitmap 0 0 0 0 0 0 
     with initial BC_183
     with list_together BC_184
@@ -11181,179 +11183,219 @@ Object -> -> I148_spell_book ""
     with article BC_186
 ;
 
-Object I128_deep_crevice ""
-    class K1_room
+Object -> -> I150_spell_book ""
+    class K2_thing
     with short_name BC_187
     with description BC_188
+    has proper
+    has concealed
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 18
+    with IK2_Link I131_cobwebs
+    with KD_Count 2
+    with name 'spell' 'book' 'things//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with initial BC_189
+    with list_together BC_190
+    with plural BC_191
+    with article BC_192
+;
+
+Object I129_deep_crevice ""
+    class K1_room
+    with short_name BC_193
+    with description BC_194
     has proper
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 3
-    with IK1_Link I129_tower
+    with IK1_Link I130_tower
     with KD_Count 1
     with name 'deep' 'crevice' 'rooms//p' 
-    with list_together BC_189
-    with plural BC_190
-    with article BC_191
+    with list_together BC_195
+    with plural BC_196
+    with article BC_197
 ;
 
-Object I129_tower ""
+Object I130_tower ""
     class K1_room
-    with short_name BC_192
-    with description BC_193
+    with short_name BC_198
+    with description BC_199
     has proper
     with vector 0
     with room_index -1
     has mark_as_room
     with IK1_Count 4
-    with IK1_Link I131_cellar
+    with IK1_Link I133_cellar
     with KD_Count 1
     with name 'tower' 'rooms//p' 
-    with list_together BC_194
-    with plural BC_195
-    with article BC_196
-;
-
-Object -> I130_dungeon_like_wall ""
-    class K2_thing
-    with short_name BC_197
-    with description BC_198
-    has proper
-    has static
-    has scenery
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 1
-    with IK2_Link I140_rusty_key
-    with KD_Count 2
-    with name 'dungeon' 'like' 'wall' 'things//p' 'walls' 
-    with parse_name Parse_Name_GV93
-    with action_bitmap 0 0 0 0 0 0 
-    with initial BC_199
     with list_together BC_200
     with plural BC_201
     with article BC_202
 ;
 
-Object -> I140_rusty_key ""
+Object -> I131_cobwebs ""
     class K2_thing
     with short_name BC_203
-    has proper
-    has concealed
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 8
-    with IK2_Link I141_old_brick
-    with KD_Count 2
-    with name 'rusty' 'key' 'things//p' 'key' 
-    with parse_name Parse_Name_GV96
-    with action_bitmap 0 0 0 0 0 0 
     with description BC_204
-    with initial BC_205
-    with list_together BC_206
-    with plural BC_207
-    with article BC_208
-;
-
-Object -> I141_old_brick ""
-    class K2_thing
-    with short_name BC_209
-    with initial BC_210
-    has proper
-    has concealed
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 9
-    with IK2_Link I144_onyx_stone
-    with KD_Count 2
-    with name 'old' 'brick' 'things//p' 'brick' 
-    with parse_name Parse_Name_GV97
-    with action_bitmap 0 0 0 0 0 0 
-    with description BC_211
-    with list_together BC_212
-    with plural BC_213
-    with article BC_214
-;
-
-Object I131_cellar ""
-    class K1_room
-    with short_name BC_215
-    with description BC_216
-    has proper
-    with vector 0
-    with room_index -1
-    has mark_as_room
-    with IK1_Count 5
-    with IK1_Link I132_first_floor
-    with KD_Count 1
-    with name 'cellar' 'rooms//p' 
-    with list_together BC_217
-    with plural BC_218
-    with article BC_219
-;
-
-Object -> I144_onyx_stone ""
-    class K2_thing
-    with short_name BC_220
-    with description BC_221
-    has proper
-    has concealed
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 12
-    with IK2_Link I133_dead_corpses
-    with KD_Count 2
-    with name 'onyx' 'stone' 'things//p' 'stone' 
-    with parse_name Parse_Name_GV100
-    with action_bitmap 0 0 0 0 0 0 
-    with initial BC_222
-    with list_together BC_223
-    with plural BC_224
-    with article BC_225
-;
-
-Object I132_first_floor ""
-    class K1_room
-    with short_name BC_226
-    with description BC_227
-    has proper
-    with vector 0
-    with room_index -1
-    has mark_as_room
-    with IK1_Count 6
-    with IK1_Link I134_top_of_tower
-    with KD_Count 1
-    with name 'first' 'floor' 'rooms//p' 
-    with list_together BC_228
-    with plural BC_229
-    with article BC_230
-;
-
-Object -> I133_dead_corpses ""
-    class K2_thing
-    with short_name BC_231
-    with description BC_232
     has proper
     has static
     has scenery
     with vector 0
     has mark_as_thing
     with IK2_Count 2
-    with IK2_Link I136_dragon
+    with IK2_Link I132_dungeon_like_wall
     with KD_Count 2
-    with name 'dead' 'corpses' 'things//p' 
+    with name 'cobwebs' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with initial BC_233
-    with list_together BC_234
-    with plural BC_235
-    with article BC_236
+    with initial BC_205
+    with list_together BC_206
+    with plural BC_207
+    with article BC_208
 ;
 
-Object I134_top_of_tower ""
+Object -> I132_dungeon_like_wall ""
+    class K2_thing
+    with short_name BC_209
+    with description BC_210
+    has proper
+    has static
+    has scenery
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 3
+    with IK2_Link I142_rusty_key
+    with KD_Count 2
+    with name 'dungeon' 'like' 'wall' 'things//p' 'walls' 
+    with parse_name Parse_Name_GV94
+    with action_bitmap 0 0 0 0 0 0 
+    with initial BC_211
+    with list_together BC_212
+    with plural BC_213
+    with article BC_214
+;
+
+Object -> I142_rusty_key ""
+    class K2_thing
+    with short_name BC_215
+    has proper
+    has concealed
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 10
+    with IK2_Link I143_old_brick
+    with KD_Count 2
+    with name 'rusty' 'key' 'things//p' 'key' 
+    with parse_name Parse_Name_GV98
+    with action_bitmap 0 0 0 0 0 0 
+    with description BC_216
+    with initial BC_217
+    with list_together BC_218
+    with plural BC_219
+    with article BC_220
+;
+
+Object -> I143_old_brick ""
+    class K2_thing
+    with short_name BC_221
+    with initial BC_222
+    has proper
+    has concealed
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 11
+    with IK2_Link I146_onyx_stone
+    with KD_Count 2
+    with name 'old' 'brick' 'things//p' 'brick' 
+    with parse_name Parse_Name_GV99
+    with action_bitmap 0 0 0 0 0 0 
+    with description BC_223
+    with list_together BC_224
+    with plural BC_225
+    with article BC_226
+;
+
+Object I133_cellar ""
     class K1_room
-    with short_name BC_237
-    with description BC_238
+    with short_name BC_227
+    with description BC_228
+    has proper
+    with vector 0
+    with room_index -1
+    has mark_as_room
+    with IK1_Count 5
+    with IK1_Link I134_first_floor
+    with KD_Count 1
+    with name 'cellar' 'rooms//p' 
+    with list_together BC_229
+    with plural BC_230
+    with article BC_231
+;
+
+Object -> I146_onyx_stone ""
+    class K2_thing
+    with short_name BC_232
+    with description BC_233
+    has proper
+    has concealed
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 14
+    with IK2_Link I135_dead_corpses
+    with KD_Count 2
+    with name 'onyx' 'stone' 'things//p' 'stone' 
+    with parse_name Parse_Name_GV102
+    with action_bitmap 0 0 0 0 0 0 
+    with initial BC_234
+    with list_together BC_235
+    with plural BC_236
+    with article BC_237
+;
+
+Object I134_first_floor ""
+    class K1_room
+    with short_name BC_238
+    with description BC_239
+    has proper
+    with vector 0
+    with room_index -1
+    has mark_as_room
+    with IK1_Count 6
+    with IK1_Link I136_top_of_tower
+    with KD_Count 1
+    with name 'first' 'floor' 'rooms//p' 
+    with list_together BC_240
+    with plural BC_241
+    with article BC_242
+;
+
+Object -> I135_dead_corpses ""
+    class K2_thing
+    with short_name BC_243
+    with description BC_244
+    has proper
+    has static
+    has scenery
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 4
+    with IK2_Link I138_dragon
+    with KD_Count 2
+    with name 'dead' 'corpses' 'things//p' 'corpses' 'bodies' 
+    with parse_name Parse_Name_GV95
+    with action_bitmap 0 0 0 0 0 0 
+    with initial BC_245
+    with list_together BC_246
+    with plural BC_247
+    with article BC_248
+;
+
+Object I136_top_of_tower ""
+    class K1_room
+    with short_name BC_249
+    with description BC_250
     has proper
     with vector 0
     with room_index -1
@@ -11362,34 +11404,34 @@ Object I134_top_of_tower ""
     with IK1_Link nothing
     with KD_Count 1
     with name 'top' 'of' 'tower' 'rooms//p' 
-    with list_together BC_239
-    with plural BC_240
-    with article BC_241
+    with list_together BC_251
+    with plural BC_252
+    with article BC_253
 ;
 
-Object -> I136_dragon ""
+Object -> I138_dragon ""
     class K8_person
-    with short_name BC_242
-    with initial BC_243
+    with short_name BC_254
+    with initial BC_255
     has proper
     with vector 0
     has mark_as_thing
-    with IK2_Count 4
-    with IK2_Link I138_bridge
+    with IK2_Count 6
+    with IK2_Link I140_bridge
     with IK8_Count 2
     with IK8_Link nothing
     with KD_Count 8
     with name 'dragon' 'people//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_244
-    with list_together BC_245
-    with plural BC_246
-    with article BC_247
+    with description BC_256
+    with list_together BC_257
+    with plural BC_258
+    with article BC_259
 ;
 
-Object I138_bridge ""
+Object I140_bridge ""
     class K4_door
-    with short_name BC_248
+    with short_name BC_260
     has proper
     has concealed
     has open
@@ -11400,33 +11442,34 @@ Object I138_bridge ""
         ;
         loc = location;
         if (loc == thedark) loc = real_location;
-        if (loc == I128_deep_crevice) return I51_north; return I54_south;],
+        if (loc == I129_deep_crevice) return I51_north; return I54_south;],
     with door_to [ 
         loc ! room of actor
         ;
         loc = location;
         if (loc == thedark) loc = real_location;
-        if (loc == I128_deep_crevice) return I129_tower; return I128_deep_crevice;],
-    with found_in I128_deep_crevice I129_tower
+        if (loc == I129_deep_crevice) return I130_tower; return I129_deep_crevice;],
+    with found_in I129_deep_crevice I130_tower
     has mark_as_thing
-    with IK2_Count 6
-    with IK2_Link I139_old_door
+    with IK2_Count 8
+    with IK2_Link I141_old_door
     with IK4_Count 0
-    with IK4_Link I139_old_door
+    with IK4_Link I141_old_door
     with KD_Count 4
     with name 'bridge' 'doors//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_249
-    with initial BC_250
-    with list_together BC_251
-    with plural BC_252
-    with article BC_253
+    with description BC_261
+    with initial BC_262
+    with list_together BC_263
+    with plural BC_264
+    with article BC_265
 ;
 
-Object I139_old_door ""
+Object I141_old_door ""
     class K4_door
-    with short_name BC_254
-    with with_key I140_rusty_key
+    with short_name BC_266
+    with initial BC_267
+    with with_key I142_rusty_key
     has proper
     has lockable
     has locked
@@ -11436,119 +11479,118 @@ Object I139_old_door ""
         ;
         loc = location;
         if (loc == thedark) loc = real_location;
-        if (loc == I131_cellar) return I55_southeast; return I53_northwest;],
+        if (loc == I133_cellar) return I55_southeast; return I53_northwest;],
     with door_to [ 
         loc ! room of actor
         ;
         loc = location;
         if (loc == thedark) loc = real_location;
-        if (loc == I131_cellar) return I129_tower; return I131_cellar;],
-    with found_in I131_cellar I129_tower
+        if (loc == I133_cellar) return I130_tower; return I133_cellar;],
+    with found_in I133_cellar I130_tower
     has mark_as_thing
-    with IK2_Count 7
-    with IK2_Link I142_defender_of_the_forests
+    with IK2_Count 9
+    with IK2_Link I144_defender_of_the_forests
     with IK4_Count 1
     with IK4_Link nothing
     with KD_Count 4
     with name 'old' 'door' 'doors//p' 'door' 
-    with parse_name Parse_Name_GV95
+    with parse_name Parse_Name_GV97
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_255
-    with initial BC_256
-    with list_together BC_257
-    with plural BC_258
-    with article BC_259
-;
-
-Object I142_defender_of_the_forests ""
-    class K2_thing
-    with short_name BC_260
-    has proper
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 10
-    with IK2_Link I143_forest_defender_heart
-    with KD_Count 2
-    with name 'defender' 'of' 'the' 'forests' 'heart' 'things//p' 'heart' 
-    with parse_name Parse_Name_GV99
-    with action_bitmap 0 0 0 0 0 0 
-    with description BC_261
-    with initial BC_262
-    with list_together BC_263
-    with plural BC_264
-    with article BC_265
-;
-
-Object I143_forest_defender_heart ""
-    class K2_thing
-    with short_name BC_266
-    with description BC_267
-    with vector 0
-    has mark_as_thing
-    with IK2_Count 11
-    with IK2_Link I145_elemental_orb
-    with KD_Count 2
-    with name 'forest' 'defender' 'heart' 'things//p' 
-    with action_bitmap 0 0 0 0 0 0 
-    with initial BC_268
+    with description BC_268
     with list_together BC_269
     with plural BC_270
     with article BC_271
 ;
 
-Object I145_elemental_orb ""
+Object I144_defender_of_the_forests ""
     class K2_thing
     with short_name BC_272
-    with initial BC_273
     has proper
     with vector 0
     has mark_as_thing
-    with IK2_Count 13
-    with IK2_Link I147_zyliath_s_magical_staff
+    with IK2_Count 12
+    with IK2_Link I145_forest_defender_heart
     with KD_Count 2
-    with name 'elemental' 'orb' 'things//p' 
+    with name 'defender' 'of' 'the' 'forests' 'heart' 'things//p' 'heart' 
+    with parse_name Parse_Name_GV101
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_274
+    with description BC_273
+    with initial BC_274
     with list_together BC_275
     with plural BC_276
     with article BC_277
 ;
 
-Object I147_zyliath_s_magical_staff ""
+Object I145_forest_defender_heart ""
     class K2_thing
     with short_name BC_278
-    with initial BC_279
-    has proper
+    with description BC_279
     with vector 0
     has mark_as_thing
-    with IK2_Count 15
-    with IK2_Link I149_infinity_staff
+    with IK2_Count 13
+    with IK2_Link I147_elemental_orb
     with KD_Count 2
-    with name 'zyliath^s' 'magical' 'staff' 'things//p' 'staff' 
-    with parse_name Parse_Name_GV101
+    with name 'forest' 'defender' 'heart' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
-    with description BC_280
+    with initial BC_280
     with list_together BC_281
     with plural BC_282
     with article BC_283
 ;
 
-Object I149_infinity_staff ""
+Object I147_elemental_orb ""
     class K2_thing
     with short_name BC_284
     with initial BC_285
     has proper
     with vector 0
     has mark_as_thing
-    with IK2_Count 17
-    with IK2_Link nothing
+    with IK2_Count 15
+    with IK2_Link I149_zyliath_s_magical_staff
     with KD_Count 2
-    with name 'infinity' 'staff' 'things//p' 
+    with name 'elemental' 'orb' 'things//p' 
     with action_bitmap 0 0 0 0 0 0 
     with description BC_286
     with list_together BC_287
     with plural BC_288
     with article BC_289
+;
+
+Object I149_zyliath_s_magical_staff ""
+    class K2_thing
+    with short_name BC_290
+    with initial BC_291
+    has proper
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 17
+    with IK2_Link I151_infinity_staff
+    with KD_Count 2
+    with name 'zyliath^s' 'magical' 'staff' 'things//p' 'staff' 
+    with parse_name Parse_Name_GV103
+    with action_bitmap 0 0 0 0 0 0 
+    with description BC_292
+    with list_together BC_293
+    with plural BC_294
+    with article BC_295
+;
+
+Object I151_infinity_staff ""
+    class K2_thing
+    with short_name BC_296
+    with initial BC_297
+    has proper
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 19
+    with IK2_Link nothing
+    with KD_Count 2
+    with name 'infinity' 'staff' 'things//p' 
+    with action_bitmap 0 0 0 0 0 0 
+    with description BC_298
+    with list_together BC_299
+    with plural BC_300
+    with article BC_301
 ;
 
 Constant I71_english_language = 1;
@@ -11602,12 +11644,12 @@ Constant I123_masculine_gender = 2;
 Constant I124_feminine_gender = 3;
 Array Global_Vars -->
   (false) ! 7 darkness witnessed
-  (BC_290) ! 25 command prompt
+  (BC_302) ! 25 command prompt
   (I71_english_language) ! 29 language of play
-  (BC_291) ! 32 story author
-  (BC_292) ! 33 story headline
-  (BC_293) ! 34 story genre
-  (BC_294) ! 35 story description
+  (BC_303) ! 32 story author
+  (BC_304) ! 33 story headline
+  (BC_305) ! 34 story genre
+  (BC_306) ! 35 story description
   (1) ! 36 release number
   (0) ! 37 story creation year
   (0) ! 45 locale paragraph count
@@ -11622,17 +11664,17 @@ Array Global_Vars -->
 
 
 Array T0_final_question_options table  tab_0_0 tab_0_1 tab_0_2 tab_0_3 tab_0_4;
-Array tab_0_0 table $0664 0 (BC_295) (BC_296) (BC_297) (BC_298) (BC_299) ;
+Array tab_0_0 table $0664 0 (BC_307) (BC_308) (BC_309) (BC_310) (BC_311) ;
 Array tab_0_1 table $0465 1 (0) (0) (1) (0) (0) ;
-Array tab_0_2 table $2066 2 (Consult_Grammar_105) (Consult_Grammar_106) (Consult_Grammar_107) (Consult_Grammar_108) (Consult_Grammar_109) ;
+Array tab_0_2 table $2066 2 (Consult_Grammar_107) (Consult_Grammar_108) (Consult_Grammar_109) (Consult_Grammar_110) (Consult_Grammar_111) ;
 Array tab_0_3 table $0067 3 (IMMEDIATELY_RESTART_VM_R) (IMMEDIATELY_RESTORE_SAVED_R) ( TABLE_NOVALUE) (IMMEDIATELY_QUIT_R) (IMMEDIATELY_UNDO_R) ;
 Array tab_0_4 table $0068 4 ( TABLE_NOVALUE) ( TABLE_NOVALUE) (V27_amusing_a_victorious_pla) ( TABLE_NOVALUE) ( TABLE_NOVALUE) ;
 Array T1_locale_priorities table  tab_1_0 tab_1_1;
-Array tab_1_0 table $0869 NULL ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
-Array tab_1_1 table $446a 5 ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_0 table $0869 NULL ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_1 table $446a 5 ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
 Array T2_outcome_objects table  tab_2_0 tab_2_1;
-Array tab_2_0 table $066b 8 (BC_300) (BC_301) ;
-Array tab_2_1 table $086c NULL (I145_elemental_orb) (I149_infinity_staff) ;
+Array tab_2_0 table $066b 8 (BC_312) (BC_313) ;
+Array tab_2_1 table $086c NULL (I147_elemental_orb) (I151_infinity_staff) ;
 Array TB_Blanks -> 
   ! For table T0_final_question_options
   $00  ! Column 0
@@ -11642,7 +11684,7 @@ Array TB_Blanks ->
   $1b  ! Column 4
   
   ! For table T1_locale_priorities
-  $ff $ff $07  ! Column 1
+  $ff $ff $1f  ! Column 1
   
   ! For table T2_outcome_objects
   $00  ! Column 0
@@ -12949,7 +12991,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of attacking Defender of the Forest when player does not have Zyliath's Magical staff:
 [ R_803 ;
-    if ((((action ==##Attack) &&  (actor==player) && ((noun == I135_defender_of_the_forest) && (true)) && (self=actor,true) && (((~~((player == OwnerOf(I147_zyliath_s_magical_staff))))))))) { ! Runs only when pattern matches
+    if ((((action ==##Attack) &&  (actor==player) && ((noun == I137_defender_of_the_forest) && (true)) && (self=actor,true) && (((~~((player == OwnerOf(I149_zyliath_s_magical_staff))))))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_803, 803);
     ! [2: say ~You try to punch the Defender, but he is not fazed by it. He grabs you by the neck and throws you to the ground instantly killing you.~]
@@ -12963,7 +13005,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of attacking Dragon when player does not have Infinity staff:
 [ R_805 ;
-    if ((((action ==##Attack) &&  (actor==player) && ((noun == I136_dragon) && (true)) && (self=actor,true) && (((~~((player == OwnerOf(I149_infinity_staff))))))))) { ! Runs only when pattern matches
+    if ((((action ==##Attack) &&  (actor==player) && ((noun == I138_dragon) && (true)) && (self=actor,true) && (((~~((player == OwnerOf(I151_infinity_staff))))))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_805, 805);
     ! [2: say ~Before you could react the dragon hurls fire at you burning you to a crisp.~]
@@ -12977,13 +13019,13 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of attacking Defender of the Forest when player has Zyliath's Magical staff:
 [ R_802 ;
-    if ((((action ==##Attack) &&  (actor==player) && ((noun == I135_defender_of_the_forest) && (true)) && (self=actor,true) && (((player == OwnerOf(I147_zyliath_s_magical_staff))))))) { ! Runs only when pattern matches
+    if ((((action ==##Attack) &&  (actor==player) && ((noun == I137_defender_of_the_forest) && (true)) && (self=actor,true) && (((player == OwnerOf(I149_zyliath_s_magical_staff))))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_802, 802);
     ! [2: say ~When you raise your staff in the air, an orb of blue light appears from your staff and strikes your opponent killing him in an instant. As the Defender gets vaporized, his heart slowly falls to the ground.~]
     say__p=1;! [3: ~When you raise your staff in the air, an orb of blue light appears from your staff and strikes your opponent killing him in an instant. As the Defender gets vaporized, his heart slowly falls to the ground.~]
     ParaContent(); print "When you raise your staff in the air, an orb of blue light appears from your staff and strikes your opponent killing him in an instant. As the Defender gets vaporized, his heart slowly falls to the ground."; new_line; .L_Say6; .L_SayX6;! [4: move heart to player]
-    MoveObject(I143_forest_defender_heart, player, 0, false);
+    MoveObject(I145_forest_defender_heart, player, 0, false);
     ! [5: say ~You now have the Defender of the forest's heart.~]
     say__p=1;! [6: ~You now have the Defender of the forest's heart.~]
     ParaContent(); print "You now have the Defender of the forest's heart."; new_line; .L_Say7; .L_SayX7;RulebookFails(); rtrue;
@@ -12993,13 +13035,13 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of attacking Dragon when player has Infinity staff:
 [ R_804 ;
-    if ((((action ==##Attack) &&  (actor==player) && ((noun == I136_dragon) && (true)) && (self=actor,true) && (((player == OwnerOf(I149_infinity_staff))))))) { ! Runs only when pattern matches
+    if ((((action ==##Attack) &&  (actor==player) && ((noun == I138_dragon) && (true)) && (self=actor,true) && (((player == OwnerOf(I151_infinity_staff))))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_804, 804);
     ! [2: say ~You lift your staff in the air. An immensely powerful dark orb starts to form; electricity begins to run through it. With one sweeping motion the Orb fly's quickly towards the dragon. With a great flash of light, the orb pierces the Dragons scales and explodes into dark flames. Once the debris clears all that's left of the dragon is the head.~]
     say__p=1;! [3: ~You lift your staff in the air. An immensely powerful dark orb starts to form; electricity begins to run through it. With one sweeping motion the Orb fly's quickly towards the dragon. With a great flash of light, the orb pierces the Dragons scales and explodes into dark flames. Once the debris clears all that's left of the dragon is the head.~]
-    ParaContent(); print "You lift your staff in the air. An immensely powerful dark orb starts to form; electricity begins to run through it. With one sweeping motion the Orb fly's quickly towards the dragon. With a great flash of light, the orb pierces the Dragons scales and explodes into dark flames. Once the debris clears all that's left of the dragon is the head."; new_line; .L_Say8; .L_SayX8;! [4: end the story finally]
-    deadflag=3; story_complete=true;
+    ParaContent(); print "You lift your staff in the air. An immensely powerful dark orb starts to form; electricity begins to run through it. With one sweeping motion the Orb fly's quickly towards the dragon. With a great flash of light, the orb pierces the Dragons scales and explodes into dark flames. Once the debris clears all that's left of the dragon is the head."; new_line; .L_Say8; .L_SayX8;! [4: end the story finally saying ~Congratulations! You have saved the town of Draycott, citizens can now live in peace. You will be remembered as a hero for centuries.~]
+    deadflag=TX_L_92; story_complete=true;
     RulebookFails(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_804, 804, 'action');
     rfalse;
@@ -13007,11 +13049,11 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of crossing bridge when player has spell book:
 [ R_808 ;
-    if ((((action ==##A78_crossing) &&  (actor==player) && ((noun == I138_bridge) && (true)) && (self=actor,true) && (((player == OwnerOf(I148_spell_book))))))) { ! Runs only when pattern matches
+    if ((((action ==##A78_crossing) &&  (actor==player) && ((noun == I140_bridge) && (true)) && (self=actor,true) && (((player == OwnerOf(I150_spell_book))))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_808, 808);
     ! [2: move the player to tower]
-    MoveObject(player, I129_tower, 0, false);
+    MoveObject(player, I130_tower, 0, false);
     RulebookFails(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_808, 808, 'action');
     rfalse;
@@ -13019,13 +13061,13 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of taking Old Brick:
 [ R_809 ;
-    if ((((action ==##Take) &&  (actor==player) && ((noun == I141_old_brick) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##Take) &&  (actor==player) && ((noun == I143_old_brick) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_809, 809);
     ! [2: say ~After taking the brick you see a Rusty key in its place, you reach your hand into the hole and grab the key.~]
     say__p=1;! [3: ~After taking the brick you see a Rusty key in its place, you reach your hand into the hole and grab the key.~]
     ParaContent(); print "After taking the brick you see a Rusty key in its place, you reach your hand into the hole and grab the key."; new_line; .L_Say9; .L_SayX9;! [4: move rusty key to player]
-    MoveObject(I140_rusty_key, player, 0, false);
+    MoveObject(I142_rusty_key, player, 0, false);
     RulebookFails(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_809, 809, 'action');
     rfalse;
@@ -13033,13 +13075,13 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! Instead of talking to Zyliath:
 [ R_814 ;
-    if ((((action ==##A80_talking_to) &&  (actor==player) && ((noun == I146_master_zyliath) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##A80_talking_to) &&  (actor==player) && ((noun == I148_master_zyliath) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_814, 814);
     ! [2: say ~Hello James, I've known you since you were a child and look at you now I am so proud to be your teacher. I almost forgot here take my staff, this will definitely come in handy. Who knows what you will run into on your adventure. With my old body I now spend my days reading and gardening it's no use to me anymore. I wish you the best of luck James you can do it!~]
     say__p=1;! [3: ~Hello James, I've known you since you were a child and look at you now I am so proud to be your teacher. I almost forgot here take my staff, this will definitely come in handy. Who knows what you will run into on your adventure. With my old body I now spend my days reading and gardening it's no use to me anymore. I wish you the best of luck James you can do it!~]
     ParaContent(); print "Hello James, I've known you since you were a child and look at you now I am so proud to be your teacher. I almost forgot here take my staff, this will definitely come in handy. Who knows what you will run into on your adventure. With my old body I now spend my days reading and gardening it's no use to me anymore. I wish you the best of luck James you can do it!"; new_line; .L_Say10; .L_SayX10;! [4: move zyliath's magical staff to player]
-    MoveObject(I147_zyliath_s_magical_staff, player, 0, false);
+    MoveObject(I149_zyliath_s_magical_staff, player, 0, false);
     RulebookFails(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_814, 814, 'action');
     rfalse;
@@ -13051,7 +13093,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
     self = noun;
     if (debug_rules) DB_Rule(R_807, 807);
     ! [2: if the player is in deep crevice]
-    if (((I128_deep_crevice == ContainerOf(player))))
+    if (((I129_deep_crevice == ContainerOf(player))))
     {! [3: say ~A bridge was built in front of you! You can now go on your way and cross over the bridge.~]
         say__p=1;! [4: ~A bridge was built in front of you! You can now go on your way and cross over the bridge.~]
         ParaContent(); print "A bridge was built in front of you! You can now go on your way and cross over the bridge."; new_line; .L_Say11; .L_SayX11;}
@@ -13069,7 +13111,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! No specific request
 ! after taking spell book:
 [ R_806 ;
-    if ((((action ==##Take) &&  (actor==player) && ((noun == I148_spell_book) && (true))))) { ! Runs only when pattern matches
+    if ((((action ==##Take) &&  (actor==player) && ((noun == I150_spell_book) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_806, 806);
     ! [2: say ~You slowly remove the spell book as vines and bark slowly break and fall to the floor. Suddenly you hear a thud behind you! You turn your head and find the Defender of the Forest approaching you! You have to attack the Defender of the Forest now!~]
@@ -16095,17 +16137,17 @@ Array ActionHappened --> 0 0 0 0 0 0;
     {! [3: if the player is the actor]
         if (((player == actor)))
         {! [4: if the player's command includes ~stand~]
-            if (((matched_text=SnippetIncludes(Consult_Grammar_110,players_command))))
+            if (((matched_text=SnippetIncludes(Consult_Grammar_112,players_command))))
             {! [5: say ~[regarding the noun][They're] not something [we] [can] stand on.~ ( a )]
                 say__p=1;! [6: ~[regarding the noun][They're] not something [we] [can] stand on.~ ( a )]
                 ParaContent(); print (TEXT_TY_Say) (TX_R_223); new_line; .L_Say121; .L_SayX121;} else {
                 ! [7: if the player's command includes ~sit~]
-                if (((matched_text=SnippetIncludes(Consult_Grammar_111,players_command))))
+                if (((matched_text=SnippetIncludes(Consult_Grammar_113,players_command))))
                 {! [8: say ~[regarding the noun][They're] not something [we] [can] sit down on.~ ( b )]
                     say__p=1;! [9: ~[regarding the noun][They're] not something [we] [can] sit down on.~ ( b )]
                     ParaContent(); print (TEXT_TY_Say) (TX_R_224); new_line; .L_Say122; .L_SayX122;} else {
                     ! [10: if the player's command includes ~lie~]
-                    if (((matched_text=SnippetIncludes(Consult_Grammar_112,players_command))))
+                    if (((matched_text=SnippetIncludes(Consult_Grammar_114,players_command))))
                     {! [11: say ~[regarding the noun][They're] not something [we] [can] lie down on.~ ( c )]
                         say__p=1;! [12: ~[regarding the noun][They're] not something [we] [can] lie down on.~ ( c )]
                         ParaContent(); print (TEXT_TY_Say) (TX_R_225); new_line; .L_Say123; .L_SayX123;} else {
@@ -20004,9 +20046,9 @@ Array ActionHappened --> 0 0 0 0 0 0;
     ! [2: move the item built to the holder of the noun]
     MoveObject((MStack-->MstVO(20079,0)), (HolderOf(noun)), 0, false);
     ! [3: move the noun to the cellar]
-    MoveObject(noun, I131_cellar, 0, false);
+    MoveObject(noun, I133_cellar, 0, false);
     ! [4: move the second noun to the cellar]
-    MoveObject(second, I131_cellar, 0, false);
+    MoveObject(second, I133_cellar, 0, false);
     } else if (debug_rules > 1) DB_Rule(R_812, 812, 'actor');
     rfalse;
 ];
@@ -20027,12 +20069,12 @@ Array ActionHappened --> 0 0 0 0 0 0;
     ParaContent(); print "You now have ";! [4: an item built]
     ParaContent(); print (a) (MStack-->MstVO(20079,0));! [5: ~!~]
     ParaContent(); print "!"; new_line; .L_Say303; .L_SayX303;! [6: if item built is elemental orb]
-    if ((((MStack-->MstVO(20079,0)) == I145_elemental_orb)))
+    if ((((MStack-->MstVO(20079,0)) == I147_elemental_orb)))
     {! [7: say ~You combine the Defender of the Forests Heart and Onyx Stone to make Elemental orb, a powerful orb of magic and pure destruction. You need something to use this immense power... could the staff work?~]
         say__p=1;! [8: ~You combine the Defender of the Forests Heart and Onyx Stone to make Elemental orb, a powerful orb of magic and pure destruction. You need something to use this immense power... could the staff work?~]
         ParaContent(); print "You combine the Defender of the Forests Heart and Onyx Stone to make Elemental orb, a powerful orb of magic and pure destruction. You need something to use this immense power... could the staff work?"; new_line; .L_Say304; .L_SayX304;}
     ! [9: if item built is infinity staff]
-    if ((((MStack-->MstVO(20079,0)) == I149_infinity_staff)))
+    if ((((MStack-->MstVO(20079,0)) == I151_infinity_staff)))
     {! [10: say ~You combine Zyliath's Magical staff and Elemental orb to make Infinity Staff, an immensely powerful staff that will defeat any foe you encounter.~]
         say__p=1;! [11: ~You combine Zyliath's Magical staff and Elemental orb to make Infinity Staff, an immensely powerful staff that will defeat any foe you encounter.~]
         ParaContent(); print "You combine Zyliath's Magical staff and Elemental orb to make Infinity Staff, an immensely powerful staff that will defeat any foe you encounter."; new_line; .L_Say305; .L_SayX305;}
@@ -28975,7 +29017,7 @@ Array FWMatrix --> NUM_ROOMS*NUM_ROOMS;
 ! Relations.i6t: Relation Route-Finding
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant MAX_ROUTE_LENGTH = 38 + 32;
+Constant MAX_ROUTE_LENGTH = 40 + 32;
 
 [ RelationRouteTo relation from to count  handler;
 	if (count) {
@@ -37434,10 +37476,10 @@ Verb meta 'tree'
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
 
-Array LIST_CONST_15750 --> (85721088) LIST_OF_TY MAX_POSITIVE_NUMBER 10 2 (I144_onyx_stone) (I143_forest_defender_heart) ;
-Array LIST_CONST_15757 --> (85721088) LIST_OF_TY MAX_POSITIVE_NUMBER 10 2 (I145_elemental_orb) (I147_zyliath_s_magical_staff) ;
-Array LIST_CONST_15752 --> (85721088) LIST_OF_TY MAX_POSITIVE_NUMBER 10 2 (I144_onyx_stone) (I143_forest_defender_heart) ;
-Array LIST_CONST_15760 --> (85721088) LIST_OF_TY MAX_POSITIVE_NUMBER 10 2 (I145_elemental_orb) (I147_zyliath_s_magical_staff) ;
+Array LIST_CONST_15788 --> (85721088) LIST_OF_TY MAX_POSITIVE_NUMBER 10 2 (I146_onyx_stone) (I145_forest_defender_heart) ;
+Array LIST_CONST_15795 --> (85721088) LIST_OF_TY MAX_POSITIVE_NUMBER 10 2 (I147_elemental_orb) (I149_zyliath_s_magical_staff) ;
+Array LIST_CONST_15790 --> (85721088) LIST_OF_TY MAX_POSITIVE_NUMBER 10 2 (I146_onyx_stone) (I145_forest_defender_heart) ;
+Array LIST_CONST_15798 --> (85721088) LIST_OF_TY MAX_POSITIVE_NUMBER 10 2 (I147_elemental_orb) (I149_zyliath_s_magical_staff) ;
 
 
 
@@ -38819,7 +38861,7 @@ Array LIST_CONST_15760 --> (85721088) LIST_OF_TY MAX_POSITIVE_NUMBER 10 2 (I145_
                     ((
                         ((((((formal_par1 ofclass K1_room) && (formal_par1 ofclass K1_room))))) && ((
                         formal_rv = MapConnection(formal_par1,formal_par0)) | 1)
-                        )|| (ArgumentTypeFailed(11))
+                        )|| (ArgumentTypeFailed(12))
 
                     ))
                 +
@@ -48517,7 +48559,7 @@ Array Rel_Record_69 -->
     x ! saved value of noun
     ;
     x=noun;
-    return ((noun ofclass K4_door) && (noun == I138_bridge));
+    return ((noun ofclass K4_door) && (noun == I140_bridge));
 ];
 [ Noun_Filter_2 
     x ! saved value of noun
@@ -49445,10 +49487,6 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
                 while (WordInProperty(NextWordStopped(), self, name)) f = true;
                 wn--; try_from_wn = wn;
             }
-                if (NextWordStopped() ~= 'dungeon') jump Fail_1;
-                if (NextWordStopped() ~= 'walls') jump Fail_1;
-                try_from_wn = wn; f = true; continue;
-                .Fail_1; wn = try_from_wn;
             break;
         } ! End of endless loop
         while (WordInProperty(NextWordStopped(), self, name)) n++;
@@ -49467,7 +49505,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
     DetectPluralWord(original_wn, n);
     return n;
 ];
-[ Parse_Name_GV95 
+[ Parse_Name_GV94 
     original_wn ! first word of text parsed
     group_wn ! first word matched against A/B/C/... disjunction
     try_from_wn ! position to try matching from
@@ -49503,6 +49541,10 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
                 while (WordInProperty(NextWordStopped(), self, name)) f = true;
                 wn--; try_from_wn = wn;
             }
+                if (NextWordStopped() ~= 'dungeon') jump Fail_1;
+                if (NextWordStopped() ~= 'walls') jump Fail_1;
+                try_from_wn = wn; f = true; continue;
+                .Fail_1; wn = try_from_wn;
             break;
         } ! End of endless loop
         while (WordInProperty(NextWordStopped(), self, name)) n++;
@@ -49521,7 +49563,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
     DetectPluralWord(original_wn, n);
     return n;
 ];
-[ Parse_Name_GV96 
+[ Parse_Name_GV95 
     original_wn ! first word of text parsed
     group_wn ! first word matched against A/B/C/... disjunction
     try_from_wn ! position to try matching from
@@ -49629,7 +49671,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
     DetectPluralWord(original_wn, n);
     return n;
 ];
-[ Parse_Name_GV99 
+[ Parse_Name_GV98 
     original_wn ! first word of text parsed
     group_wn ! first word matched against A/B/C/... disjunction
     try_from_wn ! position to try matching from
@@ -49683,7 +49725,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
     DetectPluralWord(original_wn, n);
     return n;
 ];
-[ Parse_Name_GV100 
+[ Parse_Name_GV99 
     original_wn ! first word of text parsed
     group_wn ! first word matched against A/B/C/... disjunction
     try_from_wn ! position to try matching from
@@ -49791,7 +49833,115 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
     DetectPluralWord(original_wn, n);
     return n;
 ];
-[ Consult_Grammar_105 
+[ Parse_Name_GV102 
+    original_wn ! first word of text parsed
+    group_wn ! first word matched against A/B/C/... disjunction
+    try_from_wn ! position to try matching from
+    n ! number of words matched
+    f ! flag: sufficiently good match found to justify success
+    w ! for use by individual grammar lines
+    rv ! for use by individual grammar lines
+    g ! temporary: success flag for parsing visibles
+    ss ! temporary: saves 'self' in distinguishing visibles
+    spn ! temporary: saves 'parsed_number' in parsing visibles
+    pass ! pass counter (1 to 3)
+    pass1_n ! value of n recorded during pass 1
+    pass2_n ! value of n recorded during pass 2
+    ;
+    #ifdef DEBUG;
+    if (parser_trace >= 3) print "Parse_name called^";
+    #endif;
+    if (parser_action == ##TheSame) return 0;
+    original_wn = wn;
+    for (pass = 1: pass <= 3: pass++) {
+        wn = original_wn;
+        try_from_wn = wn; f = false; n = 0;
+        while (true) {
+            ! On pass 1 only, advance wn past name property words
+            ! (but do not do this for ##TheSame, when wn is undefined)
+            if ((parser_action ~= ##TheSame) && (pass == 1)) {
+                while (WordInProperty(NextWordStopped(), self, name)) f = true;
+                wn--; try_from_wn = wn;
+            }
+            if (pass == 1 or 2) {
+            }
+            if ((parser_action ~= ##TheSame) && (pass == 1)) {
+                while (WordInProperty(NextWordStopped(), self, name)) f = true;
+                wn--; try_from_wn = wn;
+            }
+            break;
+        } ! End of endless loop
+        while (WordInProperty(NextWordStopped(), self, name)) n++;
+        if ((f) || (n>0)) n = n + try_from_wn - original_wn;
+        if (pass == 1) pass1_n = n;
+        if (pass == 2) pass2_n = n;
+    } ! End of pass loop
+    #ifdef DEBUG;
+    if (parser_trace >= 3)
+        print "Pass 1: ", pass1_n, " Pass 2: ", pass2_n, " Pass 3: ", n, "^";
+    #endif;
+    if (pass1_n > n) n = pass1_n;
+    if (pass2_n > n) n = pass2_n;
+    wn = original_wn + n;
+    if (n == 0) return -1;
+    DetectPluralWord(original_wn, n);
+    return n;
+];
+[ Parse_Name_GV103 
+    original_wn ! first word of text parsed
+    group_wn ! first word matched against A/B/C/... disjunction
+    try_from_wn ! position to try matching from
+    n ! number of words matched
+    f ! flag: sufficiently good match found to justify success
+    w ! for use by individual grammar lines
+    rv ! for use by individual grammar lines
+    g ! temporary: success flag for parsing visibles
+    ss ! temporary: saves 'self' in distinguishing visibles
+    spn ! temporary: saves 'parsed_number' in parsing visibles
+    pass ! pass counter (1 to 3)
+    pass1_n ! value of n recorded during pass 1
+    pass2_n ! value of n recorded during pass 2
+    ;
+    #ifdef DEBUG;
+    if (parser_trace >= 3) print "Parse_name called^";
+    #endif;
+    if (parser_action == ##TheSame) return 0;
+    original_wn = wn;
+    for (pass = 1: pass <= 3: pass++) {
+        wn = original_wn;
+        try_from_wn = wn; f = false; n = 0;
+        while (true) {
+            ! On pass 1 only, advance wn past name property words
+            ! (but do not do this for ##TheSame, when wn is undefined)
+            if ((parser_action ~= ##TheSame) && (pass == 1)) {
+                while (WordInProperty(NextWordStopped(), self, name)) f = true;
+                wn--; try_from_wn = wn;
+            }
+            if (pass == 1 or 2) {
+            }
+            if ((parser_action ~= ##TheSame) && (pass == 1)) {
+                while (WordInProperty(NextWordStopped(), self, name)) f = true;
+                wn--; try_from_wn = wn;
+            }
+            break;
+        } ! End of endless loop
+        while (WordInProperty(NextWordStopped(), self, name)) n++;
+        if ((f) || (n>0)) n = n + try_from_wn - original_wn;
+        if (pass == 1) pass1_n = n;
+        if (pass == 2) pass2_n = n;
+    } ! End of pass loop
+    #ifdef DEBUG;
+    if (parser_trace >= 3)
+        print "Pass 1: ", pass1_n, " Pass 2: ", pass2_n, " Pass 3: ", n, "^";
+    #endif;
+    if (pass1_n > n) n = pass1_n;
+    if (pass2_n > n) n = pass2_n;
+    wn = original_wn + n;
+    if (n == 0) return -1;
+    DetectPluralWord(original_wn, n);
+    return n;
+];
+[ Consult_Grammar_107 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -49811,7 +49961,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_106 
+[ Consult_Grammar_108 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -49831,7 +49981,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_107 
+[ Consult_Grammar_109 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -49851,7 +50001,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_108 
+[ Consult_Grammar_110 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -49871,7 +50021,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_109 
+[ Consult_Grammar_111 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -49891,7 +50041,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_110 
+[ Consult_Grammar_112 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -49911,7 +50061,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_111 
+[ Consult_Grammar_113 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -49931,7 +50081,7 @@ Array present_chronological_record-->(NO_PAST_TENSE_CONDS+1);
         .Fail_1; rv = GPR_PREPOSITION; wn = original_wn;
     return GPR_FAIL;
 ];
-[ Consult_Grammar_112 
+[ Consult_Grammar_114 
     range_from ! call parameter: word number of snippet start
 
     range_words ! call parameter: snippet length
@@ -50303,63 +50453,70 @@ Verb 'hi'
 
 
 
-Constant TX_PS_80 = ">";
-Constant TX_PS_73 = "A heart made of pure emerald. This item is great for combining with stones to make powerful magic.";
-Constant TX_PS_47 = "A mystic looking leather bound hand sized spell book, you slowly open it and find a word written inside of the book. It says PATHUS?";
-Constant TX_PS_60 = "A spherical stone pulsating with magic and power. This is just the stone you need to combine with your heart you got.";
-Constant TX_PS_64 = "All of these people must have died trying to slay the dragon. You look at your feet and find bodies scattered about. East of you are stairs leading to the top of the tower.";
+Constant TX_PS_85 = ">";
+Constant TX_PS_75 = "A big old wooden door.";
+Constant TX_PS_78 = "A heart made of pure emerald. This item is great for combining with stones to make powerful magic.";
+Constant TX_PS_49 = "A mystic looking leather bound hand sized spell book, you slowly open it and find a word written inside of the book. It says PATHUS?";
+Constant TX_PS_64 = "A spherical stone pulsating with magic and power. This is just the stone you need to combine with your heart you got.";
+Constant TX_PS_68 = "All of these people must have died trying to slay the dragon. You look at your feet and find bodies scattered about. East of you are stairs leading to the top of the tower.";
 Constant TX_PS_3 = "An Interactive Fiction";
-Constant TX_PS_56 = "An old dirty brick.";
-Constant TX_PS_75 = "An orb of pure power and destruction, dark light emits from the object.";
-Constant TX_PS_62 = "As you head up the stairs, a deep roar echos through the tower. As you reach the top of the steps, you find yourself surrounded by burnt dead corpses and dungeon-like walls. The whole feeling of the room creeps you out.";
+Constant TX_PS_60 = "An old dirty brick.";
+Constant TX_PS_80 = "An orb of pure power and destruction, dark light emits from the object.";
+Constant TX_PS_66 = "As you head up the stairs, a deep roar echos through the tower. As you reach the top of the steps, you find yourself surrounded by burnt dead corpses and dungeon-like walls. The whole feeling of the room creeps you out.";
 Constant TX_PS_39 = "As you leave the town, a dirt path is found underneath you. As you venture on further, you find an opening to the forest east of you. Ahead of you, the trail keeps heading north.";
-Constant TX_PS_66 = "As you take each step, the whole atmosphere begins to change, as if a dark powerful presence is watching your every step. You soon reach the top of the tower and the wind blows rapidly into your face while clouds begin to form above you blocking out the sun. You look ahead and see the Dragon! It screeches out a roar and stares right into your eyes. Your heart starts rapidly speeding up! YOU NEED TO SLAY THE DRAGON NOW!";
-Constant TX_PS_69 = "Bridge";
-Constant TX_PS_57 = "Cellar";
+Constant TX_PS_70 = "As you take each step, the whole atmosphere begins to change, as if a dark powerful presence is watching your every step. You soon reach the top of the tower, the wind blows rapidly into your face. Clouds begin to form above you blocking out the sun. You look ahead and see the Dragon! It screeches out a roar and stares right into your eyes. Your heart starts rapidly speeding up! YOU NEED TO SLAY THE DRAGON NOW!";
+Constant TX_PS_73 = "Bridge";
+Constant TX_PS_61 = "Cellar";
+Constant TX_PS_54 = "Cobwebs";
 Constant TX_PS_4 = "Cole Hulick";
-Constant TX_PS_63 = "Dead Corpses";
-Constant TX_PS_48 = "Deep Crevice";
-Constant TX_PS_42 = "Defender of the Forest";
-Constant TX_PS_71 = "Defender of the Forests heart";
-Constant TX_PS_67 = "Dragon";
+Constant TX_PS_92 = "Congratulations! You have saved the town of Draycott, citizens can now live in peace. You will be remembered as a hero for centuries.";
+Array TX_L_92 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_92;
+Constant TX_PS_67 = "Dead Corpses";
+Constant TX_PS_50 = "Deep Crevice";
+Constant TX_PS_44 = "Defender of the Forest";
+Constant TX_PS_76 = "Defender of the Forests heart";
+Constant TX_PS_40 = "Dirt path";
+Constant TX_PS_71 = "Dragon";
 Constant TX_PS_34 = "Draycott";
-Constant TX_PS_52 = "Dungeon like wall";
-Constant TX_PS_74 = "Elemental Orb";
-Constant TX_PS_81 = "Fiction";
-Constant TX_PS_68 = "Fierce eyes sit deep within the dragon's skull. Two horns sit atop its head, several rows of small crystal growths run down the dragon's spine. Colossal wings grow from its side; large ruby scales cover the dragon's body.";
-Constant TX_PS_61 = "First floor";
-Constant TX_PS_72 = "Forest Defender heart";
-Constant TX_PS_40 = "Forest";
+Constant TX_PS_56 = "Dungeon like wall";
+Constant TX_PS_79 = "Elemental Orb";
+Constant TX_PS_86 = "Fiction";
+Constant TX_PS_72 = "Fierce eyes sit deep within the dragon's skull. Two horns sit atop its head, several rows of small crystal growths run down the dragon's spine. Colossal wings grow from its side; large ruby scales cover the dragon's body.";
+Constant TX_PS_65 = "First floor";
+Constant TX_PS_77 = "Forest Defender heart";
+Constant TX_PS_42 = "Forest";
 Constant TX_PS_37 = "He is a tall old man, a blue robe surrounds him and drags to the floor. A large great white beard droops down to his chest, and a blue wizard hat sits on his head. In his right hand he holds a tall staff.";
-Constant TX_PS_78 = "Infinity staff";
-Constant TX_PS_44 = "Large oak tree";
+Constant TX_PS_83 = "Infinity staff";
+Constant TX_PS_41 = "Just a brown dirt path.";
+Constant TX_PS_46 = "Large oak tree";
+Constant TX_PS_55 = "Long silky webs stretch along the walls.";
 Constant TX_PS_36 = "Master Zyliath";
-Constant TX_PS_55 = "Old Brick";
-Constant TX_PS_70 = "Old Door";
-Constant TX_PS_59 = "Onyx Stone";
-Constant TX_PS_85 = "QUIT";
-Constant TX_PS_82 = "RESTART";
-Constant TX_PS_83 = "RESTORE a saved game";
+Constant TX_PS_59 = "Old Brick";
+Constant TX_PS_74 = "Old Door";
+Constant TX_PS_63 = "Onyx Stone";
+Constant TX_PS_90 = "QUIT";
+Constant TX_PS_87 = "RESTART";
+Constant TX_PS_88 = "RESTORE a saved game";
 Constant TX_PS_2 = "Revenge ";
-Constant TX_PS_54 = "Rusty Key";
-Constant TX_PS_46 = "Spell book";
-Constant TX_PS_49 = "Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, and this might be the time to use that spell you found.";
-Constant TX_PS_53 = "The bricks of the wall have started to crumble and blacken in age. Cobwebs cover the walls and give you a sense of foreboding. You look more closely and notice a brick out of place?";
-Constant TX_PS_58 = "The door slowly creaks open; a musty smell fills your nose. The outdoor sunlight fills the darkened room. As your eyes adjust something shiny grabs your attention. You walk towards it and wipe off the thick layer of dust settling on the item, and notice its an Onyx stone!";
-Constant TX_PS_79 = "The staff contains a huge amount of magical power. Green and dark light runs down the side of the staff like veins. This staff will surely defeat any foe you run into.";
-Constant TX_PS_65 = "Top of tower";
-Constant TX_PS_50 = "Tower";
+Constant TX_PS_58 = "Rusty Key";
+Constant TX_PS_48 = "Spell book";
+Constant TX_PS_51 = "Suddenly the trail ends. You look down and find a deep crevice with dark blue water rushing through it. As you look ahead you can see the Tower in the distance, and this might be the time to use that spell you found.";
+Constant TX_PS_57 = "The bricks of the wall have started to crumble and blacken in age. Cobwebs cover the walls and give you a sense of foreboding. You look more closely and notice a brick out of place?";
+Constant TX_PS_62 = "The door slowly creaks open; a musty smell fills your nose. The outdoor sunlight fills the darkened room. As your eyes adjust something shiny grabs your attention. You walk towards it and wipe off the thick layer of dust settling on the item, and notice its an Onyx stone!";
+Constant TX_PS_84 = "The staff contains a huge amount of magical power. Green and dark light runs down the side of the staff like veins. This staff will surely defeat any foe you run into.";
+Constant TX_PS_69 = "Top of tower";
+Constant TX_PS_52 = "Tower";
 Constant TX_PS_38 = "Trail";
-Constant TX_PS_86 = "UNDO the last command";
-Constant TX_PS_43 = "Vines and moss wrap around its body and its eyes are emerald green and shining with life. A long wooden spear is found in his right hand.";
+Constant TX_PS_91 = "UNDO the last command";
+Constant TX_PS_45 = "Vines and moss wrap around its body and its eyes are emerald green and shining with life. A long wooden spear is found in his right hand.";
 Constant TX_PS_35 = "Welcome to the town of Draycott. Crops are burnt to a crisp and livestock is at an all-time low. Houses are in ashes and there are no townspeople to be seen. As you head near the end of the town you see Master Zyliath and speaking to him is greatly advised.";
-Constant TX_PS_32 = "You are a young man. Blond locks of hair run down to your shoulders. Your eyes are as blue as sapphires and your skin is silky and brown.";
-Constant TX_PS_45 = "You look more closely and find a mystic looking leather bound hand sized spell book placed on the outside of the tree.";
-Constant TX_PS_77 = "You look more closely at the staff. The body of the staff is made from while pearly wood and is entwined with gold.";
-Constant TX_PS_41 = "You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall, the whole atmosphere changes. The ground is spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest.";
-Constant TX_PS_51 = "You slowly enter the tower, and find yourself surrounded by dungeon-like walls on every side. The brick walls are covered in dust and cobwebs and you feel like there must be something hidden within these walls. You see an old door northwest of you and stairs northeast of you.";
+Constant TX_PS_32 = "You are a young man. Blonde locks of hair run down to your shoulders. Your eyes are as blue as sapphires and your skin is rough and brown.";
+Constant TX_PS_47 = "You look more closely and find a mystic looking leather bound hand sized spell book placed on the outside of the tree.";
+Constant TX_PS_82 = "You look more closely at the staff. The body of the staff is made from while pearly wood and is entwined with gold.";
+Constant TX_PS_43 = "You reach the edge of the forest as you stand in front of tightly knit trees. You stare deep into the darkness ahead as if begging permission to enter. You slowly step into the massive realm of woodland and from the first footfall, the whole atmosphere changes. The ground is spongy; the earth gently hugs your boots with each step. You look ahead and find a large dark oak tree. Its roots spread throughout the ground as if it were veins, almost as if it is the heart of the entire forest.";
+Constant TX_PS_53 = "You slowly enter the tower, and find yourself surrounded by dungeon-like walls on every side. The brick walls are covered in dust and cobwebs and you feel like there must be something hidden within these walls. You see an old door northwest of you and stairs northeast of you.";
 Constant TX_PS_33 = "Yourself";
-Constant TX_PS_76 = "Zyliath's Magical staff";
+Constant TX_PS_81 = "Zyliath's Magical staff";
 Constant TX_PS_9 = "animals";
 Constant TX_PS_14 = "backdrops";
 Constant TX_PS_11 = "containers";
@@ -50377,7 +50534,7 @@ Constant TX_PS_30 = "outside";
 Constant TX_PS_6 = "people";
 Constant TX_PS_13 = "player's holdalls";
 Constant TX_PS_16 = "regions";
-Constant TX_PS_84 = "see some suggestions for AMUSING things to do";
+Constant TX_PS_89 = "see some suggestions for AMUSING things to do";
 Constant TX_PS_22 = "south";
 Constant TX_PS_23 = "southeast";
 Constant TX_PS_24 = "southwest";
@@ -57713,139 +57870,151 @@ Array BC_165 --> PACKED_TEXT_STORAGE TX_PS_41;
 Array BC_166 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_167 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_168 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_169 --> PACKED_TEXT_STORAGE TX_PS_42;
-Array BC_170 --> PACKED_TEXT_STORAGE TX_PS_43;
-Array BC_171 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_169 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_170 --> PACKED_TEXT_STORAGE TX_PS_42;
+Array BC_171 --> PACKED_TEXT_STORAGE TX_PS_43;
 Array BC_172 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_173 --> PACKED_TEXT_STORAGE TX_PS_6;
+Array BC_173 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_174 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_175 --> PACKED_TEXT_STORAGE TX_PS_44;
 Array BC_176 --> PACKED_TEXT_STORAGE TX_PS_45;
 Array BC_177 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_178 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_179 --> PACKED_TEXT_STORAGE TX_PS_11;
+Array BC_179 --> PACKED_TEXT_STORAGE TX_PS_6;
 Array BC_180 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_181 --> PACKED_TEXT_STORAGE TX_PS_46;
 Array BC_182 --> PACKED_TEXT_STORAGE TX_PS_47;
 Array BC_183 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_184 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_185 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_185 --> PACKED_TEXT_STORAGE TX_PS_11;
 Array BC_186 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_187 --> PACKED_TEXT_STORAGE TX_PS_48;
 Array BC_188 --> PACKED_TEXT_STORAGE TX_PS_49;
 Array BC_189 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_190 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_191 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_192 --> PACKED_TEXT_STORAGE TX_PS_50;
-Array BC_193 --> PACKED_TEXT_STORAGE TX_PS_51;
-Array BC_194 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_192 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_193 --> PACKED_TEXT_STORAGE TX_PS_50;
+Array BC_194 --> PACKED_TEXT_STORAGE TX_PS_51;
 Array BC_195 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_196 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_197 --> PACKED_TEXT_STORAGE TX_PS_52;
-Array BC_198 --> PACKED_TEXT_STORAGE TX_PS_53;
-Array BC_199 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_197 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_198 --> PACKED_TEXT_STORAGE TX_PS_52;
+Array BC_199 --> PACKED_TEXT_STORAGE TX_PS_53;
 Array BC_200 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_201 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_202 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_203 --> PACKED_TEXT_STORAGE TX_PS_54;
-Array BC_204 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_204 --> PACKED_TEXT_STORAGE TX_PS_55;
 Array BC_205 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_206 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_207 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_208 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_209 --> PACKED_TEXT_STORAGE TX_PS_55;
-Array BC_210 --> PACKED_TEXT_STORAGE TX_PS_56;
+Array BC_209 --> PACKED_TEXT_STORAGE TX_PS_56;
+Array BC_210 --> PACKED_TEXT_STORAGE TX_PS_57;
 Array BC_211 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_212 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_213 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_214 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_215 --> PACKED_TEXT_STORAGE TX_PS_57;
-Array BC_216 --> PACKED_TEXT_STORAGE TX_PS_58;
+Array BC_215 --> PACKED_TEXT_STORAGE TX_PS_58;
+Array BC_216 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_217 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_218 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_219 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_220 --> PACKED_TEXT_STORAGE TX_PS_59;
-Array BC_221 --> PACKED_TEXT_STORAGE TX_PS_60;
-Array BC_222 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_220 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_221 --> PACKED_TEXT_STORAGE TX_PS_59;
+Array BC_222 --> PACKED_TEXT_STORAGE TX_PS_60;
 Array BC_223 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_224 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_225 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_226 --> PACKED_TEXT_STORAGE TX_PS_61;
-Array BC_227 --> PACKED_TEXT_STORAGE TX_PS_62;
-Array BC_228 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_226 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_227 --> PACKED_TEXT_STORAGE TX_PS_61;
+Array BC_228 --> PACKED_TEXT_STORAGE TX_PS_62;
 Array BC_229 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_230 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_231 --> PACKED_TEXT_STORAGE TX_PS_63;
-Array BC_232 --> PACKED_TEXT_STORAGE TX_PS_64;
-Array BC_233 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_231 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_232 --> PACKED_TEXT_STORAGE TX_PS_63;
+Array BC_233 --> PACKED_TEXT_STORAGE TX_PS_64;
 Array BC_234 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_235 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_236 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_237 --> PACKED_TEXT_STORAGE TX_PS_65;
-Array BC_238 --> PACKED_TEXT_STORAGE TX_PS_66;
-Array BC_239 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_237 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_238 --> PACKED_TEXT_STORAGE TX_PS_65;
+Array BC_239 --> PACKED_TEXT_STORAGE TX_PS_66;
 Array BC_240 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_241 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_242 --> PACKED_TEXT_STORAGE TX_PS_67;
-Array BC_243 --> PACKED_TEXT_STORAGE TX_PS_68;
-Array BC_244 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_242 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_243 --> PACKED_TEXT_STORAGE TX_PS_67;
+Array BC_244 --> PACKED_TEXT_STORAGE TX_PS_68;
 Array BC_245 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_246 --> PACKED_TEXT_STORAGE TX_PS_6;
+Array BC_246 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_247 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_248 --> PACKED_TEXT_STORAGE TX_PS_69;
-Array BC_249 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_250 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_248 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_249 --> PACKED_TEXT_STORAGE TX_PS_69;
+Array BC_250 --> PACKED_TEXT_STORAGE TX_PS_70;
 Array BC_251 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_252 --> PACKED_TEXT_STORAGE TX_PS_10;
+Array BC_252 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_253 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_254 --> PACKED_TEXT_STORAGE TX_PS_70;
-Array BC_255 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_254 --> PACKED_TEXT_STORAGE TX_PS_71;
+Array BC_255 --> PACKED_TEXT_STORAGE TX_PS_72;
 Array BC_256 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_257 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_258 --> PACKED_TEXT_STORAGE TX_PS_10;
+Array BC_258 --> PACKED_TEXT_STORAGE TX_PS_6;
 Array BC_259 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_260 --> PACKED_TEXT_STORAGE TX_PS_71;
+Array BC_260 --> PACKED_TEXT_STORAGE TX_PS_73;
 Array BC_261 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_262 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_263 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_264 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_264 --> PACKED_TEXT_STORAGE TX_PS_10;
 Array BC_265 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_266 --> PACKED_TEXT_STORAGE TX_PS_72;
-Array BC_267 --> PACKED_TEXT_STORAGE TX_PS_73;
+Array BC_266 --> PACKED_TEXT_STORAGE TX_PS_74;
+Array BC_267 --> PACKED_TEXT_STORAGE TX_PS_75;
 Array BC_268 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_269 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_270 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_270 --> PACKED_TEXT_STORAGE TX_PS_10;
 Array BC_271 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_272 --> PACKED_TEXT_STORAGE TX_PS_74;
-Array BC_273 --> PACKED_TEXT_STORAGE TX_PS_75;
+Array BC_272 --> PACKED_TEXT_STORAGE TX_PS_76;
+Array BC_273 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_274 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_275 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_276 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_277 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_278 --> PACKED_TEXT_STORAGE TX_PS_76;
-Array BC_279 --> PACKED_TEXT_STORAGE TX_PS_77;
+Array BC_278 --> PACKED_TEXT_STORAGE TX_PS_77;
+Array BC_279 --> PACKED_TEXT_STORAGE TX_PS_78;
 Array BC_280 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_281 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_282 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_283 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_284 --> PACKED_TEXT_STORAGE TX_PS_78;
-Array BC_285 --> PACKED_TEXT_STORAGE TX_PS_79;
+Array BC_284 --> PACKED_TEXT_STORAGE TX_PS_79;
+Array BC_285 --> PACKED_TEXT_STORAGE TX_PS_80;
 Array BC_286 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_287 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_288 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_289 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_290 --> PACKED_TEXT_STORAGE TX_PS_80;
-Array BC_291 --> PACKED_TEXT_STORAGE TX_PS_4;
-Array BC_292 --> PACKED_TEXT_STORAGE TX_PS_3;
-Array BC_293 --> PACKED_TEXT_STORAGE TX_PS_81;
+Array BC_290 --> PACKED_TEXT_STORAGE TX_PS_81;
+Array BC_291 --> PACKED_TEXT_STORAGE TX_PS_82;
+Array BC_292 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_293 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_294 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_295 --> PACKED_TEXT_STORAGE TX_PS_82;
+Array BC_295 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_296 --> PACKED_TEXT_STORAGE TX_PS_83;
 Array BC_297 --> PACKED_TEXT_STORAGE TX_PS_84;
-Array BC_298 --> PACKED_TEXT_STORAGE TX_PS_85;
-Array BC_299 --> PACKED_TEXT_STORAGE TX_PS_86;
-Array BC_300 --> LIST_CONST_15750 0;
-Array BC_301 --> LIST_CONST_15757 0;
+Array BC_298 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_299 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_300 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_301 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_302 --> PACKED_TEXT_STORAGE TX_PS_85;
+Array BC_303 --> PACKED_TEXT_STORAGE TX_PS_4;
+Array BC_304 --> PACKED_TEXT_STORAGE TX_PS_3;
+Array BC_305 --> PACKED_TEXT_STORAGE TX_PS_86;
+Array BC_306 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_307 --> PACKED_TEXT_STORAGE TX_PS_87;
+Array BC_308 --> PACKED_TEXT_STORAGE TX_PS_88;
+Array BC_309 --> PACKED_TEXT_STORAGE TX_PS_89;
+Array BC_310 --> PACKED_TEXT_STORAGE TX_PS_90;
+Array BC_311 --> PACKED_TEXT_STORAGE TX_PS_91;
+Array BC_312 --> LIST_CONST_15788 0;
+Array BC_313 --> LIST_CONST_15795 0;
 
 
 
